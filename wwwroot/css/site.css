@@ -1,0 +1,48 @@
+/* Reset body */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling - MÀU NHẠT */
+header {
+    background: linear-gradient(135deg, #f0f8ff, #cce7ff);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+header .navbar {
+    margin-bottom: 0 !important;
+    background: transparent !important;
+}
+
+/* Main content - chiếm phần còn lại */
+.main-content {
+    flex: 1;
+    background: linear-gradient(135deg, #dff6ff, #a8dfff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer styling - MÀU NHẠT */
+footer {
+    background: linear-gradient(135deg, #f0f8ff, #cce7ff);
+    border-top: 1px solid #ce93d8;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+footer .container {
+    color: black;
+    text-align: center;
+}

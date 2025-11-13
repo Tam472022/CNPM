@@ -1,0 +1,348 @@
+﻿@model Duan_CNPM.Models.Project
+@{
+    ViewData["Title"] = "Chi tiết đề tài";
+}
+
+<div class="container mt-4">
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <a class="btn btn-secondary" href="/Professor/Dashboard">
+                <i class="bi bi-arrow-left"></i> Quay lại
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Thông tin đề tài -->
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">@Model.Title</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <p>
+                                <strong>Trạng thái:</strong>
+                                @switch (Model.Status)
+                                {
+                                    case "Pending":
+                                        <span class="badge bg-warning text-dark">Chờ duyệt</span>
+                                        break;
+                                    case "Approved":
+                                        <span class="badge bg-info">Đã duyệt</span>
+                                        break;
+                                    case "InProgress":
+                                        <span class="badge bg-primary">Đang thực hiện</span>
+                                        break;
+                                    case "Completed":
+                                        <span class="badge bg-success">Hoàn thành</span>
+                                        break;
+                                    case "Rejected":
+                                        <span class="badge bg-danger">Từ chối</span>
+                                        break;
+                                }
+                            </p>
+                            <p><strong>Năm học:</strong> @Model.Year - Học kỳ @Model.Semester</p>
+                            <p><strong>Ngày tạo:</strong> @Model.CreatedDate.ToString("dd/MM/yyyy HH:mm")</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Ngày cập nhật:</strong> @(Model.UpdatedDate?.ToString("dd/MM/yyyy HH:mm") ?? "Chưa có")</p>
+                            <p><strong>Ngày bắt đầu:</strong> @Model.StartDate.ToString("dd/MM/yyyy")</p>
+                            @if (Model.DefenseDate.HasValue)
+                            {
+                                <p><strong>Ngày bảo vệ:</strong> @Model.DefenseDate.Value.ToString("dd/MM/yyyy HH:mm")</p>
+                            }
+                        </div>
+                    </div>
+
+                    <hr>
+                    <h5>Mô tả đề tài</h5>
+                    <p class="text-justify">@Model.Description</p>
+                </div>
+            </div>
+
+            <!-- Tiến độ thực hiện -->
+            <div class="card mb-4">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0"><i class="bi bi-clock-history"></i> Lịch sử tiến độ</h5>
+                </div>
+                <div class="card-body">
+                    @if (Model.ProjectProgresses != null && Model.ProjectProgresses.Any())
+                    {
+                        <div class="timeline">
+                            @foreach (var progress in Model.ProjectProgresses.OrderByDescending(p => p.UpdateDate))
+                            {
+                                <div class="timeline-item mb-3">
+                                    <div class="timeline-marker bg-primary"></div>
+                                    <div class="timeline-content">
+                                        <h6>
+                                            @progress.Title
+                                            <span class="badge bg-info">@progress.Percentage%</span>
+                                        </h6>
+                                        <p class="mb-1">@progress.Description</p>
+                                        <small class="text-muted">
+                                            <i class="bi bi-calendar"></i> @progress.UpdateDate.ToString("dd/MM/yyyy HH:mm")
+                                        </small>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-muted text-center">Chưa có cập nhật tiến độ</p>
+                    }
+                </div>
+            </div>
+
+            <!-- Tài liệu đính kèm -->
+            <div class="card mb-4">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0"><i class="bi bi-file-earmark-text"></i> Tài liệu đính kèm</h5>
+                </div>
+                <div class="card-body">
+                    @if (Model.ProjectFiles != null && Model.ProjectFiles.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Tên file</th>
+                                        <th>Loại</th>
+                                        <th>Kích thước</th>
+                                        <th>Ngày upload</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var file in Model.ProjectFiles.OrderByDescending(f => f.UploadDate))
+                                    {
+                                        <tr>
+                                            <td>@file.FileName</td>
+                                            <td><span class="badge bg-secondary">@file.FileType</span></td>
+                                            <td>@((file.FileSize / 1024.0).ToString("F2")) KB</td>
+                                            <td>@file.UploadDate.ToString("dd/MM/yyyy HH:mm")</td>
+                                            <td>
+                                                <a href="@file.FilePath" target="_blank" class="btn btn-sm btn-info">
+                                                    <i class="bi bi-download"></i> Tải xuống
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-muted text-center">Chưa có tài liệu nào</p>
+                    }
+                </div>
+            </div>
+
+            <!-- Lịch sử nhận xét -->
+            <div class="card mb-4">
+                <div class="card-header bg-warning">
+                    <h5 class="mb-0"><i class="bi bi-chat-left-text"></i> Lịch sử nhận xét</h5>
+                </div>
+                <div class="card-body">
+                    @if (Model.ProfessorComments != null && Model.ProfessorComments.Any())
+                    {
+                        <div class="comments-timeline">
+                            @foreach (var comment in Model.ProfessorComments.OrderByDescending(c => c.CreatedDate))
+                            {
+                                <div class="comment-item mb-3 p-3 border-start border-4 border-warning bg-light">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <strong class="text-primary">
+                                            <i class="bi bi-person-badge"></i> @comment.Professor.FullName
+                                        </strong>
+                                        <small class="text-muted">
+                                            <i class="bi bi-clock"></i> @comment.CreatedDate.ToString("dd/MM/yyyy HH:mm")
+                                        </small>
+                                    </div>
+                                    <p class="mb-0">@comment.CommentText</p>
+                                </div>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-muted text-center">Chưa có nhận xét nào</p>
+                    }
+
+                    <!-- Form thêm nhận xét mới -->
+                    @if (Model.Status == "Approved" || Model.Status == "InProgress" || Model.Status == "Completed")
+                    {
+                        <hr>
+                        <h6 class="mt-3">Thêm nhận xét mới</h6>
+                        <textarea class="form-control mb-3" id="commentText" rows="4"
+                              placeholder="Nhập nhận xét của bạn..."></textarea>
+                        <button class="btn btn-primary" onclick="addComment(@Model.ProjectID)">
+                            <i class="bi bi-send"></i> Gửi nhận xét
+                        </button>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar: Thông tin sinh viên -->
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <div class="card-header bg-secondary text-white">
+                    <h5 class="mb-0"><i class="bi bi-person-circle"></i> Thông tin sinh viên</h5>
+                </div>
+                <div class="card-body text-center">
+                    <img src="@(string.IsNullOrEmpty(Model.Student.Avatar) ? "/images/default-avatar.png" : Model.Student.Avatar)"
+                         alt="Avatar"
+                         class="rounded-circle mb-3"
+                         width="100"
+                         height="100"
+                         style="object-fit: cover;">
+
+                    <h5>@Model.Student.FullName</h5>
+
+                    @if (!string.IsNullOrEmpty(Model.Student.StudentCode))
+                    {
+                        <p class="mb-1">
+                            <strong>Mã SV:</strong> @Model.Student.StudentCode
+                        </p>
+                    }
+
+                    @if (!string.IsNullOrEmpty(Model.Student.Email))
+                    {
+                        <p class="mb-1">
+                            <i class="bi bi-envelope"></i> @Model.Student.Email
+                        </p>
+                    }
+
+                    @if (!string.IsNullOrEmpty(Model.Student.Phone))
+                    {
+                        <p class="mb-1">
+                            <i class="bi bi-telephone"></i> @Model.Student.Phone
+                        </p>
+                    }
+
+                    @if (!string.IsNullOrEmpty(Model.Student.Major))
+                    {
+                        <p class="mb-1">
+                            <i class="bi bi-book"></i> @Model.Student.Major
+                        </p>
+                    }
+                </div>
+            </div>
+
+            <!-- Thống kê nhanh -->
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0"><i class="bi bi-bar-chart"></i> Thống kê</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Số lần cập nhật tiến độ:</span>
+                        <strong>@(Model.ProjectProgresses?.Count ?? 0)</strong>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Số tài liệu đã nộp:</span>
+                        <strong>@(Model.ProjectFiles?.Count ?? 0)</strong>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Số nhận xét:</span>
+                        <strong>@(Model.ProfessorComments?.Count ?? 0)</strong>
+                    </div>
+                    @if (Model.ProjectProgresses != null && Model.ProjectProgresses.Any())
+                    {
+                        <div class="d-flex justify-content-between">
+                            <span>Tiến độ hiện tại:</span>
+                            <strong class="text-primary">
+                                @Model.ProjectProgresses.OrderByDescending(p => p.UpdateDate).FirstOrDefault()?.Percentage%
+                            </strong>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nút xóa đề tài (nếu bị từ chối) -->
+    @if (Model.Status == "Rejected")
+    {
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <button class="btn btn-danger" onclick="deleteProject(@Model.ProjectID)">
+                    <i class="bi bi-trash"></i> Xóa đề tài
+                </button>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .timeline {
+        position: relative;
+        padding-left: 30px;
+    }
+
+    .timeline-item {
+        position: relative;
+    }
+
+    .timeline-marker {
+        position: absolute;
+        left: -30px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        top: 5px;
+    }
+
+    .timeline-content {
+        border-left: 2px solid #dee2e6;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+
+    .comment-item {
+        border-radius: 8px;
+        transition: all 0.3s;
+    }
+
+        .comment-item:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+</style>
+
+<script>
+    // Thêm nhận xét
+    function addComment(projectId) {
+        const comment = document.getElementById('commentText').value.trim();
+        if (comment === "") {
+            alert("Vui lòng nhập nhận xét.");
+            return;
+        }
+
+        $.post('/Professor/AddComment', { projectId: projectId, comment: comment })
+            .done(function (res) {
+                alert(res.message);
+                if (res.success) {
+                    location.reload();
+                }
+            })
+            .fail(function () {
+                alert("Lỗi khi gửi nhận xét.");
+            });
+    }
+
+    // Xóa đề tài
+    function deleteProject(id) {
+        if (!confirm("Bạn có chắc chắn muốn xóa đề tài này?")) return;
+        $.post('/Professor/DeleteProject', { id })
+            .done(res => {
+                alert(res.message);
+                if (res.success) {
+                    window.location.href = '/Professor/Dashboard';
+                }
+            })
+            .fail(() => alert("Lỗi khi xóa đề tài."));
+    }
+</script>

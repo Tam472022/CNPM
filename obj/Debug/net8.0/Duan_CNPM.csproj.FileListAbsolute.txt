@@ -1,0 +1,1489 @@
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\appsettings.Development.json
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\appsettings.json
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Duan_CNPM.staticwebassets.runtime.json
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Duan_CNPM.staticwebassets.endpoints.json
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Duan_CNPM.exe
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Duan_CNPM.deps.json
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Duan_CNPM.runtimeconfig.json
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Duan_CNPM.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Duan_CNPM.pdb
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\rpswa.dswa.cache.json
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.GeneratedMSBuildEditorConfig.editorconfig
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.AssemblyInfoInputs.cache
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.AssemblyInfo.cs
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.csproj.CoreCompileInputs.cache
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.MvcApplicationPartsAssemblyInfo.cache
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.RazorAssemblyInfo.cache
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.RazorAssemblyInfo.cs
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\rjimswa.dswa.cache.json
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\scopedcss\bundle\Duan_CNPM.styles.css
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\scopedcss\projectbundle\Duan_CNPM.bundle.scp.css
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\staticwebassets.build.json
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\staticwebassets.build.json.cache
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\staticwebassets.development.json
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\refint\Duan_CNPM.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.pdb
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.genruntimeconfig.cache
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\ref\Duan_CNPM.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Azure.Core.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Azure.Identity.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Humanizer.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.Build.Locator.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\Mono.TextTemplating.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.ClientModel.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.CodeDom.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.Composition.Convention.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.Composition.Hosting.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.Composition.Runtime.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.Composition.TypedParts.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.Drawing.Common.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.Formats.Asn1.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.IO.Pipelines.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.Memory.Data.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.Runtime.Caching.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.Security.Permissions.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.Text.Json.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\System.Windows.Extensions.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.csproj.AssemblyReference.cache
+E:\CNPM\Duan_CNPM\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.csproj.Up2Date
+D:\test\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.csproj.AssemblyReference.cache
+D:\test\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.GeneratedMSBuildEditorConfig.editorconfig
+D:\test\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.AssemblyInfoInputs.cache
+D:\test\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.AssemblyInfo.cs
+D:\test\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.csproj.CoreCompileInputs.cache
+D:\test\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.MvcApplicationPartsAssemblyInfo.cache
+D:\test\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.RazorAssemblyInfo.cache
+D:\test\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.RazorAssemblyInfo.cs
+D:\test\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.sourcelink.json
+D:\test\Duan_CNPM\bin\Debug\net8.0\appsettings.Development.json
+D:\test\Duan_CNPM\bin\Debug\net8.0\appsettings.json
+D:\test\Duan_CNPM\bin\Debug\net8.0\Duan_CNPM.staticwebassets.runtime.json
+D:\test\Duan_CNPM\bin\Debug\net8.0\Duan_CNPM.exe
+D:\test\Duan_CNPM\bin\Debug\net8.0\Duan_CNPM.deps.json
+D:\test\Duan_CNPM\bin\Debug\net8.0\Duan_CNPM.runtimeconfig.json
+D:\test\Duan_CNPM\bin\Debug\net8.0\Duan_CNPM.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Duan_CNPM.pdb
+D:\test\Duan_CNPM\bin\Debug\net8.0\Azure.Core.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Azure.Identity.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Humanizer.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\System.CodeDom.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\System.Memory.Data.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\test\Duan_CNPM\obj\Debug\net8.0\staticwebassets.build.json
+D:\test\Duan_CNPM\obj\Debug\net8.0\staticwebassets.development.json
+D:\test\Duan_CNPM\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\test\Duan_CNPM\obj\Debug\net8.0\scopedcss\bundle\Duan_CNPM.styles.css
+D:\test\Duan_CNPM\obj\Debug\net8.0\scopedcss\projectbundle\Duan_CNPM.bundle.scp.css
+D:\test\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.csproj.Up2Date
+D:\test\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.dll
+D:\test\Duan_CNPM\obj\Debug\net8.0\refint\Duan_CNPM.dll
+D:\test\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.pdb
+D:\test\Duan_CNPM\obj\Debug\net8.0\Duan_CNPM.genruntimeconfig.cache
+D:\test\Duan_CNPM\obj\Debug\net8.0\ref\Duan_CNPM.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ClosedXML.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ExcelNumberFormat.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Irony.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.Build.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.Build.Framework.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\NuGet.Common.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\NuGet.Configuration.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\NuGet.Frameworks.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\NuGet.LibraryModel.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\NuGet.Packaging.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\NuGet.ProjectModel.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\NuGet.Protocol.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\NuGet.Versioning.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\SixLabors.Fonts.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\System.IO.Packaging.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\XLParser.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\af\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ar\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\az\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\bg\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\bn-BD\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\cs\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\da\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\de\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\el\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\es\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\fa\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\fi-FI\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\fr\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\fr-BE\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\he\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\hr\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\hu\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\hy\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\id\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\is\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\it\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ja\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ko-KR\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ku\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\lv\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ms-MY\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\mt\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\nb\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\nb-NO\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\nl\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\pl\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\pt\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ro\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ru\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\sk\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\sl\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\sr\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\sr-Latn\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\sv\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\th-TH\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\tr\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\uk\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\uz-Cyrl-UZ\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\uz-Latn-UZ\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\vi\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\test\Duan_CNPM\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\test\Duan_CNPM\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\test\Duan_CNPM\bin\Debug\net8.0\Duan_CNPM.staticwebassets.endpoints.json
+D:\test\Duan_CNPM\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\test\Duan_CNPM\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\test\Duan_CNPM\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\test\Duan_CNPM\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\test\Duan_CNPM\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\test\Duan_CNPM\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\appsettings.Development.json
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\appsettings.json
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.staticwebassets.runtime.json
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.staticwebassets.endpoints.json
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.exe
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.deps.json
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.runtimeconfig.json
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.pdb
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Azure.Core.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Azure.Identity.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\BCrypt.Net-Next.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ClosedXML.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ExcelNumberFormat.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Humanizer.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Irony.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Build.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Build.Framework.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Mono.TextTemplating.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\Newtonsoft.Json.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Common.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Configuration.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Frameworks.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.LibraryModel.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Packaging.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.ProjectModel.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Protocol.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Versioning.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\SixLabors.Fonts.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.CodeDom.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Composition.Convention.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Composition.Hosting.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Composition.Runtime.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Composition.TypedParts.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Drawing.Common.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.IO.Packaging.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Memory.Data.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Runtime.Caching.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Security.Permissions.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Windows.Extensions.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\XLParser.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\af\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ar\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\az\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\bg\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\bn-BD\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\da\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\el\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\fa\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\fi-FI\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr-BE\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\he\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\hr\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\hu\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\hy\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\id\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\is\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ko-KR\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ku\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\lv\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ms-MY\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\mt\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\nb\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\nb-NO\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\nl\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\pt\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ro\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\sk\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\sl\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\sr\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\sr-Latn\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\sv\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\th-TH\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\uk\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\uz-Cyrl-UZ\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\uz-Latn-UZ\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\vi\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
+E:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.csproj.AssemblyReference.cache
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\rpswa.dswa.cache.json
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.GeneratedMSBuildEditorConfig.editorconfig
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.AssemblyInfoInputs.cache
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.AssemblyInfo.cs
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.csproj.CoreCompileInputs.cache
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.MvcApplicationPartsAssemblyInfo.cache
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.RazorAssemblyInfo.cache
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.RazorAssemblyInfo.cs
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\rjimswa.dswa.cache.json
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\scopedcss\bundle\Duan_CNPM.styles.css
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\scopedcss\projectbundle\Duan_CNPM.bundle.scp.css
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\staticwebassets.build.json
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\staticwebassets.build.json.cache
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\staticwebassets.development.json
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.csproj.Up2Date
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.dll
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\refint\Duan_CNPM.dll
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.pdb
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.genruntimeconfig.cache
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\ref\Duan_CNPM.dll
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.sourcelink.json
+E:\CNPM-main\CNPM-main\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\appsettings.Development.json
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\appsettings.json
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.staticwebassets.runtime.json
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.staticwebassets.endpoints.json
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.exe
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.deps.json
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.runtimeconfig.json
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.pdb
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Azure.Core.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Azure.Identity.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ClosedXML.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ExcelNumberFormat.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Humanizer.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Irony.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Build.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Build.Framework.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Common.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Configuration.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Frameworks.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.LibraryModel.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Packaging.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.ProjectModel.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Protocol.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Versioning.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\SixLabors.Fonts.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\System.CodeDom.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\System.IO.Packaging.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Memory.Data.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\XLParser.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\af\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ar\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\az\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\bg\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\bn-BD\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\da\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\el\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\fa\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\fi-FI\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\fr-BE\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\he\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\hr\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\hu\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\hy\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\id\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\is\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ko-KR\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ku\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\lv\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ms-MY\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\mt\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\nb\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\nb-NO\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\nl\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\pt\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ro\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\sk\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\sl\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\sr\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\sr-Latn\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\sv\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\th-TH\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\uk\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\uz-Cyrl-UZ\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\uz-Latn-UZ\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\vi\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\D download\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.csproj.AssemblyReference.cache
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.GeneratedMSBuildEditorConfig.editorconfig
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.AssemblyInfoInputs.cache
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.AssemblyInfo.cs
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.csproj.CoreCompileInputs.cache
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.MvcApplicationPartsAssemblyInfo.cache
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.RazorAssemblyInfo.cache
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.RazorAssemblyInfo.cs
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\scopedcss\bundle\Duan_CNPM.styles.css
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\scopedcss\projectbundle\Duan_CNPM.bundle.scp.css
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\staticwebassets.build.json
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\staticwebassets.development.json
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.csproj.Up2Date
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.dll
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\refint\Duan_CNPM.dll
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.pdb
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.genruntimeconfig.cache
+D:\D download\CNPM-main\CNPM-main\obj\Debug\net8.0\ref\Duan_CNPM.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\appsettings.Development.json
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\appsettings.json
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.staticwebassets.runtime.json
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.staticwebassets.endpoints.json
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.exe
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.deps.json
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.runtimeconfig.json
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Duan_CNPM.pdb
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Azure.Core.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Azure.Identity.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ClosedXML.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ExcelNumberFormat.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Humanizer.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Irony.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Build.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Build.Framework.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Common.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Configuration.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Frameworks.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.LibraryModel.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Packaging.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.ProjectModel.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Protocol.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\NuGet.Versioning.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\SixLabors.Fonts.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.CodeDom.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.IO.Packaging.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Memory.Data.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\XLParser.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\af\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ar\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\az\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\bg\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\bn-BD\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\da\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\el\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\fa\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\fi-FI\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr-BE\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\he\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\hr\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\hu\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\hy\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\id\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\is\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ko-KR\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ku\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\lv\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ms-MY\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\mt\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\nb\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\nb-NO\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\nl\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\pt\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ro\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\sk\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\sl\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\sr\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\sr-Latn\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\sv\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\th-TH\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\uk\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\uz-Cyrl-UZ\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\uz-Latn-UZ\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\vi\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\CNPM-main\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.csproj.AssemblyReference.cache
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.GeneratedMSBuildEditorConfig.editorconfig
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.AssemblyInfoInputs.cache
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.AssemblyInfo.cs
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.csproj.CoreCompileInputs.cache
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.MvcApplicationPartsAssemblyInfo.cache
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.RazorAssemblyInfo.cache
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.RazorAssemblyInfo.cs
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\scopedcss\bundle\Duan_CNPM.styles.css
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\scopedcss\projectbundle\Duan_CNPM.bundle.scp.css
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\staticwebassets.build.json
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\staticwebassets.development.json
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.csproj.Up2Date
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.dll
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\refint\Duan_CNPM.dll
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.pdb
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.genruntimeconfig.cache
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\ref\Duan_CNPM.dll
+D:\CNPM-main\CNPM-main\obj\Debug\net8.0\Duan_CNPM.sourcelink.json
+D:\test\CNPM-main\bin\Debug\net8.0\appsettings.Development.json
+D:\test\CNPM-main\bin\Debug\net8.0\appsettings.json
+D:\test\CNPM-main\bin\Debug\net8.0\Duan_CNPM.staticwebassets.runtime.json
+D:\test\CNPM-main\bin\Debug\net8.0\Duan_CNPM.staticwebassets.endpoints.json
+D:\test\CNPM-main\bin\Debug\net8.0\Duan_CNPM.exe
+D:\test\CNPM-main\bin\Debug\net8.0\Duan_CNPM.deps.json
+D:\test\CNPM-main\bin\Debug\net8.0\Duan_CNPM.runtimeconfig.json
+D:\test\CNPM-main\bin\Debug\net8.0\Duan_CNPM.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Duan_CNPM.pdb
+D:\test\CNPM-main\bin\Debug\net8.0\Azure.Core.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Azure.Identity.dll
+D:\test\CNPM-main\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ClosedXML.dll
+D:\test\CNPM-main\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ExcelNumberFormat.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Humanizer.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Irony.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.Build.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.Build.Framework.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\test\CNPM-main\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\test\CNPM-main\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\test\CNPM-main\bin\Debug\net8.0\NuGet.Common.dll
+D:\test\CNPM-main\bin\Debug\net8.0\NuGet.Configuration.dll
+D:\test\CNPM-main\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
+D:\test\CNPM-main\bin\Debug\net8.0\NuGet.Frameworks.dll
+D:\test\CNPM-main\bin\Debug\net8.0\NuGet.LibraryModel.dll
+D:\test\CNPM-main\bin\Debug\net8.0\NuGet.Packaging.dll
+D:\test\CNPM-main\bin\Debug\net8.0\NuGet.ProjectModel.dll
+D:\test\CNPM-main\bin\Debug\net8.0\NuGet.Protocol.dll
+D:\test\CNPM-main\bin\Debug\net8.0\NuGet.Versioning.dll
+D:\test\CNPM-main\bin\Debug\net8.0\SixLabors.Fonts.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.CodeDom.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.IO.Packaging.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.Memory.Data.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\test\CNPM-main\bin\Debug\net8.0\XLParser.dll
+D:\test\CNPM-main\bin\Debug\net8.0\af\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ar\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\az\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\bg\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\bn-BD\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\cs\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\da\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\de\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\el\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\es\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\fa\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\fi-FI\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\fr\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\fr-BE\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\he\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\hr\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\hu\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\hy\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\id\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\is\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\it\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ja\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ko-KR\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ku\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\lv\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ms-MY\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\mt\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\nb\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\nb-NO\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\nl\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\pl\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\pt\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ro\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ru\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\sk\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\sl\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\sr\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\sr-Latn\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\sv\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\th-TH\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\tr\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\uk\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\uz-Cyrl-UZ\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\uz-Latn-UZ\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\vi\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\test\CNPM-main\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\test\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\test\CNPM-main\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\test\CNPM-main\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\test\CNPM-main\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\test\CNPM-main\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\test\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\test\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+D:\test\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\test\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\test\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\test\CNPM-main\obj\Debug\net8.0\Duan_CNPM.csproj.AssemblyReference.cache
+D:\test\CNPM-main\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\test\CNPM-main\obj\Debug\net8.0\Duan_CNPM.GeneratedMSBuildEditorConfig.editorconfig
+D:\test\CNPM-main\obj\Debug\net8.0\Duan_CNPM.AssemblyInfoInputs.cache
+D:\test\CNPM-main\obj\Debug\net8.0\Duan_CNPM.AssemblyInfo.cs
+D:\test\CNPM-main\obj\Debug\net8.0\Duan_CNPM.csproj.CoreCompileInputs.cache
+D:\test\CNPM-main\obj\Debug\net8.0\Duan_CNPM.MvcApplicationPartsAssemblyInfo.cache
+D:\test\CNPM-main\obj\Debug\net8.0\Duan_CNPM.RazorAssemblyInfo.cache
+D:\test\CNPM-main\obj\Debug\net8.0\Duan_CNPM.RazorAssemblyInfo.cs
+D:\test\CNPM-main\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\test\CNPM-main\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\test\CNPM-main\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\test\CNPM-main\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\test\CNPM-main\obj\Debug\net8.0\scopedcss\bundle\Duan_CNPM.styles.css
+D:\test\CNPM-main\obj\Debug\net8.0\scopedcss\projectbundle\Duan_CNPM.bundle.scp.css
+D:\test\CNPM-main\obj\Debug\net8.0\staticwebassets.build.json
+D:\test\CNPM-main\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\test\CNPM-main\obj\Debug\net8.0\staticwebassets.development.json
+D:\test\CNPM-main\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\test\CNPM-main\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\test\CNPM-main\obj\Debug\net8.0\Duan_CNPM.csproj.Up2Date
+D:\test\CNPM-main\obj\Debug\net8.0\Duan_CNPM.dll
+D:\test\CNPM-main\obj\Debug\net8.0\refint\Duan_CNPM.dll
+D:\test\CNPM-main\obj\Debug\net8.0\Duan_CNPM.pdb
+D:\test\CNPM-main\obj\Debug\net8.0\Duan_CNPM.genruntimeconfig.cache
+D:\test\CNPM-main\obj\Debug\net8.0\ref\Duan_CNPM.dll

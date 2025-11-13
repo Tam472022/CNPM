@@ -1,0 +1,200 @@
+﻿@model IEnumerable<Duan_CNPM.Models.Project>
+@{
+    ViewData["Title"] = "Quản lý đề tài";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h2>Quản lý đề tài</h2>
+        </div>
+    </div>
+
+    <!-- Filter -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <form method="get" asp-action="Projects" class="row g-3">
+                <div class="col-md-2">
+                    <label class="form-label">Trạng thái</label>
+                    <select name="status" class="form-select">
+                        <option value="">Tất cả</option>
+                        <option value="Pending">Chờ duyệt</option>
+                        <option value="Approved">Đã duyệt</option>
+                        <option value="InProgress">Đang thực hiện</option>
+                        <option value="Completed">Hoàn thành</option>
+                        <option value="Rejected">Từ chối</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label">Năm</label>
+                    <select name="year" class="form-select">
+                        <option value="0">Tất cả</option>
+                        @for (int y = DateTime.Now.Year; y >= 2020; y--)
+                        {
+                            <option value="@y">@y</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-5">
+                    <label class="form-label">Tìm kiếm</label>
+                    <input type="text" name="search" class="form-control"
+                           placeholder="Tên đề tài, sinh viên...">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">&nbsp;</label>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-search"></i> Tìm
+                        </button>
+                        <a href="@Url.Action("ExportProjects")" class="btn btn-success">
+                            <i class="bi bi-file-excel"></i> Export
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Projects Table -->
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Mã SV</th>
+                            <th>Sinh viên</th>
+                            <th>Tên đề tài</th>
+                            <th>GVHD</th>
+                            <th>Trạng thái</th>
+                            <th>Năm</th>
+                            <th>Điểm</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var project in Model)
+                        {
+                            <tr>
+                                <td>@project.Student.StudentCode</td>
+                                <td>@project.Student.FullName</td>
+                                <td>@project.Title</td>
+                                <td>@(project.Professor?.FullName ?? "Chưa có")</td>
+                                <td>
+                                    @switch (project.Status)
+                                    {
+                                        case "Pending":
+                                            <span class="badge bg-warning">Chờ duyệt</span>
+                                            break;
+                                        case "Approved":
+                                            <span class="badge bg-info">Đã duyệt</span>
+                                            break;
+                                        case "InProgress":
+                                            <span class="badge bg-primary">Đang thực hiện</span>
+                                            break;
+                                        case "Completed":
+                                            <span class="badge bg-success">Hoàn thành</span>
+                                            break;
+                                        case "Rejected":
+                                            <span class="badge bg-danger">Từ chối</span>
+                                            break;
+                                    }
+                                </td>
+                                <td>@project.Year - HK@project.Semester</td>
+                                <td>
+                                    @if (project.FinalScore.HasValue)
+                                    {
+                                        <strong>@project.FinalScore.Value.ToString("F2")</strong>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">-</span>
+                                    }
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        @if (project.ProfessorID == null)
+                                        {
+                                            <button onclick="showAssignModal(@project.ProjectID)"
+                                                    class="btn btn-primary" title="Phân công GVHD">
+                                                <i class="bi bi-person-plus"></i>
+                                            </button>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Assign Professor Modal -->
+<div class="modal fade" id="assignModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Phân công giảng viên</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="assignProjectId">
+                <div class="mb-3">
+                    <label class="form-label">Chọn giảng viên</label>
+                    <select id="assignProfessorId" class="form-select">
+                        <option value="">-- Chọn --</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary" onclick="submitAssign()">
+                    Phân công
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function showAssignModal(projectId) {
+            $('#assignProjectId').val(projectId);
+            // Load professors list
+            $.get('/Admin/GetProfessors', function(data) {
+                const select = $('#assignProfessorId');
+                select.empty().append('<option value="">-- Chọn --</option>');
+                data.forEach(p => {
+                    select.append(`<option value="${p.userID}">${p.fullName}</option>`);
+                });
+            });
+            $('#assignModal').modal('show');
+        }
+
+        function submitAssign() {
+            const projectId = $('#assignProjectId').val();
+            const professorId = $('#assignProfessorId').val();
+
+            if(!professorId) {
+                alert('Vui lòng chọn giảng viên!');
+                return;
+            }
+
+            $.post('@Url.Action("AssignProfessor")', {
+                projectId: projectId,
+                professorId: professorId
+            })
+            .done(function(res) {
+                alert(res.message);
+                if(res.success) {
+                    location.reload();
+                }
+            })
+            .fail(function() {
+                alert('Có lỗi xảy ra!');
+            });
+        }
+    </script>
+}

@@ -1,0 +1,71 @@
+﻿@model Duan_CNPM.Models.User
+@{
+    ViewData["Title"] = "Hồ sơ cá nhân";
+}
+
+<div class="container mt-4">
+    <h3 class="text-center mb-4">Hồ sơ cá nhân</h3>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show">
+            @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show">
+            @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="card mx-auto" style="max-width: 500px;">
+        <div class="card-body text-center" style="font-size: 17px;">
+
+            <!-- Avatar hiển thị -->
+            <img id="avatarPreview"
+                 src="@(string.IsNullOrEmpty(Model.Avatar) ? "/images/default-avatar.png" : Model.Avatar)"
+                 class="rounded-circle mb-3" width="120" height="120" alt="Ảnh đại diện"
+                 style="object-fit: cover;" />
+
+            <p>Họ và tên: <strong>@Model.FullName</strong></p>
+            <p>Email: @(Model.Email ?? "Chưa cập nhật")</p>
+            <p>Vai trò: @(Model.Role == "Student" ? "Sinh viên" : Model.Role)</p>
+            <p style="margin-bottom:30px;">Ngày tạo tài khoản: @Model.CreatedDate.ToString("dd/MM/yyyy")</p>
+
+            <!-- Form thay đổi avatar -->
+            <p class="text-justify" style="font-size: 15px;">Thay đổi ảnh đại diện nếu cần thiết ở dưới đây:</p>
+            <form asp-action="UpdateProfile" asp-controller="Student" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <input type="file" id="avatarInput" name="avatar" accept="image/*" class="form-control" onchange="previewAvatar(event)" />
+                    <small class="text-muted">Chấp nhận: JPG, JPEG, PNG, GIF (Max 5MB)</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Cập nhật ảnh đại diện</button>
+            </form>
+
+            <a class="btn btn-secondary mt-3" href="/Student/Dashboard">Quay lại</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function previewAvatar(event) {
+        var input = event.target;
+        if (input.files && input.files[0]) {
+            // Kiểm tra kích thước file (5MB)
+            if (input.files[0].size > 5242880) {
+                alert('File quá lớn! Vui lòng chọn file nhỏ hơn 5MB.');
+                input.value = '';
+                return;
+            }
+
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('avatarPreview').src = e.target.result;
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>

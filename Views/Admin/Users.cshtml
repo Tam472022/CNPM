@@ -1,0 +1,195 @@
+﻿@model IEnumerable<Duan_CNPM.Models.User>
+@{
+    ViewData["Title"] = "Quản lý người dùng";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h2>Quản lý người dùng</h2>
+        </div>
+    </div>
+
+    <!-- Filter & Search -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <form method="get" asp-action="Users" class="row g-3">
+                <div class="col-md-3">
+                    <label class="form-label">Vai trò</label>
+                    <select name="role" class="form-select">
+                        <option value="">Tất cả</option>
+                        <option value="Student" selected="@(ViewBag.Role == "Student")">Sinh viên</option>
+                        <option value="Professor" selected="@(ViewBag.Role == "Professor")">Giảng viên</option>
+                        <option value="Admin" selected="@(ViewBag.Role == "Admin")">Admin</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Tìm kiếm</label>
+                    <input type="text" name="search" class="form-control"
+                           placeholder="Tên, email, username..." value="@ViewBag.Search">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">&nbsp;</label>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-search"></i> Tìm kiếm
+                        </button>
+                        <a href="@Url.Action("CreateUser")" class="btn btn-success">
+                            <i class="bi bi-plus-circle"></i> Thêm mới
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Users Table -->
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Họ tên</th>
+                            <th>Email</th>
+                            <th>Vai trò</th>
+                            <th>Trạng thái</th>
+                            <th>Ngày tạo</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in Model)
+                        {
+                            <tr>
+                                <td>@user.Username</td>
+                                <td>@user.FullName</td>
+                                <td>@user.Email</td>
+                                <td>
+                                    @switch (user.Role)
+                                    {
+                                        case "Admin":
+                                            <span class="badge bg-danger">Admin</span>
+                                            break;
+                                        case "Professor":
+                                            <span class="badge bg-info">Giảng viên</span>
+                                            break;
+                                        case "Student":
+                                            <span class="badge bg-primary">Sinh viên</span>
+                                            break;
+                                    }
+                                </td>
+                                <td>
+                                    @if (user.IsActive)
+                                    {
+                                        <span class="badge bg-success">Hoạt động</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary">Khóa</span>
+                                    }
+                                </td>
+                                <td>@user.CreatedDate.ToString("dd/MM/yyyy")</td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="@Url.Action("EditUser", new { id = user.UserID })"
+                                           class="btn btn-warning">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        <button onclick="resetPassword(@user.UserID)"
+                                                class="btn btn-info">
+                                            <i class="bi bi-key"></i>
+                                        </button>
+                                        @if (user.Role != "Admin")
+                                        {
+                                            <button onclick="deleteUser(@user.UserID)"
+                                                    class="btn btn-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Reset Password Modal -->
+<div class="modal fade" id="resetPasswordModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Đặt lại mật khẩu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="resetUserId">
+                <div class="mb-3">
+                    <label class="form-label">Mật khẩu mới</label>
+                    <input type="password" id="newPassword" class="form-control"
+                           placeholder="Nhập mật khẩu mới">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary" onclick="submitResetPassword()">
+                    Đặt lại
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function resetPassword(userId) {
+            $('#resetUserId').val(userId);
+            $('#newPassword').val('');
+            $('#resetPasswordModal').modal('show');
+        }
+
+        function submitResetPassword() {
+            const userId = $('#resetUserId').val();
+            const newPassword = $('#newPassword').val();
+
+            if(!newPassword || newPassword.length < 6) {
+                alert('Mật khẩu phải có ít nhất 6 ký tự!');
+                return;
+            }
+
+            $.post('@Url.Action("ResetPassword")', {
+                id: userId,
+                newPassword: newPassword
+            })
+            .done(function(res) {
+                alert(res.message);
+                if(res.success) {
+                    $('#resetPasswordModal').modal('hide');
+                }
+            })
+            .fail(function() {
+                alert('Có lỗi xảy ra!');
+            });
+        }
+
+        function deleteUser(userId) {
+            if(!confirm('Bạn có chắc chắn muốn xóa người dùng này?')) return;
+
+            $.post('@Url.Action("DeleteUser")', { id: userId })
+            .done(function(res) {
+                alert(res.message);
+                if(res.success) {
+                    location.reload();
+                }
+            })
+            .fail(function() {
+                alert('Có lỗi xảy ra!');
+            });
+        }
+    </script>
+}

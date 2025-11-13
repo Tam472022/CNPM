@@ -1,0 +1,214 @@
+﻿@{
+    ViewData["Title"] = "Thống kê & Báo cáo";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h2>Thống kê & Báo cáo</h2>
+            <p class="text-muted">Tổng quan về các đề tài trong hệ thống</p>
+        </div>
+    </div>
+
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show">
+            <i class="bi bi-exclamation-triangle"></i> @ViewBag.ErrorMessage
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <!-- Charts Row -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Đề tài theo năm</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="projectsByYearChart" style="max-height: 300px;"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Đề tài theo trạng thái</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="projectsByStatusChart" style="max-height: 300px;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Phân bố điểm</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="scoreDistributionChart" style="max-height: 300px;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Professors -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Top giảng viên hướng dẫn (năm hiện tại)</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Giảng viên</th>
+                                    <th>Số đề tài</th>
+                                    <th>Điểm TB</th>
+                                </tr>
+                            </thead>
+                            <tbody id="professorsTableBody">
+                                <tr>
+                                    <td colspan="4" class="text-center text-muted">Đang tải dữ liệu...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Lấy dữ liệu từ server
+        const yearData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.ProjectsByYear ?? new List<object>()));
+        const statusData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.ProjectsByStatus ?? new List<object>()));
+        const scoreData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.ScoreDistribution ?? new List<object>()));
+        const professorsData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.TopProfessors ?? new List<object>()));
+
+        // Render Professors Table
+        function renderProfessorsTable() {
+            const tbody = document.getElementById('professorsTableBody');
+            if (professorsData && professorsData.length > 0) {
+                let html = '';
+                professorsData.forEach((prof, index) => {
+                    const avgScore = prof.avgScore != null ? prof.avgScore.toFixed(2) : '<span class="text-muted">Chưa có điểm</span>';
+                    html += `
+                        <tr>
+                            <td>${index + 1}</td>
+                            <td>${prof.professor || 'N/A'}</td>
+                            <td><span class="badge bg-primary">${prof.count || 0}</span></td>
+                            <td>${avgScore}</td>
+                        </tr>
+                    `;
+                });
+                tbody.innerHTML = html;
+            } else {
+                tbody.innerHTML = '<tr><td colspan="4" class="text-center text-muted">Chưa có dữ liệu</td></tr>';
+            }
+        }
+
+        // Projects by Year Chart
+        if (yearData && yearData.length > 0) {
+            new Chart(document.getElementById('projectsByYearChart'), {
+                type: 'bar',
+                data: {
+                    labels: yearData.map(d => d.year || 'N/A'),
+                    datasets: [{
+                        label: 'Số đề tài',
+                        data: yearData.map(d => d.count || 0),
+                        backgroundColor: '#0d6efd',
+                        borderColor: '#0d6efd',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: true }
+                    },
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+        } else {
+            document.getElementById('projectsByYearChart').parentElement.innerHTML = '<p class="text-muted text-center">Chưa có dữ liệu</p>';
+        }
+
+        // Projects by Status Chart
+        if (statusData && statusData.length > 0) {
+            const statusLabels = {
+                'Pending': 'Chờ duyệt',
+                'Approved': 'Đã duyệt',
+                'InProgress': 'Đang thực hiện',
+                'Completed': 'Hoàn thành',
+                'Rejected': 'Từ chối'
+            };
+
+            new Chart(document.getElementById('projectsByStatusChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: statusData.map(d => statusLabels[d.status] || d.status || 'Unknown'),
+                    datasets: [{
+                        data: statusData.map(d => d.count || 0),
+                        backgroundColor: ['#ffc107', '#17a2b8', '#007bff', '#28a745', '#dc3545']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    }
+                }
+            });
+        } else {
+            document.getElementById('projectsByStatusChart').parentElement.innerHTML = '<p class="text-muted text-center">Chưa có dữ liệu</p>';
+        }
+
+        // Score Distribution Chart
+        if (scoreData && scoreData.length > 0) {
+            new Chart(document.getElementById('scoreDistributionChart'), {
+                type: 'line',
+                data: {
+                    labels: scoreData.map(d => d.score || 0),
+                    datasets: [{
+                        label: 'Số lượng sinh viên',
+                        data: scoreData.map(d => d.count || 0),
+                        borderColor: '#28a745',
+                        backgroundColor: 'rgba(40, 167, 69, 0.2)',
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: true }
+                    },
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+        } else {
+            document.getElementById('scoreDistributionChart').parentElement.innerHTML = '<p class="text-muted text-center">Chưa có dữ liệu</p>';
+        }
+
+        // Render professors table
+        renderProfessorsTable();
+    </script>
+}

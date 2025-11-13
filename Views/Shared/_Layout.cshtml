@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Duan_CNPM</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Duan_CNPM.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- Khai báo các header -->
+    <header>
+        <nav class="
+            navbar navbar-expand-sm 
+            navbar-toggleable-sm 
+            navbar-light 
+            bg-white 
+            border-bottom 
+            box-shadow mb-3"
+        >
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center gap-2"
+                   asp-area=""
+                   asp-controller="Home"
+                   asp-action="Index"   
+                >
+                    <img src="~/images/logoTruong.PNG" alt="Logo trường" style="height:40px;" />
+                    <img src="~/images/logoKhoa.PNG" alt="Logo khoa" style="height:40px; border-radius: 50%; object-fit:cover;" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Trang chủ</a>
+                        </li>
+                        @if (Context.Session.GetString("Role") == "Professor")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Professor" asp-action="Profile">Hồ sơ giảng viên</a>
+                            </li>
+                        } else if (Context.Session.GetString("Role") == "Student")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Profile">Hồ sơ sinh viên</a>
+                            </li>
+                        }
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        @if (Context.Session.GetString("UserID") == null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Đăng nhập</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Register">Đăng ký</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <form asp-controller="Home" asp-action="Logout" method="post" class="d-inline">
+                                    <button type="submit" class="btn btn-link nav-link text-dark" style="display:inline; padding:0;">Đăng xuất</button>
+                                </form>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="main-content">
+        @RenderBody()
+    </main>
+
+    <!-- Khai báo các footer -->
+    <footer class="site-footer border-top text-muted">
+        <div class="container">
+            Website quản lý đồ án tốt nghiệp - SVTH: Trần Quang Khánh, Lê Xuân Nam, Hồ Anh Nguyên, Hồ Nguyên Tâm - 22KTMT1
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

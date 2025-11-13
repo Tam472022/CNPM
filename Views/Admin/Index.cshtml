@@ -1,0 +1,225 @@
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h2>Dashboard Quản trị</h2>
+            <p class="text-muted">Chào mừng, @ViewBag.UserName</p>
+        </div>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="card-title">Tổng người dùng</h6>
+                            <h2 class="mb-0">@ViewBag.TotalUsers</h2>
+                        </div>
+                        <i class="bi bi-people fs-1"></i>
+                    </div>
+                    <div class="mt-2">
+                        <small>Sinh viên: @ViewBag.TotalStudents | GVHD: @ViewBag.TotalProfessors</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-white bg-success">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="card-title">Tổng đề tài</h6>
+                            <h2 class="mb-0">@ViewBag.TotalProjects</h2>
+                        </div>
+                        <i class="bi bi-journal-text fs-1"></i>
+                    </div>
+                    <div class="mt-2">
+                        <small>Hoàn thành: @ViewBag.CompletedProjects</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-white bg-warning">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="card-title">Chờ duyệt</h6>
+                            <h2 class="mb-0">@ViewBag.PendingProjects</h2>
+                        </div>
+                        <i class="bi bi-hourglass-split fs-1"></i>
+                    </div>
+                    <div class="mt-2">
+                        <small>Đang thực hiện: @ViewBag.InProgressProjects</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-white bg-info">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="card-title">Hội đồng</h6>
+                            <h2 class="mb-0">@ViewBag.TotalCouncils</h2>
+                        </div>
+                        <i class="bi bi-award fs-1"></i>
+                    </div>
+                    <div class="mt-2">
+                        <small>Đã tổ chức</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Recent Projects -->
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Đề tài gần đây</h5>
+                    <a href="@Url.Action("Projects", "Admin")" class="btn btn-sm btn-primary">Xem tất cả</a>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Tên đề tài</th>
+                                    <th>Sinh viên</th>
+                                    <th>GVHD</th>
+                                    <th>Trạng thái</th>
+                                    <th>Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (ViewBag.RecentProjects != null)
+                                {
+                                    @foreach (var project in (List<Duan_CNPM.Models.Project>)ViewBag.RecentProjects)
+                                    {
+                                        <tr>
+                                            <td>@project.Title</td>
+                                            <td>@project.Student.FullName</td>
+                                            <td>@(project.Professor?.FullName ?? "Chưa có")</td>
+                                            <td>
+                                                @switch (project.Status)
+                                                {
+                                                    case "Pending":
+                                                        <span class="badge bg-warning">Chờ duyệt</span>
+                                                        break;
+                                                    case "Approved":
+                                                        <span class="badge bg-info">Đã duyệt</span>
+                                                        break;
+                                                    case "InProgress":
+                                                        <span class="badge bg-primary">Đang thực hiện</span>
+                                                        break;
+                                                    case "Completed":
+                                                        <span class="badge bg-success">Hoàn thành</span>
+                                                        break;
+                                                }
+                                            </td>
+                                            <td>
+                                                <a href="@Url.Action("Projects", "Admin")" class="btn btn-sm btn-info">
+                                                    Chi tiết
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Statistics -->
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5 class="mb-0">Thống kê đề tài theo trạng thái</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="statusChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Truy cập nhanh</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-2">
+                        <a href="@Url.Action("Users", "Admin")" class="btn btn-outline-primary">
+                            <i class="bi bi-people"></i> Quản lý người dùng
+                        </a>
+                        <a href="@Url.Action("Projects", "Admin")" class="btn btn-outline-success">
+                            <i class="bi bi-journal-text"></i> Quản lý đề tài
+                        </a>
+                        <a href="@Url.Action("Councils", "Admin")" class="btn btn-outline-info">
+                            <i class="bi bi-award"></i> Quản lý hội đồng
+                        </a>
+                        <a href="@Url.Action("Statistics", "Admin")" class="btn btn-outline-warning">
+                            <i class="bi bi-graph-up"></i> Thống kê & Báo cáo
+                        </a>
+                        <a href="@Url.Action("SystemConfig", "Admin")" class="btn btn-outline-secondary">
+                            <i class="bi bi-gear"></i> Cấu hình hệ thống
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Status Chart
+    const statusData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.ProjectsByStatus ?? new List<object>()));
+    
+    const ctx = document.getElementById('statusChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: statusData.map(d => d.status),
+            datasets: [{
+                data: statusData.map(d => d.count),
+                backgroundColor: [
+                    '#ffc107',
+                    '#17a2b8',
+                    '#007bff',
+                    '#28a745',
+                    '#dc3545'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+</script>
+
+<style>
+    .card {
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    .bg-primary, .bg-success, .bg-warning, .bg-info {
+        background: linear-gradient(135deg, var(--bs-primary), var(--bs-info)) !important;
+    }
+</style>

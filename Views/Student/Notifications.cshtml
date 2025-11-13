@@ -1,0 +1,50 @@
+﻿@model List<Duan_CNPM.Models.Notification>
+
+@{
+    ViewData["Title"] = "Tất cả thông báo";
+}
+
+<div class="container mt-4">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3>Tất cả thông báo</h3>
+        <a href="@Url.Action("Dashboard", "Student")"
+           class="btn btn-secondary btn-sm"
+           style="font-size: 16px;
+          background: linear-gradient(135deg, #0d6efd, #0a58ca);
+          color: white;
+          border: none;">
+            <i class="bi bi-arrow-left"></i> Trở về trang chủ
+        </a>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info text-center">
+            Chưa có thông báo nào.
+        </div>
+    }
+    else
+    {
+        <ul class="list-group">
+            @foreach (var note in Model.OrderByDescending(n => n.CreatedDate))
+            {
+                var itemClass = note.IsRead ? "fw-bold" : "";
+                var badgeClass = note.Type switch
+                {
+                    "Info" => "bg-info",
+                    "Warning" => "bg-warning text-dark",
+                    "Success" => "bg-success",
+                    _ => "bg-secondary"
+                };
+                <li class="list-group-item d-flex justify-content-between align-items-start @itemClass mb-1">
+                    <div>
+                        <div>@note.Title</div>
+                        <small class="text-muted">@note.Message</small>
+                    </div>
+                    <span class="badge @badgeClass rounded-pill">@note.CreatedDate.ToString("dd/MM/yyyy HH:mm")</span>
+                </li>
+            }
+        </ul>
+    }
+</div>

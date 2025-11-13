@@ -1,0 +1,16 @@
+﻿-- Sửa cột ProfessorComment cho phép NULL
+ALTER TABLE Projects
+ALTER COLUMN ProfessorComment NTEXT NULL;
+
+-- Sửa luôn cột Link trong Notifications
+ALTER TABLE Notifications
+ALTER COLUMN Link NVARCHAR(200) NULL;
+
+-- Kiểm tra kết quả
+SELECT COLUMN_NAME, IS_NULLABLE, DATA_TYPE 
+FROM INFORMATION_SCHEMA.COLUMNS 
+WHERE TABLE_NAME = 'Projects' AND COLUMN_NAME = 'ProfessorComment';
+
+SELECT COLUMN_NAME, IS_NULLABLE, DATA_TYPE 
+FROM INFORMATION_SCHEMA.COLUMNS 
+WHERE TABLE_NAME = 'Notifications' AND COLUMN_NAME = 'Link';

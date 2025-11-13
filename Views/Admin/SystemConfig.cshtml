@@ -1,0 +1,137 @@
+﻿@model IEnumerable<Duan_CNPM.Models.SystemConfig>
+@{
+    ViewData["Title"] = "Cấu hình hệ thống";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h2>Cấu hình hệ thống</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Danh sách cấu hình</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Tên cấu hình</th>
+                                    <th>Giá trị</th>
+                                    <th>Mô tả</th>
+                                    <th>Cập nhật</th>
+                                    <th>Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var config in Model)
+                                {
+                                    <tr>
+                                        <td><strong>@config.ConfigKey</strong></td>
+                                        <td>
+                                            <input type="text"
+                                                   class="form-control form-control-sm"
+                                                   id="value_@config.ConfigID"
+                                                   value="@config.ConfigValue">
+                                        </td>
+                                        <td>
+                                            <small class="text-muted">@config.Description</small>
+                                        </td>
+                                        <td>
+                                            <small>@config.UpdatedDate.ToString("dd/MM/yyyy")</small>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-sm btn-primary"
+                                                    onclick="updateConfig(@config.ConfigID)">
+                                                <i class="bi bi-save"></i> Lưu
+                                            </button>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audit Logs -->
+            <div class="card mt-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Nhật ký hệ thống</h5>
+                    <a href="@Url.Action("AuditLogs")" class="btn btn-sm btn-primary">
+                        Xem tất cả
+                    </a>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted">
+                        Xem nhật ký hoạt động của người dùng trong hệ thống
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Panel -->
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Hướng dẫn</h5>
+                </div>
+                <div class="card-body">
+                    <h6>Năm học hiện tại</h6>
+                    <p class="small">Năm học đang áp dụng cho các đề tài mới</p>
+
+                    <h6>Học kỳ hiện tại</h6>
+                    <p class="small">Học kỳ đang áp dụng (1 hoặc 2)</p>
+
+                    <h6>Kích thước file tối đa</h6>
+                    <p class="small">Giới hạn dung lượng file upload (bytes). Mặc định: 10MB = 10485760 bytes</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header bg-warning">
+                    <h5 class="mb-0">Lưu ý</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="mb-0">
+                        <li>Thay đổi cấu hình có thể ảnh hưởng đến toàn bộ hệ thống</li>
+                        <li>Kiểm tra kỹ trước khi lưu</li>
+                        <li>Nhật ký sẽ ghi lại mọi thay đổi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function updateConfig(configId) {
+            const value = $('#value_' + configId).val();
+
+            if(!value) {
+                alert('Giá trị không được để trống!');
+                return;
+            }
+
+            $.post('@Url.Action("UpdateConfig")', {
+                id: configId,
+                value: value
+            })
+            .done(function(res) {
+                alert(res.message);
+                if(res.success) {
+                    location.reload();
+                }
+            })
+            .fail(function() {
+                alert('Có lỗi xảy ra!');
+            });
+        }
+    </script>
+}
