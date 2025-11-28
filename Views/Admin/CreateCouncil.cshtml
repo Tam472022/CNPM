@@ -1,0 +1,286 @@
+﻿@model Duan_CNPM.Models.Council
+@{
+    ViewData["Title"] = "Tạo hội đồng mới";
+    var proposedProjects = ViewBag.ProposedProjects as List<Duan_CNPM.Models.Project> ?? new List<Duan_CNPM.Models.Project>();
+    var preSelectedProjectId = ViewBag.PreSelectedProjectId as int?;
+}
+
+<div class="container-fluid">
+    <h2 class="text-center mt-4">@ViewData["Title"]</h2>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show">
+            <i class="bi bi-exclamation-triangle"></i> @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show">
+            <i class="bi bi-check-circle"></i> @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (!proposedProjects.Any())
+    {
+        <div class="alert alert-warning">
+            <h5><i class="bi bi-exclamation-triangle"></i> Không có đề tài nào được đề xuất!</h5>
+            <p class="mb-2">Hiện tại chưa có đề tài nào được giảng viên đề xuất đưa vào hội đồng bảo vệ.</p>
+            <a href="@Url.Action("Councils")" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Quay lại
+            </a>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info mb-4">
+            <i class="bi bi-info-circle"></i>
+            <strong>Lưu ý:</strong> Chỉ có thể chọn các đề tài đã được giảng viên đề xuất (@proposedProjects.Count đề tài)
+        </div>
+
+        <form asp-action="CreateCouncil" method="post">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label asp-for="Name" class="form-label">
+                        <i class="bi bi-card-heading"></i> Tên hội đồng <span class="text-danger">*</span>
+                    </label>
+                    <input asp-for="Name" class="form-control" placeholder="Ví dụ: Hội đồng bảo vệ Học kỳ 1 - 2025" required />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="DefenseDate" class="form-label">
+                        <i class="bi bi-calendar-event"></i> Ngày bảo vệ <span class="text-danger">*</span>
+                    </label>
+                    <input asp-for="DefenseDate" type="datetime-local" class="form-control" required />
+                    <span asp-validation-for="DefenseDate" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label asp-for="Location" class="form-label">
+                        <i class="bi bi-geo-alt"></i> Địa điểm <span class="text-danger">*</span>
+                    </label>
+                    <input asp-for="Location" class="form-control" placeholder="Ví dụ: Phòng 301 - Nhà A1" required />
+                    <span asp-validation-for="Location" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Description" class="form-label">
+                        <i class="bi bi-card-text"></i> Mô tả
+                    </label>
+                    <input asp-for="Description" class="form-control" placeholder="Nhập mô tả (tùy chọn)" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">
+                        <i class="bi bi-people"></i> Thành viên hội đồng
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Chọn giảng viên <span class="text-danger">*</span></label>
+                            <select name="memberIds" multiple class="form-select" size="8" required>
+                                @foreach (var prof in ViewBag.Professors)
+                                {
+                                    <option value="@prof.UserID">@prof.FullName</option>
+                                }
+                            </select>
+                            <small class="text-muted">Ctrl + click để chọn nhiều giảng viên</small>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Vai trò tương ứng <span class="text-danger">*</span></label>
+                            <textarea name="memberRoles" class="form-control" rows="8" required
+                                  placeholder="Nhập vai trò theo thứ tự, mỗi vai trò một dòng:&#13;&#10;Chairman&#13;&#10;Secretary&#13;&#10;Member&#13;&#10;Member"></textarea>
+                            <small class="text-muted">
+                                <strong>Vai trò phổ biến:</strong><br>
+                                • Chairman (Chủ tịch)<br>
+                                • Secretary (Thư ký)<br>
+                                • Member (Thành viên)
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4 border-warning">
+                <div class="card-header bg-warning text-dark">
+                    <h5 class="mb-0">
+                        <i class="bi bi-star-fill"></i> Chọn đề tài được đề xuất
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted mb-3">
+                        <i class="bi bi-info-circle"></i>
+                        Chỉ có thể chọn các đề tài đã được giảng viên đề xuất bảo vệ
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered">
+                            <thead class="table-light">
+                                <tr>
+                                    <th style="width: 5%">
+                                        <input type="checkbox" id="selectAll" onclick="toggleSelectAll()">
+                                    </th>
+                                    <th style="width: 35%">Tên đề tài</th>
+                                    <th style="width: 20%">Sinh viên</th>
+                                    <th style="width: 20%">GVHD</th>
+                                    <th style="width: 10%">Năm - HK</th>
+                                    <th style="width: 10%">Nhận xét</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var project in proposedProjects)
+                                {
+                                    var comment = project.ProfessorComment?.Replace("[ĐỀ XUẤT HỘI ĐỒNG]", "").Trim() ?? "";
+                                    var isPreSelected = preSelectedProjectId.HasValue && preSelectedProjectId.Value == project.ProjectID;
+
+                                    <tr class="@(isPreSelected ? "table-info" : "")">
+                                        <td class="text-center">
+                                            <input type="checkbox"
+                                                   name="projectIds"
+                                                   value="@project.ProjectID"
+                                                   class="project-checkbox"
+                                                   @(isPreSelected ? "checked" : "")>
+                                        </td>
+                                        <td>
+                                            <strong>@project.Title</strong>
+                                            @if (isPreSelected)
+                                            {
+                                                <br>
+                                    
+                                                <small class="text-info"><i class="bi bi-star"></i> Đề tài được chọn từ trang trước</small>
+                                            }
+                                        </td>
+                                        <td>
+                                            @project.Student.FullName
+                                            <br>
+                                            <small class="text-muted">@project.Student.StudentCode</small>
+                                        </td>
+                                        <td>@(project.Professor?.FullName ?? "N/A")</td>
+                                        <td class="text-center">@project.Year - HK@project.Semester</td>
+                                        <td class="text-center">
+                                            <button type="button"
+                                                    class="btn btn-sm btn-outline-info"
+                                                    onclick="showComment('@project.Title.Replace("'", "\\'")', '@comment.Replace("'", "\\'").Replace("\n", "\\n").Replace("\r", "")')">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="alert alert-warning mt-3 mb-0">
+                        <i class="bi bi-exclamation-triangle"></i>
+                        <strong>Lưu ý:</strong> Vui lòng chọn ít nhất một đề tài để tạo hội đồng
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between mb-4">
+                <a href="~/Admin/Councils" class="btn btn-secondary">
+                    <i class="bi bi-arrow-left"></i> Quay lại
+                </a>
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-check-circle"></i> Tạo hội đồng
+                </button>
+            </div>
+        </form>
+    }
+</div>
+
+<!-- Modal xem nhận xét -->
+<div class="modal fade" id="commentModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-chat-left-quote"></i> Nhận xét của giảng viên
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h6 class="text-primary mb-3">Đề tài:</h6>
+                <p id="modalTitle" class="fw-bold mb-4"></p>
+
+                <h6 class="text-primary mb-3">Nhận xét và đề xuất:</h6>
+                <div id="modalComment" class="alert alert-light border p-3" style="white-space: pre-wrap;"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        // Toggle select all checkboxes
+        function toggleSelectAll() {
+            const selectAll = document.getElementById('selectAll');
+            const checkboxes = document.querySelectorAll('.project-checkbox');
+            checkboxes.forEach(cb => cb.checked = selectAll.checked);
+        }
+
+        // Show comment modal
+        function showComment(title, comment) {
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalComment').textContent = comment || 'Không có nhận xét';
+
+            const modal = new bootstrap.Modal(document.getElementById('commentModal'));
+            modal.show();
+        }
+
+        // Form validation
+        document.querySelector('form')?.addEventListener('submit', function(e) {
+            const selectedProjects = document.querySelectorAll('.project-checkbox:checked');
+            if (selectedProjects.length === 0) {
+                e.preventDefault();
+                alert('Vui lòng chọn ít nhất một đề tài!');
+                return false;
+            }
+
+            const memberIds = document.querySelector('select[name="memberIds"]').selectedOptions.length;
+            const memberRoles = document.querySelector('textarea[name="memberRoles"]').value.trim().split('\n').filter(r => r.trim());
+
+            if (memberIds === 0) {
+                e.preventDefault();
+                alert('Vui lòng chọn ít nhất một giảng viên!');
+                return false;
+            }
+
+            if (memberRoles.length !== memberIds) {
+                e.preventDefault();
+                alert(`Số lượng vai trò (${memberRoles.length}) phải khớp với số lượng giảng viên được chọn (${memberIds})!`);
+                return false;
+            }
+        });
+    </script>
+}
+
+<style>
+    .table-info {
+        background-color: #cfe2ff;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+
+    .form-select[multiple] {
+        height: auto;
+    }
+
+    .card {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+</style>

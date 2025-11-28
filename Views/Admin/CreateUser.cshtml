@@ -1,0 +1,294 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Tạo người dùng mới";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #dff6ff, #a8dfff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px 0;
+        }
+
+        .register-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+            max-width: 850px;
+            width: 100%;
+        }
+
+        .register-header {
+            background: linear-gradient(135deg,#0d1b3d 0%,#1a3a6d 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .register-header h2 {
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .register-header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }
+
+        .register-body {
+            padding: 40px;
+        }
+
+        .form-label {
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .form-control, .form-select {
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102,126,234,0.25);
+        }
+
+        .btn-register {
+            background: linear-gradient(135deg,#0d1b3d 0%,#1a3a6d 100%);
+            border: none;
+            color: white;
+            padding: 12px 40px;
+            border-radius: 8px;
+            font-weight: 500;
+            width: 100%;
+            transition: transform 0.2s;
+        }
+
+        .btn-register:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102,126,234,0.4);
+            color: white;
+        }
+
+        .additional-fields {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .alert {
+            border-radius: 10px;
+            border: none;
+        }
+
+        .required {
+            color: #dc3545;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #1e3c72;
+            color: #1e3c72;
+            padding: 10px 30px;
+            border-radius: 8px;
+            font-weight: 500;
+            width: 100%;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(135deg,#0d1b3d 0%,#1a3a6d 100%);
+            color: white;
+        }
+
+        .password-strength {
+            height: 6px;
+            width: 100%;
+            background: #e9ecef;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        .strength-bar {
+            height: 100%;
+            width: 0%;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-header">
+            <h2><i class="bi bi-person-plus-fill"></i> Tạo người dùng mới</h2>
+            <p>Điền thông tin để thêm người dùng vào hệ thống</p>
+        </div>
+        <div class="register-body">
+
+            @* Hiển thị thông báo *@
+            @if (ViewBag.Message != null)
+            {
+                var isSuccess = ViewBag.Message.ToString().Contains("thành công");
+                <div class="alert @(isSuccess ? "alert-success" : "alert-danger") alert-dismissible fade show" role="alert">
+                    <i class="bi @(isSuccess ? "bi-check-circle-fill" : "bi-exclamation-triangle-fill")"></i>
+                    @ViewBag.Message
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+
+            <form method="post" asp-action="CreateUser" asp-controller="Admin" id="createUserForm" onsubmit="return validateForm()">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Tên đăng nhập <span class="required">*</span></label>
+                        <input type="text" class="form-control" name="Username" required minlength="3" maxlength="50">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Họ và tên <span class="required">*</span></label>
+                        <input type="text" class="form-control" name="FullName" required maxlength="100">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Mật khẩu <span class="required">*</span></label>
+                        <input type="password" class="form-control" name="Password" required minlength="6" onkeyup="checkPasswordStrength()">
+                        <div class="password-strength" id="passwordStrength">
+                            <div class="strength-bar" id="strengthBar"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Xác nhận mật khẩu <span class="required">*</span></label>
+                        <input type="password" class="form-control" name="ConfirmPassword" required minlength="6">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="form-label">Vai trò <span class="required">*</span></label>
+                        <select class="form-select" name="Role" required onchange="showAdditionalFields()">
+                            <option value="">-- Chọn vai trò --</option>
+                            <option value="Student">Sinh viên</option>
+                            <option value="Professor">Giảng viên</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Student fields -->
+                <div id="studentFields" class="additional-fields">
+                    <h6 class="mb-3"><i class="bi bi-info-circle"></i> Thông tin sinh viên</h6>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label">Mã sinh viên</label>
+                            <input type="text" class="form-control" name="StudentCode">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label">Chuyên ngành</label>
+                            <input type="text" class="form-control" name="StudentMajor">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label">Số điện thoại</label>
+                            <input type="tel" class="form-control" name="StudentPhone">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" name="StudentEmail">
+                    </div>
+                </div>
+
+                <!-- Professor fields -->
+                <div id="professorFields" class="additional-fields">
+                    <h6 class="mb-3"><i class="bi bi-info-circle"></i> Thông tin giảng viên</h6>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" name="ProfessorEmail">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Số điện thoại</label>
+                            <input type="tel" class="form-control" name="ProfessorPhone">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Chuyên môn</label>
+                        <input type="text" class="form-control" name="ProfessorMajor">
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-2 d-grid">
+                        <button type="submit" class="btn btn-register"><i class="bi bi-check-circle"></i> Tạo người dùng</button>
+                    </div>
+                    <div class="col-md-6 mb-2 d-grid">
+                        <a href="@Url.Action("Users", "Admin")" class="btn btn-secondary"><i class="bi bi-arrow-left-circle"></i> Quay lại danh sách</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showAdditionalFields() {
+            const role = document.querySelector('select[name="Role"]').value;
+            document.getElementById('studentFields').style.display = role === 'Student' ? 'block' : 'none';
+            document.getElementById('professorFields').style.display = role === 'Professor' ? 'block' : 'none';
+        }
+
+        function checkPasswordStrength() {
+            const password = document.querySelector('input[name="Password"]').value;
+            const strengthBar = document.getElementById('strengthBar');
+            let strength = 0;
+            if (password.length >= 6) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/\d/.test(password)) strength++;
+            if (/[^a-zA-Z0-9]/.test(password)) strength++;
+            let percentage = strength / 5 * 100;
+            let color = '#dc3545';
+            if (percentage >= 80) color = '#198754';
+            else if (percentage >= 60) color = '#0dcaf0';
+            else if (percentage >= 40) color = '#ffc107';
+            strengthBar.style.width = percentage + '%';
+            strengthBar.style.backgroundColor = color;
+        }
+
+        function validateForm() {
+            const username = document.getElementById('Username').value.trim();
+            const password = document.getElementById('Password').value;
+            const confirm = document.getElementById('ConfirmPassword').value;
+            const role = document.getElementById('Role').value;
+            if (/\s/.test(username)) {
+                alert("Tên đăng nhập không được chứa khoảng trắng!");
+                return false;
+            }
+            if (password.length < 6) {
+                alert("Mật khẩu phải >= 6 ký tự");
+                return false;
+            }
+            if (password !== confirm) {
+                alert("Mật khẩu xác nhận không khớp!");
+                return false;
+            }
+            if (!role) {
+                alert("Vui lòng chọn vai trò!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

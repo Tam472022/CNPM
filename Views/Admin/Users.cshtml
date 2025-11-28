@@ -1,0 +1,308 @@
+﻿@model IEnumerable<Duan_CNPM.Models.User>
+@{
+    ViewData["Title"] = "Quản lý người dùng";
+}
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-12 d-flex justify-content-between align-items-center" style="margin-top: 30px;">
+            <h2 class="m-0">Quản lý người dùng</h2>
+            <a href="~/Admin/Index" style="background-color:darkblue;" class="btn btn-success">
+                <i class="bi bi-return"></i> Quay lại
+            </a>
+        </div>
+    </div>
+
+    <!-- Filter & Search -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <form method="get" asp-action="Users" class="row g-3">
+                <div class="col-md-3">
+                    <label class="form-label">Vai trò</label>
+                    <select name="role" class="form-select">
+                        <option value="">Tất cả</option>
+                        <option value="Student" selected="@(ViewBag.Role == "Student")">Sinh viên</option>
+                        <option value="Professor" selected="@(ViewBag.Role == "Professor")">Giảng viên</option>
+                        <option value="Admin" selected="@(ViewBag.Role == "Admin")">Admin</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Tìm kiếm</label>
+                    <input type="text" name="search" class="form-control"
+                           placeholder="Tên, email, username..." value="@ViewBag.Search">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">&nbsp;</label>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-search"></i> Tìm kiếm
+                        </button>
+                        <a href="@Url.Action("CreateUser")" class="btn btn-success">
+                            <i class="bi bi-plus-circle"></i> Thêm mới
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Users Table -->
+    <div class="card" style="margin-bottom: 20px;">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Họ tên</th>
+                            <th>Email</th>
+                            <th>Vai trò</th>
+                            <th>Trạng thái</th>
+                            <th>Ngày tạo</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in Model)
+                        {
+                            <tr>
+                                <td>@user.Username</td>
+                                <td>@user.FullName</td>
+                                <td>@user.Email</td>
+                                <td>
+                                    @switch (user.Role)
+                                    {
+                                        case "Admin":
+                                            <span class="badge bg-danger">Admin</span>
+                                            break;
+                                        case "Professor":
+                                            <span class="badge bg-info">Giảng viên</span>
+                                            break;
+                                        case "Student":
+                                            <span class="badge bg-primary">Sinh viên</span>
+                                            break;
+                                    }
+                                </td>
+
+                                <td>
+                                    @if (user.IsActive)
+                                    {
+                                        <span class="badge bg-success">Hoạt động</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary">Khóa</span>
+                                    }
+                                </td>
+
+                                <td>@user.CreatedDate.ToString("dd/MM/yyyy")</td>
+
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button onclick="editUser(@user.UserID)" class="btn btn-warning">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                        <button onclick="resetPassword(@user.UserID)" class="btn btn-info">
+                                            <i class="bi bi-key"></i>
+                                        </button>
+                                        @if (user.Role != "Admin")
+                                        {
+                                            <button onclick="deleteUser(@user.UserID)" class="btn btn-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Edit Modal -->
+<div class="modal fade" id="editUserModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Sửa thông tin người dùng</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="editUserId">
+                <div class="mb-3">
+                    <label class="form-label">Chọn thông tin muốn sửa</label>
+                    <select id="editFieldSelect" class="form-select" onchange="onChangeEditField()">
+                        <option value="">-- Chọn --</option>
+                        <option value="FullName">Họ tên</option>
+                        <option value="Email">Email</option>
+                        <option value="PhoneNumber">Số điện thoại</option>
+                        <option value="Major">Chuyên ngành/Chuyên môn</option>
+                    </select>
+                </div>
+                <div id="editInputWrapper" class="mb-3" style="display:none;">
+                    <label id="editInputLabel" class="form-label"></label>
+                    <input type="text" id="editInputValue" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button class="btn btn-primary" onclick="submitEditUser()">Lưu thay đổi</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Reset Password Modal -->
+<div class="modal fade" id="resetPasswordModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Đặt lại mật khẩu</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <input type="hidden" id="resetUserId">
+
+                <div class="mb-3">
+                    <label class="form-label">Mật khẩu mới</label>
+                    <input type="password" id="newPassword" class="form-control" placeholder="Nhập mật khẩu mới">
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button class="btn btn-primary" onclick="submitResetPassword()">Đặt lại</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Script -->
+@section Scripts {
+    <script>
+
+        function editUser(id) {
+            $("#editUserId").val(id);
+            $("#editFieldSelect").val("");
+            $("#editInputWrapper").hide();
+            $("#editUserModal").modal("show");
+        }
+
+        function onChangeEditField() {
+            let field = $("#editFieldSelect").val();
+            if (!field) {
+                $("#editInputWrapper").hide();
+                return;
+            }
+            let label = "";
+            switch (field) {
+                case "FullName": label = "Nhập họ tên mới"; break;
+                case "Email": label = "Nhập email mới"; break;
+                case "PhoneNumber": label = "Nhập số điện thoại mới"; break;
+                case "Major": label = "Nhập chuyên ngành (Sinh viên)"; break;
+            }
+            $("#editInputLabel").text(label);
+            $("#editInputValue").val("");
+            $("#editInputWrapper").show();
+        }
+
+        function submitEditUser() {
+            const data = {
+                id: parseInt($("#editUserId").val()),
+                field: $("#editFieldSelect").val(),
+                value: $("#editInputValue").val().trim()
+            };
+
+            if (!data.field) {
+                alert("Bạn chưa chọn mục cần sửa!");
+                return;
+            }
+
+            if (!data.value) {
+                alert("Giá trị không được để trống!");
+                return;
+            }
+
+            $.ajax({
+                url: '@Url.Action("EditUserField")',
+                type: 'POST',
+                data: data,
+                success: function(res) {
+                    alert(res.message);
+                    if (res.success) {
+                        $("#editUserModal").modal("hide");
+                        // Lấy đúng row theo id
+                        let row = $("#userRow_" + data.id);  // chú ý dấu _
+                        // Cập nhật giá trị trong bảng
+                        switch (data.field) {
+                            case "FullName":
+                                row.find(".userFullName").text(data.value);
+                                break;
+                            case "Email":
+                                row.find(".userEmail").text(data.value);
+                                break;
+                            case "Phone":
+                                row.find(".userPhone").text(data.value);
+                                break;
+                            case "Major":
+                                row.find(".userMajor").text(data.value);
+                                break;
+                            default:
+                                console.warn("Field không xác định:", data.field);
+                                break;
+                        }
+                        location.reload();
+                    }
+                },
+                error: function() {
+                    alert("Có lỗi xảy ra!");
+                }
+            });
+        }
+
+        function resetPassword(userId) {
+            $("#resetUserId").val(userId);
+            $("#newPassword").val("");
+            $("#resetPasswordModal").modal("show");
+        }
+
+        // Thay đổi mật khẩu:
+        function submitResetPassword() {
+            const userId = $("#resetUserId").val();
+            const newPassword = $("#newPassword").val();
+            if (newPassword.length < 6) {
+                alert("Mật khẩu phải tối thiểu 6 ký tự!");
+                return;
+            }
+            $.post('@Url.Action("ResetPassword")', {
+                id: userId,
+                newPassword: newPassword
+            })
+            .done(res => {
+                alert(res.message);
+                if (res.success) $("#resetPasswordModal").modal("hide");
+            })
+            .fail(() => alert("Lỗi khi đặt lại mật khẩu!"));
+        }
+
+        function deleteUser(userId) {
+            if (!confirm("Bạn chắc chắn muốn xóa?")) return;
+            $.post('@Url.Action("DeleteUser")', { id: userId })
+            .done(res => {
+                alert(res.message);
+                if (res.success) location.reload();
+            })
+            .fail(() => alert("Có lỗi xảy ra!"));
+        }
+
+    </script>
+}

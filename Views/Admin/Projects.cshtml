@@ -1,0 +1,380 @@
+﻿@model IEnumerable<Duan_CNPM.Models.Project>
+@{
+    ViewData["Title"] = "Quản lý đề tài";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-12 d-flex justify-content-between align-items-center" style="margin-top: 30px;">
+            <h2 class="m-0">Quản lý đề tài</h2>
+            <a href="~/Admin/Index" style="background-color:darkblue;" class="btn btn-success">
+                <i class="bi bi-return"></i> Quay lại
+            </a>
+        </div>
+    </div>
+
+    <!-- Filter -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <form method="get" asp-action="Projects" class="row g-3">
+                <div class="col-md-2">
+                    <label class="form-label">Trạng thái</label>
+                    <select name="status" class="form-select">
+                        <option value="">Tất cả</option>
+                        <option value="Pending">Chờ duyệt</option>
+                        <option value="Approved">Đã duyệt</option>
+                        <option value="InProgress">Đang thực hiện</option>
+                        <option value="Completed">Hoàn thành</option>
+                        <option value="Rejected">Từ chối</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label">Năm</label>
+                    <select name="year" class="form-select">
+                        <option value="0">Tất cả</option>
+                        @for (int y = DateTime.Now.Year; y >= 2020; y--)
+                        {
+                            <option value="@y">@y</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-5">
+                    <label class="form-label">Tìm kiếm</label>
+                    <input type="text" name="search" class="form-control"
+                           placeholder="Tên đề tài, sinh viên...">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">&nbsp;</label>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-search"></i> Tìm
+                        </button>
+                        <a href="@Url.Action("ExportProjects")" class="btn btn-success">
+                            <i class="bi bi-file-excel"></i> Export
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Thông báo đề xuất bảo vệ -->
+    @{
+        var proposedProjects = Model.Where(p => 
+            p.Status == "Completed" && 
+            p.CouncilID == null && 
+            !string.IsNullOrEmpty(p.ProfessorComment) && 
+            p.ProfessorComment.Contains("[ĐỀ XUẤT HỘI ĐỒNG]")
+        ).ToList();
+    }
+
+    @if (proposedProjects.Any())
+    {
+        <div class="alert alert-warning border-start border-4 border-warning">
+            <h5 class="alert-heading">
+                <i class="bi bi-star-fill"></i> Có @proposedProjects.Count đề tài được đề xuất đưa vào hội đồng bảo vệ
+            </h5>
+            <p class="mb-2">Các giảng viên đã đề xuất đưa một số đề tài vào hội đồng bảo vệ. Vui lòng xem xét!</p>
+            <hr>
+            <ul class="mb-0">
+                @foreach (var p in proposedProjects.Take(5))
+                {
+                    <li>
+                        <strong>@p.Title</strong> - SV: @p.Student.FullName - GVHD: @(p.Professor?.FullName ?? "N/A")
+                    </li>
+                }
+            </ul>
+            @if (proposedProjects.Count > 5)
+            {
+                <small class="text-muted">... và @(proposedProjects.Count - 5) đề tài khác</small>
+            }
+        </div>
+    }
+
+    <!-- Projects Table -->
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Mã SV</th>
+                            <th>Sinh viên</th>
+                            <th>Tên đề tài</th>
+                            <th>GVHD</th>
+                            <th>Trạng thái</th>
+                            <th>Năm</th>
+                            <th>Điểm</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var project in Model)
+                        {
+                            var isProposed = project.Status == "Completed" && 
+                                           project.CouncilID == null && 
+                                           !string.IsNullOrEmpty(project.ProfessorComment) && 
+                                           project.ProfessorComment.Contains("[ĐỀ XUẤT HỘI ĐỒNG]");
+                            
+                            <tr class="@(isProposed ? "table-warning" : "")">
+                                <td>@project.Student.StudentCode</td>
+                                <td>@project.Student.FullName</td>
+                                <td>
+                                    @project.Title
+                                    @if (isProposed)
+                                    {
+                                        <br>
+                                        <small class="text-warning">
+                                            <i class="bi bi-star-fill"></i> Được đề xuất bảo vệ
+                                        </small>
+                                    }
+                                </td>
+                                <td>@(project.Professor?.FullName ?? "Chưa có")</td>
+                                <td>
+                                    @if (isProposed)
+                                    {
+                                        <span class="badge bg-warning text-dark">
+                                            <i class="bi bi-star-fill"></i> Đề xuất bảo vệ
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        @switch (project.Status)
+                                        {
+                                            case "Pending":
+                                                <span class="badge bg-warning">Chờ duyệt</span>
+                                                break;
+                                            case "Approved":
+                                                <span class="badge bg-info">Đã duyệt</span>
+                                                break;
+                                            case "InProgress":
+                                                <span class="badge bg-primary">Đang thực hiện</span>
+                                                break;
+                                            case "Completed":
+                                                <span class="badge bg-success">Hoàn thành</span>
+                                                break;
+                                            case "Rejected":
+                                                <span class="badge bg-danger">Từ chối</span>
+                                                break;
+                                        }
+                                    }
+                                </td>
+                                <td>@project.Year - Học kì @project.Semester</td>
+                                <td>
+                                    @if (project.FinalScore.HasValue)
+                                    {
+                                        <strong>@project.FinalScore.Value.ToString("F2")</strong>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">-</span>
+                                    }
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <td>
+    <div class="btn-group btn-group-sm">
+        <!-- Nút xem chi tiết -->
+        <a href="@Url.Action("ProjectDetail", "Admin", new { id = project.ProjectID })" 
+           class="btn btn-info" 
+           title="Xem chi tiết">
+            <i class="bi bi-eye"></i>
+        </a>
+        
+        @if (project.ProfessorID == null)
+        {
+            <button onclick="showAssignModal(@project.ProjectID)"
+                    class="btn btn-primary" title="Phân công GVHD">
+                <i class="bi bi-person-plus"></i>
+            </button>
+        }
+        
+        @if (isProposed)
+        {
+            <button onclick="showProposalDetail(@project.ProjectID, '@project.Title.Replace("'", "\\'")')"
+                    class="btn btn-warning" title="Xem đề xuất">
+                <i class="bi bi-eye"></i>
+            </button>
+            <button onclick="addToCouncilQuick(@project.ProjectID)"
+                    class="btn btn-success" title="Thêm vào hội đồng">
+                <i class="bi bi-award"></i>
+            </button>
+        }
+    </div>
+</td>
+                                        @if (project.ProfessorID == null)
+                                        {
+                                            <button onclick="showAssignModal(@project.ProjectID)"
+                                                    class="btn btn-primary" title="Phân công GVHD">
+                                                <i class="bi bi-person-plus"></i>
+                                            </button>
+                                        }
+                                        
+                                        @if (isProposed)
+                                        {
+                                            <button onclick="showProposalDetail(@project.ProjectID, '@project.Title.Replace("'", "\\'")')"
+                                                    class="btn btn-warning" title="Xem đề xuất">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button onclick="addToCouncilQuick(@project.ProjectID)"
+                                                    class="btn btn-success" title="Thêm vào hội đồng">
+                                                <i class="bi bi-award"></i>
+                                            </button>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Assign Professor Modal -->
+<div class="modal fade" id="assignModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Phân công giảng viên</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="assignProjectId">
+                <div class="mb-3">
+                    <label class="form-label">Chọn giảng viên</label>
+                    <select id="assignProfessorId" class="form-select">
+                        <option value="">-- Chọn --</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary" onclick="submitAssign()">
+                    Phân công
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Proposal Detail Modal -->
+<div class="modal fade" id="proposalModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-warning">
+                <h5 class="modal-title">
+                    <i class="bi bi-star-fill"></i> Chi tiết đề xuất hội đồng
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="proposalProjectId">
+                <h6 class="text-primary">Tên đề tài:</h6>
+                <p id="proposalProjectTitle" class="mb-3"></p>
+                
+                <h6 class="text-primary">Nhận xét và đề xuất từ giảng viên:</h6>
+                <div id="proposalComment" class="alert alert-light border"></div>
+                
+                <p class="text-muted mb-0">
+                    <i class="bi bi-info-circle"></i> 
+                    Bạn có thể tạo hội đồng mới hoặc thêm đề tài này vào hội đồng hiện có.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <a href="/Admin/CreateCouncil" class="btn btn-success">
+                    <i class="bi bi-plus-circle"></i> Tạo hội đồng mới
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function showAssignModal(projectId) {
+            $('#assignProjectId').val(projectId);
+            // Load professors list
+            $.get('/Admin/GetProfessors', function(data) {
+                const select = $('#assignProfessorId');
+                select.empty().append('<option value="">-- Chọn --</option>');
+                data.forEach(p => {
+                    select.append(`<option value="${p.userID}">${p.fullName}</option>`);
+                });
+            });
+            $('#assignModal').modal('show');
+        }
+
+        function submitAssign() {
+            const projectId = $('#assignProjectId').val();
+            const professorId = $('#assignProfessorId').val();
+
+            if(!professorId) {
+                alert('Vui lòng chọn giảng viên!');
+                return;
+            }
+
+            $.post('@Url.Action("AssignProfessor")', {
+                projectId: projectId,
+                professorId: professorId
+            })
+            .done(function(res) {
+                alert(res.message);
+                if(res.success) {
+                    location.reload();
+                }
+            })
+            .fail(function() {
+                alert('Có lỗi xảy ra!');
+            });
+        }
+
+        function showProposalDetail(projectId, projectTitle) {
+            $('#proposalProjectId').val(projectId);
+            $('#proposalProjectTitle').text(projectTitle);
+            
+            // Lấy comment từ server
+            $.get('/Admin/Projects', function() {
+                // Tìm project trong Model để lấy comment
+                const projects = @Html.Raw(Json.Serialize(Model.Select(p => new { 
+                    p.ProjectID, 
+                    p.ProfessorComment 
+                })));
+                
+                const project = projects.find(p => p.projectID == projectId);
+                if (project && project.professorComment) {
+                    // Loại bỏ tag [ĐỀ XUẤT HỘI ĐỒNG] để hiển thị
+                    const comment = project.professorComment.replace('[ĐỀ XUẤT HỘI ĐỒNG]', '').trim();
+                    $('#proposalComment').html(comment);
+                }
+            });
+            
+            $('#proposalModal').modal('show');
+        }
+
+        function addToCouncilQuick(projectId) {
+            if (!confirm('Chuyển đến trang tạo hội đồng để thêm đề tài này?')) return;
+            window.location.href = '/Admin/CreateCouncil';
+        }
+    </script>
+}
+
+<style>
+    .table-warning {
+        background-color: #fff3cd !important;
+    }
+    
+    .table-warning:hover {
+        background-color: #ffecb5 !important;
+    }
+    
+    .alert-warning {
+        border-radius: 8px;
+    }
+    
+    .btn-group-sm .btn {
+        padding: 0.25rem 0.5rem;
+    }
+</style>

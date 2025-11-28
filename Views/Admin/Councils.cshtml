@@ -1,0 +1,240 @@
+﻿@model IEnumerable<Duan_CNPM.Models.Council>
+@{
+    ViewData["Title"] = "Quản lý hội đồng";
+
+    // Lấy danh sách đề tài được đề xuất
+    var proposedProjects = ViewBag.ProposedProjects as List<Duan_CNPM.Models.Project> ?? new List<Duan_CNPM.Models.Project>();
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-12 d-flex justify-content-between align-items-center">
+            <h2>Quản lý hội đồng</h2>
+            <div class="d-flex gap-2">
+                <a href="~/Admin/Index" style="background-color:darkblue;" class="btn btn-success">
+                    <i class="bi bi-return"></i> Quay lại
+                </a>
+                <a href="@Url.Action("CreateCouncil")" class="btn btn-success @(proposedProjects.Count == 0 ? "disabled" : "")">
+                    <i class="bi bi-plus-circle"></i> Tạo hội đồng mới
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ THÊM PHẦN ĐỀ XUẤT BẢO VỆ -->
+    @if (proposedProjects.Any())
+    {
+        <div class="card mb-4 border-warning">
+            <div class="card-header bg-warning text-dark">
+                <h5 class="mb-0">
+                    <i class="bi bi-star-fill"></i>
+                    Đề tài được đề xuất bảo vệ (@proposedProjects.Count)
+                </h5>
+            </div>
+            <div class="card-body">
+                <p class="text-muted mb-3">
+                    <i class="bi bi-info-circle"></i>
+                    Các giảng viên đã đề xuất những đề tài sau đưa vào hội đồng bảo vệ.
+                    Vui lòng xem xét và tạo hội đồng phù hợp.
+                </p>
+
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th style="width: 5%">STT</th>
+                                <th style="width: 25%">Tên đề tài</th>
+                                <th style="width: 15%">Sinh viên</th>
+                                <th style="width: 15%">GVHD</th>
+                                <th style="width: 10%">Năm - HK</th>
+                                <th style="width: 20%">Nhận xét GVHD</th>
+                                <th style="width: 10%">Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < proposedProjects.Count; i++)
+                            {
+                                var project = proposedProjects[i];
+                                var comment = project.ProfessorComment?.Replace("[ĐỀ XUẤT HỘI ĐỒNG]", "").Trim() ?? "";
+
+                                <tr class="table-warning">
+                                    <td class="text-center">@(i + 1)</td>
+                                    <td>
+                                        <strong>@project.Title</strong>
+                                        <br>
+                                        <small class="text-muted">
+                                            Mã: @project.Student.StudentCode
+                                        </small>
+                                    </td>
+                                    <td>@project.Student.FullName</td>
+                                    <td>
+                                        @(project.Professor?.FullName ?? "Chưa có")
+                                        <br>
+                                        <small class="text-success">
+                                            <i class="bi bi-check-circle"></i> Đã đề xuất
+                                        </small>
+                                    </td>
+                                    <td class="text-center">
+                                        @project.Year - HK@project.Semester
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-info"
+                                                onclick="showCommentModal('@project.Title.Replace("'", "\\'")', '@comment.Replace("'", "\\'").Replace("\n", "\\n").Replace("\r", "")')">
+                                            <i class="bi bi-eye"></i> Xem chi tiết
+                                        </button>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="@Url.Action("CreateCouncil", new { projectId = project.ProjectID })"
+                                           class="btn btn-sm btn-primary">
+                                            <i class="bi bi-plus-circle"></i> Tạo hội đồng
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="alert alert-info mt-3 mb-0">
+                    <i class="bi bi-lightbulb"></i>
+                    <strong>Lưu ý:</strong> Chỉ có thể tạo hội đồng với các đề tài đã được giảng viên đề xuất ở bảng trên.
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            <i class="bi bi-info-circle"></i>
+            <strong>Chưa có đề tài nào được đề xuất bảo vệ</strong>
+            <p class="mb-0">Khi giảng viên đề xuất đưa đề tài vào hội đồng bảo vệ, chúng sẽ hiển thị tại đây.</p>
+        </div>
+    }
+
+    <!-- Danh sách hội đồng hiện có -->
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="mb-3">
+                <i class="bi bi-list-ul"></i> Danh sách hội đồng (@Model.Count())
+            </h4>
+        </div>
+
+        @foreach (var council in Model)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white d-flex justify-content-between">
+                        <h5 class="mb-0">@council.Name</h5>
+                        <span class="badge bg-light text-dark">
+                            @council.Projects.Count đề tài
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            <strong><i class="bi bi-calendar"></i> Ngày bảo vệ:</strong>
+                            @council.DefenseDate.ToString("dd/MM/yyyy HH:mm")
+                        </p>
+                        <p>
+                            <strong><i class="bi bi-geo-alt"></i> Địa điểm:</strong>
+                            @council.Location
+                        </p>
+                        <p>
+                            <strong><i class="bi bi-people"></i> Thành viên:</strong>
+                            @council.CouncilMembers.Count người
+                        </p>
+
+                        <hr>
+
+                        <div class="mb-2">
+                            <strong>Danh sách thành viên:</strong>
+                        </div>
+                        <ul class="list-unstyled mb-3">
+                            @foreach (var member in council.CouncilMembers)
+                            {
+                                <li class="mb-1">
+                                    <i class="bi bi-person-badge"></i>
+                                    @member.Professor.FullName
+                                    <span class="badge bg-info">@member.Role</span>
+                                </li>
+                            }
+                        </ul>
+
+                        <div class="d-flex gap-2">
+                            <a href="@Url.Action("CouncilDetail", new { id = council.CouncilID })"
+                               class="btn btn-primary btn-sm">
+                                <i class="bi bi-eye"></i> Chi tiết
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-footer text-muted small">
+                        Tạo ngày: @council.CreatedDate.ToString("dd/MM/yyyy")
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-secondary text-center">
+            <i class="bi bi-info-circle"></i> Chưa có hội đồng nào được tạo
+        </div>
+    }
+</div>
+
+<!-- Modal xem chi tiết nhận xét -->
+<div class="modal fade" id="commentModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-chat-left-quote"></i> Nhận xét của giảng viên
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h6 class="text-primary mb-3">Đề tài:</h6>
+                <p id="modalProjectTitle" class="mb-4 fw-bold"></p>
+
+                <h6 class="text-primary mb-3">Nhận xét và đề xuất:</h6>
+                <div id="modalComment" class="alert alert-light border p-3" style="white-space: pre-wrap;"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .table-warning {
+        background-color: #fff3cd;
+    }
+
+        .table-warning:hover {
+            background-color: #ffecb5;
+        }
+
+    .card {
+        transition: transform 0.2s;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+    .badge {
+        font-size: 0.85rem;
+    }
+</style>
+
+<script>
+    function showCommentModal(projectTitle, comment) {
+        document.getElementById('modalProjectTitle').textContent = projectTitle;
+        document.getElementById('modalComment').textContent = comment || 'Không có nhận xét';
+
+        const modal = new bootstrap.Modal(document.getElementById('commentModal'));
+        modal.show();
+    }
+</script>

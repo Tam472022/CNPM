@@ -1,0 +1,240 @@
+@model IEnumerable<Duan_CNPM.Models.Project>
+@{
+    ViewData["Title"] = "Dashboard - Sinh viên";
+}
+
+<div class="container-fluid">
+    <!-- Tiêu đề chào -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h2 class="mb-3 text-center" style="margin-top: 35px;">Xin chào, @ViewBag.UserName!</h2>
+        </div>
+    </div>
+
+    <!-- Thống kê -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card bg-primary text-white text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Tổng đề tài</h5>
+                    <h2>@ViewBag.TotalProjects</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-warning text-white text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Chờ duyệt</h5>
+                    <h2>@ViewBag.PendingProjects</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-info text-white text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Đang thực hiện</h5>
+                    <h2>@ViewBag.InProgressProjects</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-success text-white text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Hoàn thành</h5>
+                    <h2>@ViewBag.CompletedProjects</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Đề tài + Thông báo -->
+    <div class="row align-items-stretch">
+        <!-- Đề tài của tôi -->
+        <div class="col-md-8 d-flex">
+            <div class="card flex-fill d-flex flex-column shadow-sm">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <h5 class="mb-0 me-3">Đề tài của tôi</h5>
+                        <form method="get" asp-action="Dashboard" class="mb-0">
+                            @{
+                                var statuses = new Dictionary<string, string>
+                                                        {
+                                                        { "All", "Tất cả" },
+                                                        { "Pending", "Chờ duyệt" },
+                                                        { "Approved", "Đã duyệt" },
+                                                        { "InProgress", "Đang thực hiện" },
+                                                        { "Completed", "Hoàn thành" },
+                                                        { "Rejected", "Bị từ chối" }
+                                                        };
+                                // Tạo HTML string cho các <option>
+                                var optionsHtml = "";
+                                foreach (var s in statuses)
+                                {
+                                    var selected = (ViewBag.CurrentStatus == s.Key) ? " selected" : "";
+                                    optionsHtml += $"<option value=\"{s.Key}\"{selected}>{s.Value}</option>";
+                                }
+                            }
+                            <select name="status" class="form-select form-select-sm" onchange="this.form.submit()">
+                                @Html.Raw(optionsHtml)
+                            </select>
+                        </form>
+                    </div>
+                    <a href="@Url.Action("CreateProject", "Student")"
+                       class="btn btn-primary btn-sm"
+                       style="font-size: 15px; border-radius: 5px; background: linear-gradient(135deg, #dff6ff, #a8dfff); font-weight: 460; color: black;">
+                        <i class="bi bi-plus-circle"></i> Tạo đề tài mới
+                    </a>
+                </div>
+
+                <div class="card-body p-0 flex-fill d-flex flex-column">
+                    @if (Model.Any())
+                    {
+                        <div class="table-responsive flex-fill" style="max-height: 420px; overflow-y: auto;">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light sticky-top">
+                                    <tr class="text-center">
+                                        <th>Tên đề tài</th>
+                                        <th>GVHD</th>
+                                        <th>Trạng thái</th>
+                                        <th>Điểm</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var project in Model)
+                                    {
+                                        <tr>
+                                            <td>@project.Title</td>
+                                            <td>@(project.Professor?.FullName ?? "Chưa có")</td>
+                                            <td class="text-center">
+                                                @switch (project.Status)
+                                                {
+                                                    case "Pending":
+                                                        <span class="badge bg-warning text-dark">Chờ duyệt</span>
+                                                        break;
+                                                    case "Approved":
+                                                        <span class="badge bg-info">Đã duyệt</span>
+                                                        break;
+                                                    case "InProgress":
+                                                        <span class="badge bg-primary">Đang thực hiện</span>
+                                                        break;
+                                                    case "Completed":
+                                                        <span class="badge bg-success">Hoàn thành</span>
+                                                        break;
+                                                    case "Rejected":
+                                                        <span class="badge bg-danger">Bị từ chối</span>
+                                                        break;
+                                                }
+                                            </td>
+                                            <td>
+                                                @if (project.FinalScore.HasValue)
+                                                {
+                                                    <strong>@project.FinalScore.Value.ToString("F2")</strong>
+                                                }
+                                                else
+                                                {
+                                                    <span class="text-muted">Chưa có</span>
+                                                }
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="@Url.Action("ProjectDetail", "Student", new { id = project.ProjectID })"
+                                                   class="btn btn-sm btn-info">
+                                                    Chi tiết
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-info text-center m-3" style="font-size: 16px;">
+                            @switch (ViewBag.CurrentStatus as string)
+                            {
+                                case "All":
+                                    <text>Không có dự án nào. Hãy tạo đề tài mới!</text>
+                                    break;
+                                case "Pending":
+                                    <text>Hiện không có đề tài nào đang chờ duyệt.</text>
+                                    break;
+                                case "Approved":
+                                    <text>Hiện không có đề tài nào đã được duyệt.</text>
+                                    break;
+                                case "InProgress":
+                                    <text>Hiện không có đề tài nào đang thực hiện.</text>
+                                    break;
+                                case "Completed":
+                                    <text>Hiện không có đề tài nào đã hoàn thành.</text>
+                                    break;
+                                case "Rejected":
+                                    <text>Hiện không có đề tài nào bị từ chối.</text>
+                                    break;
+                                default:
+                                    <text>Không có dữ liệu cần lọc.</text>
+                                    break;
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Thông báo -->
+        <div class="col-md-4 d-flex">
+            <div class="card flex-fill d-flex flex-column shadow-sm">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Thông báo</h5>
+                    <a href="@Url.Action("Notifications", "Student")" class="btn btn-link btn-sm" style="font-size: 16px;">Xem tất cả</a>
+                </div>
+
+                <div class="card-body flex-fill" style="overflow-y: auto; max-height: 420px;">
+                    @if (ViewBag.Notifications != null && ((List<Duan_CNPM.Models.Notification>)ViewBag.Notifications).Any())
+                    {
+                        @foreach (var notification in (List<Duan_CNPM.Models.Notification>)ViewBag.Notifications)
+                        {
+                            <div class="notification-item mb-3 p-2 border-start border-3
+                                        @(notification.Type == "Success" ? "border-success"
+                                                                 : notification.Type == "Error" ? "border-danger"
+                                                                 : "border-info")">
+                                <h6 class="mb-1">@notification.Title</h6>
+                                <p class="mb-1 small">@notification.Message</p>
+                                <small class="text-muted">@notification.CreatedDate.ToString("dd/MM/yyyy HH:mm")</small>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <p class="text-muted text-center">Không có thông báo mới</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        margin-bottom: 30px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .table thead th {
+        background-color: #f8f9fa;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+
+    .notification-item {
+        background-color: #f8f9fa;
+        border-radius: 5px;
+    }
+
+    /* Dropdown lọc trạng thái */
+    .card-header form select {
+        min-width: 150px;
+        font-size: 0.85rem;
+    }
+</style>

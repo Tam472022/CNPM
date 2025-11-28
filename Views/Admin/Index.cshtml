@@ -1,0 +1,655 @@
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="dashboard-container">
+    <!-- Header Section -->
+    <div class="dashboard-header">
+        <div class="header-content">
+            <div>
+                <h1 class="header-title">Dashboard Quản trị</h1>
+                <p class="header-subtitle">Chào mừng, <span class="highlight-user">@ViewBag.UserName</span></p>
+            </div>
+            <div class="header-date">
+                <span id="current-date"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Section -->
+    <div class="stats-grid">
+        <div class="stat-card stat-card-primary">
+            <div class="stat-icon">
+                <i class="bi bi-people"></i>
+            </div>
+            <div class="stat-content">
+                <p class="stat-label">Tổng người dùng</p>
+                <h3 class="stat-value">@ViewBag.TotalUsers</h3>
+                <p class="stat-meta">
+                    <span class="meta-item"><strong>@ViewBag.TotalStudents</strong> sinh viên</span>
+                    <span class="meta-divider">•</span>
+                    <span class="meta-item"><strong>@ViewBag.TotalProfessors</strong> GVHD</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="stat-card stat-card-success">
+            <div class="stat-icon">
+                <i class="bi bi-journal-check"></i>
+            </div>
+            <div class="stat-content">
+                <p class="stat-label">Tổng đề tài</p>
+                <h3 class="stat-value">@ViewBag.TotalProjects</h3>
+                <p class="stat-meta">
+                    <span class="meta-item"><strong>@ViewBag.CompletedProjects</strong> hoàn thành</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="stat-card stat-card-warning">
+            <div class="stat-icon">
+                <i class="bi bi-clock-history"></i>
+            </div>
+            <div class="stat-content">
+                <p class="stat-label">Chờ xử lý</p>
+                <h3 class="stat-value">@ViewBag.PendingProjects</h3>
+                <p class="stat-meta">
+                    <span class="meta-item"><strong>@ViewBag.InProgressProjects</strong> đang thực hiện</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="stat-card stat-card-info">
+            <div class="stat-icon">
+                <i class="bi bi-award"></i>
+            </div>
+            <div class="stat-content">
+                <p class="stat-label">Hội đồng</p>
+                <h3 class="stat-value">@ViewBag.TotalCouncils</h3>
+                <p class="stat-meta">
+                    <span class="meta-item">Đã tổ chức</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <!-- Left Column -->
+        <div class="col-main">
+            <!-- Quick Actions -->
+            <div class="card content-card">
+                <div class="card-header-custom">
+                    <div>
+                        <h2 class="card-title">Truy cập nhanh</h2>
+                        <p class="card-description">Chức năng chính</p>
+                    </div>
+                </div>
+                <div class="quick-actions">
+                    <a href="@Url.Action("Users", "Admin")" class="quick-action-btn">
+                        <span class="action-icon"><i class="bi bi-people"></i></span>
+                        <span class="action-text">Quản lý người dùng</span>
+                        <span class="action-arrow"><i class="bi bi-chevron-right"></i></span>
+                    </a>
+
+                    <a href="@Url.Action("Projects", "Admin")" class="quick-action-btn">
+                        <span class="action-icon"><i class="bi bi-journal-text"></i></span>
+                        <span class="action-text">Quản lý đề tài</span>
+                        <span class="action-arrow"><i class="bi bi-chevron-right"></i></span>
+                    </a>
+
+                    <a href="@Url.Action("Councils", "Admin")" class="quick-action-btn">
+                        <span class="action-icon"><i class="bi bi-award"></i></span>
+                        <span class="action-text">Quản lý hội đồng</span>
+                        <span class="action-arrow"><i class="bi bi-chevron-right"></i></span>
+                    </a>
+
+                    <a href="@Url.Action("Statistics", "Admin")" class="quick-action-btn">
+                        <span class="action-icon"><i class="bi bi-graph-up"></i></span>
+                        <span class="action-text">Thống kê & Báo cáo</span>
+                        <span class="action-arrow"><i class="bi bi-chevron-right"></i></span>
+                    </a>
+
+                    <a href="@Url.Action("SystemConfig", "Admin")" class="quick-action-btn">
+                        <span class="action-icon"><i class="bi bi-gear"></i></span>
+                        <span class="action-text">Cấu hình hệ thống</span>
+                        <span class="action-arrow"><i class="bi bi-chevron-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-sidebar">
+            <!-- Chart -->
+            <div class="card content-card">
+                <div class="card-header-custom">
+                    <div>
+                        <h2 class="card-title">Thống kê đề tài</h2>
+                        <p class="card-description">Phân bố theo trạng thái</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="statusChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Projects Section -->
+    <div class="recent-projects-section">
+        <div class="card content-card">
+            <div class="card-header-custom">
+                <div>
+                    <h2 class="card-title">Đề tài gần đây</h2>
+                    <p class="card-description">Danh sách các đề tài mới nhất</p>
+                </div>
+                <a href="@Url.Action("Projects", "Admin")" class="btn-view-all">
+                    Xem tất cả <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="projects-table">
+                    <thead>
+                        <tr>
+                            <th>Tên đề tài</th>
+                            <th>Sinh viên</th>
+                            <th>GVHD</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (ViewBag.RecentProjects != null)
+                        {
+                            @foreach (var project in (List<Duan_CNPM.Models.Project>)ViewBag.RecentProjects)
+                            {
+                                <tr>
+                                    <td class="cell-project-name">@project.Title</td>
+                                    <td class="cell-name">@project.Student.FullName</td>
+                                    <td class="cell-name">@(project.Professor?.FullName ?? "Chưa có")</td>
+                                    <td>
+                                        @switch (project.Status)
+                                        {
+                                            case "Pending":
+                                                <span class="badge badge-warning">Chờ duyệt</span>
+                                                break;
+                                            case "Approved":
+                                                <span class="badge badge-info">Đã duyệt</span>
+                                                break;
+                                            case "InProgress":
+                                                <span class="badge badge-primary">Đang thực hiện</span>
+                                                break;
+                                            case "Completed":
+                                                <span class="badge badge-success">Hoàn thành</span>
+                                                break;
+                                        }
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("Projects", "Admin")" class="btn-action">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Update date
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString('vi-VN', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+
+    // Chart
+    const statusData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.ProjectsByStatus ?? new List<object>()));
+
+    if (statusData && statusData.length > 0) {
+        const ctx = document.getElementById('statusChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: statusData.map(d => d.label),
+                datasets: [{
+                    data: statusData.map(d => d.count || 0),
+                    backgroundColor: ['#7da9ff', '#6edc9d', '#ffd86f', '#ffb878', '#ff6b9d'],
+                    borderColor: '#fff',
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { padding: 15, font: { size: 12 } }
+                    }
+                }
+            }
+        });
+    } else {
+        document.getElementById('statusChart').parentElement.innerHTML =
+            '<p class="text-center text-muted" style="padding: 40px 0;">Chưa có dữ liệu</p>';
+    }
+</script>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #2c3e50;
+        min-height: 100vh;
+    }
+
+    .dashboard-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 30px 20px;
+    }
+
+    /* ==================== HEADER ==================== */
+    .dashboard-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 20px;
+        padding: 40px;
+        color: white;
+        margin-bottom: 40px;
+        box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        letter-spacing: -0.5px;
+    }
+
+    .header-subtitle {
+        font-size: 15px;
+        opacity: 0.9;
+        font-weight: 500;
+    }
+
+    .highlight-user {
+        font-weight: 600;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 3px 10px;
+        border-radius: 6px;
+    }
+
+    .header-date {
+        font-size: 14px;
+        opacity: 0.85;
+        font-weight: 500;
+    }
+
+    /* ==================== STATS GRID ==================== */
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .stat-card {
+        background: white;
+        border-radius: 16px;
+        padding: 24px;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+    .stat-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        flex-shrink: 0;
+    }
+
+    .stat-card-primary .stat-icon {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+    }
+
+    .stat-card-success .stat-icon {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        color: white;
+    }
+
+    .stat-card-warning .stat-icon {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        color: white;
+    }
+
+    .stat-card-info .stat-icon {
+        background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        color: white;
+    }
+
+    .stat-content {
+        flex: 1;
+    }
+
+    .stat-label {
+        font-size: 12px;
+        color: #95a5a6;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        margin-bottom: 8px;
+    }
+
+    .stat-value {
+        font-size: 32px;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 10px;
+        line-height: 1;
+    }
+
+    .stat-meta {
+        font-size: 13px;
+        color: #7f8c8d;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .meta-item {
+        color: #2c3e50;
+        font-weight: 500;
+    }
+
+    .meta-divider {
+        opacity: 0.4;
+    }
+
+    /* ==================== CONTENT WRAPPER ==================== */
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    /* ==================== RECENT PROJECTS SECTION ==================== */
+    .recent-projects-section {
+        margin-top: 0;
+    }
+
+    /* ==================== CARDS ==================== */
+    .content-card {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+        .content-card:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+    .card-header-custom {
+        padding: 24px;
+        border-bottom: 1px solid #ecf0f1;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .card-title {
+        font-size: 17px;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 4px;
+    }
+
+    .card-description {
+        font-size: 13px;
+        color: #95a5a6;
+        font-weight: 500;
+    }
+
+    .btn-view-all {
+        padding: 8px 16px;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+        .btn-view-all:hover {
+            background: #764ba2;
+            transform: translateX(4px);
+        }
+
+    /* ==================== TABLE ==================== */
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    .projects-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .projects-table thead {
+            background: #f8f9fa;
+        }
+
+            .projects-table thead th {
+                padding: 14px 20px;
+                font-weight: 600;
+                font-size: 12px;
+                color: #7f8c8d;
+                text-align: left;
+                text-transform: uppercase;
+                letter-spacing: 0.4px;
+            }
+
+        .projects-table tbody td {
+            padding: 14px 20px;
+            border-bottom: 1px solid #ecf0f1;
+            font-size: 14px;
+        }
+
+        .projects-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .projects-table tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+    .cell-project-name {
+        font-weight: 600;
+        color: #2c3e50;
+    }
+
+    .cell-name {
+        color: #555;
+        font-weight: 500;
+    }
+
+    .btn-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background: #ecf0f1;
+        color: #667eea;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 16px;
+    }
+
+        .btn-action:hover {
+            background: #667eea;
+            color: white;
+        }
+
+    /* ==================== BADGES ==================== */
+    .badge {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .badge-primary {
+        background: #e8f1ff;
+        color: #667eea;
+    }
+
+    .badge-success {
+        background: #e8f8f5;
+        color: #27ae60;
+    }
+
+    .badge-warning {
+        background: #fef5e7;
+        color: #f39c12;
+    }
+
+    .badge-info {
+        background: #e8f8f5;
+        color: #3498db;
+    }
+
+    /* ==================== CHART ==================== */
+    .chart-container {
+        padding: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+
+    #statusChart {
+        max-width: 100%;
+        max-height: 280px;
+    }
+
+    /* ==================== QUICK ACTIONS ==================== */
+    .quick-actions {
+        padding: 12px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .quick-action-btn {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px;
+        margin-bottom: 8px;
+        background: #f8f9fa;
+        border: 1px solid #ecf0f1;
+        border-radius: 12px;
+        text-decoration: none;
+        color: #2c3e50;
+        transition: all 0.3s ease;
+    }
+
+        .quick-action-btn:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+            transform: translateX(8px);
+        }
+
+    .action-icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background: white;
+        font-size: 18px;
+        flex-shrink: 0;
+    }
+
+    .quick-action-btn:hover .action-icon {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .action-text {
+        flex: 1;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .action-arrow {
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .quick-action-btn:hover .action-arrow {
+        opacity: 1;
+    }
+
+    /* ==================== UTILITIES ==================== */
+    .text-center {
+        text-align: center;
+    }
+
+    .text-muted {
+        color: #7f8c8d;
+    }
+</style>

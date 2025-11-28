@@ -1,0 +1,482 @@
+﻿@model Duan_CNPM.Models.Council
+@{
+    ViewData["Title"] = "Chi tiết hội đồng";
+}
+
+<div class="container-fluid">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-md-12 d-flex justify-content-between align-items-center" style="margin-top: 30px;">
+            <h2 class="m-0">Chi tiết hội đồng</h2>
+            <a href="@Url.Action("Councils", "Admin")" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Quay lại
+            </a>
+        </div>
+    </div>
+
+    <!-- Thông tin hội đồng -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">
+                        <i class="bi bi-award"></i> @Model.Name
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="mb-2">
+                                <strong><i class="bi bi-calendar-event"></i> Ngày bảo vệ:</strong>
+                                <span class="text-primary">@Model.DefenseDate.ToString("dd/MM/yyyy HH:mm")</span>
+                            </p>
+                            <p class="mb-2">
+                                <strong><i class="bi bi-geo-alt"></i> Địa điểm:</strong>
+                                @Model.Location
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="mb-2">
+                                <strong><i class="bi bi-calendar-plus"></i> Ngày tạo:</strong>
+                                @Model.CreatedDate.ToString("dd/MM/yyyy HH:mm")
+                            </p>
+                            <p class="mb-2">
+                                <strong><i class="bi bi-journal-text"></i> Số đề tài:</strong>
+                                <span class="badge bg-info">@Model.Projects.Count</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    @if (!string.IsNullOrWhiteSpace(Model.Description))
+                    {
+                        <hr>
+                        <p class="mb-0">
+                            <strong><i class="bi bi-card-text"></i> Mô tả:</strong><br>
+                            @Model.Description
+                        </p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thành viên hội đồng -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">
+                        <i class="bi bi-people"></i> Thành viên hội đồng (@Model.CouncilMembers.Count người)
+                    </h5>
+                </div>
+                <div class="card-body">
+                    @if (Model.CouncilMembers != null && Model.CouncilMembers.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover table-bordered align-middle">
+                                <thead class="table-light">
+                                    <tr class="text-center">
+                                        <th style="width: 5%">STT</th>
+                                        <th style="width: 35%">Họ tên</th>
+                                        <th style="width: 20%">Vai trò</th>
+                                        <th style="width: 20%">Email</th>
+                                        <th style="width: 20%">Ngày phân công</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        int memberIndex = 1;
+                                    }
+                                    @foreach (var member in Model.CouncilMembers.OrderBy(m => m.Role))
+                                    {
+                                        <tr>
+                                            <td class="text-center">@memberIndex</td>
+                                            <td>
+                                                <i class="bi bi-person-badge"></i>
+                                                <strong>@member.Professor.FullName</strong>
+                                            </td>
+                                            <td class="text-center">
+                                                @switch (member.Role)
+                                                {
+                                                    case "Chairman":
+                                                        <span class="badge bg-danger">Chủ tịch</span>
+                                                        break;
+                                                    case "Secretary":
+                                                        <span class="badge bg-warning text-dark">Thư ký</span>
+                                                        break;
+                                                    default:
+                                                        <span class="badge bg-secondary">@member.Role</span>
+                                                        break;
+                                                }
+                                            </td>
+                                            <td>
+                                                @if (!string.IsNullOrEmpty(member.Professor.Email))
+                                                {
+                                                    <a href="mailto:@member.Professor.Email">
+                                                        <i class="bi bi-envelope"></i> @member.Professor.Email
+                                                    </a>
+                                                }
+                                                else
+                                                {
+                                                    <span class="text-muted">Chưa có</span>
+                                                }
+                                            </td>
+                                            <td class="text-center">
+                                                @member.AssignedDate.ToString("dd/MM/yyyy")
+                                            </td>
+                                        </tr>
+                                        memberIndex++;
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-muted text-center mb-0">Chưa có thành viên nào</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Danh sách đề tài -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">
+                        <i class="bi bi-journal-text"></i> Danh sách đề tài (@Model.Projects.Count đề tài)
+                    </h5>
+                </div>
+                <div class="card-body">
+                    @if (Model.Projects != null && Model.Projects.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover table-bordered align-middle">
+                                <thead class="table-light">
+                                    <tr class="text-center">
+                                        <th style="width: 5%">STT</th>
+                                        <th style="width: 30%">Tên đề tài</th>
+                                        <th style="width: 15%">Sinh viên</th>
+                                        <th style="width: 15%">GVHD</th>
+                                        <th style="width: 10%">Năm - HK</th>
+                                        <th style="width: 15%">Điểm chấm</th>
+                                        <th style="width: 10%">Điểm TB</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        int projectIndex = 1;
+                                    }
+                                    @foreach (var project in Model.Projects.OrderBy(p => p.Student.FullName))
+{
+    var projectScores = project.Scores.Where(s => s.CouncilMember.CouncilID == Model.CouncilID).ToList();
+    var totalMembers = Model.CouncilMembers.Count;
+    var scoredCount = projectScores.Count;
+    var isComplete = scoredCount == totalMembers;
+    
+    <tr>
+        <td class="text-center">@projectIndex</td>
+        <td>
+            <strong>@project.Title</strong>
+            <br>
+            <small class="text-muted">
+                <i class="bi bi-calendar"></i> @(project.DefenseDate?.ToString("dd/MM/yyyy HH:mm") ?? "Chưa có")
+            </small>
+        </td>
+        <td>
+            <i class="bi bi-person"></i> @project.Student.FullName
+            @if (!string.IsNullOrEmpty(project.Student.StudentCode))
+            {
+                <br>
+                <small class="text-muted">MSSV: @project.Student.StudentCode</small>
+            }
+        </td>
+        <td>
+            @(project.Professor?.FullName ?? "Chưa có")
+        </td>
+        <td class="text-center">
+            @project.Year - HK @project.Semester
+        </td>
+        <td class="text-center">
+            @if (projectScores.Any())
+            {
+                <div class="mb-2">
+                    <span class="badge bg-success">
+                        <i class="bi bi-check-circle"></i> @scoredCount/@totalMembers
+                    </span>
+                </div>
+                <button class="btn btn-sm btn-outline-info" 
+                        onclick="showScoresModal(@project.ProjectID, '@project.Title.Replace("'", "\\'")')">
+                    <i class="bi bi-eye"></i> Xem chi tiết
+                </button>
+            }
+            else
+            {
+                <span class="badge bg-secondary">
+                    <i class="bi bi-hourglass"></i> Chưa chấm
+                </span>
+            }
+        </td>
+        <td class="text-center">
+            @if (project.FinalScore.HasValue)
+            {
+                var score = project.FinalScore.Value;
+                var badgeClass = score >= 8.5m ? "bg-success" : 
+                                score >= 7.0m ? "bg-primary" : 
+                                score >= 5.5m ? "bg-warning text-dark" : "bg-danger";
+                
+                <span class="badge @badgeClass fs-6">
+                    @score.ToString("F2")
+                </span>
+                
+                @if (isComplete)
+                {
+                    <br>
+                    <small class="text-success">
+                        <i class="bi bi-check-all"></i> Hoàn thành
+                    </small>
+                }
+            }
+            else
+            {
+                <span class="text-muted">-</span>
+            }
+        </td>
+    </tr>
+
+    @* Thêm hiển thị file sinh viên *@
+    @if (project.ProjectFiles != null && project.ProjectFiles.Any())
+    {
+        <tr>
+            <td colspan="7">
+                <strong>Files sinh viên upload:</strong>
+                <ul>
+                    @foreach (var f in project.ProjectFiles)
+                    {
+                        <li>
+                            <a href="@Url.Content(f.FilePath)" target="_blank">@f.FileName</a>
+                            (@f.FileSize KB, @f.UploadDate.ToString("dd/MM/yyyy HH:mm"))
+                        </li>
+                    }
+                </ul>
+            </td>
+        </tr>
+    }
+
+    projectIndex++;
+}
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Thống kê nhanh -->
+                        <div class="row mt-4">
+                            <div class="col-md-12">
+                                <div class="alert alert-light border">
+                                    <h6 class="mb-3">
+                                        <i class="bi bi-bar-chart"></i> Thống kê
+                                    </h6>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <strong>Tổng đề tài:</strong> @Model.Projects.Count
+                                        </div>
+                                        <div class="col-md-3">
+                                            <strong>Đã chấm xong:</strong> 
+                                            @Model.Projects.Count(p => p.Scores.Where(s => s.CouncilMember.CouncilID == Model.CouncilID).Count() == Model.CouncilMembers.Count)
+                                        </div>
+                                        <div class="col-md-3">
+                                            <strong>Điểm TB chung:</strong> 
+                                            @{
+                                                var projectsForAvg = Model.Projects.Where(p => p.FinalScore.HasValue).ToList();
+                                                var avgScore = projectsForAvg.Any() 
+                                                    ? projectsForAvg.Average(p => p.FinalScore!.Value) 
+                                                    : (decimal?)null;
+                                            }
+                                            @if (avgScore.HasValue)
+                                            {
+                                                <span class="text-primary">@avgScore.Value.ToString("F2")</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">Chưa có</span>
+                                            }
+                                        </div>
+                                        <div class="col-md-3">
+                                            <strong>Điểm cao nhất:</strong> 
+                                           @{
+                                                var projectsForMax = Model.Projects.Where(p => p.FinalScore.HasValue).ToList();
+                                                var maxScore = projectsForMax.Any() 
+                                                    ? projectsForMax.Max(p => p.FinalScore!.Value) 
+                                                    : (decimal?)null;
+                                            }
+                                            @if (maxScore.HasValue)
+                                            {
+                                                <span class="text-success">@maxScore.Value.ToString("F2")</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">Chưa có</span>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-muted text-center mb-0">Chưa có đề tài nào</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal xem chi tiết điểm -->
+<div class="modal fade" id="scoresModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-clipboard-data"></i> Chi tiết điểm chấm
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h6 class="text-primary mb-3">Đề tài: <span id="modalProjectTitle"></span></h6>
+                
+                <div id="scoresContent" class="table-responsive">
+                    <!-- Content will be loaded here -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var councilProjectFiles = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(
+        Model.Projects.Select(p => new {
+            projectId = p.ProjectID,
+            files = p.ProjectFiles.Select(f => new {
+                fileName = f.FileName,
+                filePath = f.FilePath,
+                fileType = f.FileType,
+                fileSize = f.FileSize,
+                uploadDate = f.UploadDate
+            }).ToList()
+        }).ToList()
+    ));
+</script>
+
+<style>
+    .card {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .card-header {
+        font-weight: 600;
+    }
+    
+    .table thead th {
+        font-weight: 600;
+        background-color: #f8f9fa;
+    }
+    
+    .badge {
+        font-size: 0.85rem;
+        padding: 0.4em 0.6em;
+    }
+    
+    .btn-outline-info:hover {
+        color: white;
+    }
+</style>
+
+<script>
+    // Lưu dữ liệu scores vào JavaScript để dùng trong modal
+    var projectScoresData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(
+        Model.Projects.Select(p => new {
+            projectId = p.ProjectID,
+            scores = p.Scores.Where(s => s.CouncilMember.CouncilID == Model.CouncilID)
+                .Select(s => new {
+                    professorName = s.CouncilMember.Professor.FullName,
+                    role = s.CouncilMember.Role,
+                    score = s.ScoreValue,
+                    comment = s.Comment ?? "",
+                    createdDate = s.CreatedDate.ToString("dd/MM/yyyy HH:mm")
+                }).ToList(),
+            finalScore = p.FinalScore
+        }).ToList()
+    ));
+
+    function showScoresModal(projectId, projectTitle) {
+        document.getElementById('modalProjectTitle').textContent = projectTitle;
+        
+        var projectData = projectScoresData.find(p => p.projectId == projectId);
+        
+        if (!projectData || !projectData.scores || projectData.scores.length === 0) {
+            document.getElementById('scoresContent').innerHTML = 
+                '<p class="text-muted text-center">Chưa có điểm chấm</p>';
+        } else {
+            var html = '<table class="table table-bordered table-hover">';
+            html += '<thead class="table-light">';
+            html += '<tr class="text-center">';
+            html += '<th style="width: 5%">STT</th>';
+            html += '<th style="width: 30%">Giảng viên</th>';
+            html += '<th style="width: 15%">Vai trò</th>';
+            html += '<th style="width: 10%">Điểm</th>';
+            html += '<th style="width: 40%">Nhận xét</th>';
+            html += '</tr>';
+            html += '</thead>';
+            html += '<tbody>';
+            
+            projectData.scores.forEach(function(score, index) {
+                var badgeClass = score.score >= 8.5 ? 'bg-success' : 
+                                score.score >= 7.0 ? 'bg-primary' : 
+                                score.score >= 5.5 ? 'bg-warning text-dark' : 'bg-danger';
+                
+                var roleDisplay = score.role === 'Chairman' ? 'Chủ tịch' :
+                                 score.role === 'Secretary' ? 'Thư ký' : score.role;
+                
+                html += '<tr>';
+                html += '<td class="text-center">' + (index + 1) + '</td>';
+                html += '<td><i class="bi bi-person-badge"></i> ' + score.professorName + '</td>';
+                html += '<td class="text-center"><span class="badge bg-secondary">' + roleDisplay + '</span></td>';
+                html += '<td class="text-center"><span class="badge ' + badgeClass + ' fs-6">' + score.score.toFixed(2) + '</span></td>';
+                html += '<td>' + (score.comment || '<span class="text-muted">Không có nhận xét</span>') + '</td>';
+                html += '</tr>';
+            });
+            
+            html += '</tbody>';
+            
+            if (projectData.finalScore !== null) {
+                var finalBadgeClass = projectData.finalScore >= 8.5 ? 'bg-success' : 
+                                     projectData.finalScore >= 7.0 ? 'bg-primary' : 
+                                     projectData.finalScore >= 5.5 ? 'bg-warning text-dark' : 'bg-danger';
+                
+                html += '<tfoot>';
+                html += '<tr class="table-light">';
+                html += '<td colspan="3" class="text-end"><strong>Điểm trung bình:</strong></td>';
+                html += '<td class="text-center"><span class="badge ' + finalBadgeClass + ' fs-5">' + projectData.finalScore.toFixed(2) + '</span></td>';
+                html += '<td></td>';
+                html += '</tr>';
+                html += '</tfoot>';
+            }
+            
+            html += '</table>';
+            
+            document.getElementById('scoresContent').innerHTML = html;
+        }
+        
+        var modal = new bootstrap.Modal(document.getElementById('scoresModal'));
+        modal.show();
+    }
+</script>
