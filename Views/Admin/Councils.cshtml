@@ -1,9 +1,8 @@
 ﻿@model IEnumerable<Duan_CNPM.Models.Council>
 @{
     ViewData["Title"] = "Quản lý hội đồng";
-
-    // Lấy danh sách đề tài được đề xuất
     var proposedProjects = ViewBag.ProposedProjects as List<Duan_CNPM.Models.Project> ?? new List<Duan_CNPM.Models.Project>();
+    var currentFilter = ViewBag.Filter as string ?? "all";
 }
 
 <div class="container-fluid">
@@ -21,7 +20,29 @@
         </div>
     </div>
 
-    <!-- ✅ THÊM PHẦN ĐỀ XUẤT BẢO VỆ -->
+    <!-- ✅ BỘ LỌC HỘI ĐỒNG -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="btn-group w-100" role="group">
+                <a href="@Url.Action("Councils", new { filter = "all" })"
+                   class="btn btn-lg @(currentFilter == "all" ? "btn-primary" : "btn-outline-primary")">
+                    <i class="bi bi-list-ul"></i> Tất cả (@Model.Count())
+                </a>
+                <a href="@Url.Action("Councils", new { filter = "completed" })"
+                   class="btn btn-lg @(currentFilter == "completed" ? "btn-success" : "btn-outline-success")">
+                    <i class="bi bi-check-circle-fill"></i> Đã chấm xong
+                    (@Model.Count(c => c.Projects.All(p => p.Scores.Count(s => s.CouncilMember.CouncilID == c.CouncilID) == c.CouncilMembers.Count)))
+                </a>
+                <a href="@Url.Action("Councils", new { filter = "incomplete" })"
+                   class="btn btn-lg @(currentFilter == "incomplete" ? "btn-warning" : "btn-outline-warning")">
+                    <i class="bi bi-hourglass-split"></i> Chưa chấm xong
+                    (@Model.Count(c => c.Projects.Any(p => p.Scores.Count(s => s.CouncilMember.CouncilID == c.CouncilID) < c.CouncilMembers.Count)))
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ĐỀ XUẤT BẢO VỆ -->
     @if (proposedProjects.Any())
     {
         <div class="card mb-4 border-warning">
@@ -102,7 +123,7 @@
             </div>
         </div>
     }
-    else
+    else if (currentFilter == "all")
     {
         <div class="alert alert-info">
             <i class="bi bi-info-circle"></i>
@@ -111,20 +132,66 @@
         </div>
     }
 
-    <!-- Danh sách hội đồng hiện có -->
+    <!-- DANH SÁCH HỘI ĐỒNG -->
     <div class="row">
         <div class="col-md-12">
             <h4 class="mb-3">
-                <i class="bi bi-list-ul"></i> Danh sách hội đồng (@Model.Count())
+                <i class="bi bi-list-ul"></i>
+                @switch (currentFilter)
+                {
+                    case "completed":
+                        <text>Hội đồng đã chấm xong (@Model.Count())</text>
+                        break;
+                    case "incomplete":
+                        <text>Hội đồng chưa chấm xong (@Model.Count())</text>
+                        break;
+                    default:
+                        <text>Danh sách hội đồng (@Model.Count())</text>
+                        break;
+                }
             </h4>
         </div>
 
+        @if (!Model.Any())
+        {
+            <div class="col-md-12">
+                <div class="alert alert-secondary text-center">
+                    <i class="bi bi-info-circle"></i>
+                    @switch (currentFilter)
+                    {
+                        case "completed":
+                            <text>Chưa có hội đồng nào chấm xong</text>
+                            break;
+                        case "incomplete":
+                            <text>Chưa có hội đồng nào đang chờ chấm</text>
+                            break;
+                        default:
+                            <text>Chưa có hội đồng nào được tạo</text>
+                            break;
+                    }
+                </div>
+            </div>
+        }
+
         @foreach (var council in Model)
         {
+            var totalProjects = council.Projects.Count;
+            var completedProjects = council.Projects.Count(p =>
+            p.Scores.Count(s => s.CouncilMember.CouncilID == council.CouncilID) == council.CouncilMembers.Count
+            );
+            var progress = totalProjects > 0 ? (int)((double)completedProjects / totalProjects * 100) : 0;
+            var isComplete = completedProjects == totalProjects && totalProjects > 0;
+
             <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-header bg-primary text-white d-flex justify-content-between">
-                        <h5 class="mb-0">@council.Name</h5>
+                <div class="card @(isComplete ? "border-success" : "")">
+                    <div class="card-header @(isComplete ? "bg-success" : "bg-primary") text-white d-flex justify-content-between">
+                        <h5 class="mb-0">
+                            @if (isComplete)
+                            {
+                                <i class="bi bi-check-circle-fill"></i>
+                            }
+                            @council.Name
+                        </h5>
                         <span class="badge bg-light text-dark">
                             @council.Projects.Count đề tài
                         </span>
@@ -143,43 +210,95 @@
                             @council.CouncilMembers.Count người
                         </p>
 
+                        <!-- ✅ TIẾN ĐỘ CHẤM ĐIỂM -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <strong>
+                                    <i class="bi bi-clipboard-check"></i> Tiến độ chấm điểm:
+                                </strong>
+                                <span class="@(isComplete ? "text-success" : "text-warning") fw-bold">
+                                    @completedProjects/@totalProjects
+                                    @if (isComplete)
+                                    {
+                                        <i class="bi bi-check-circle-fill"></i>
+                                    }
+                                </span>
+                            </div>
+                            <div class="progress" style="height: 25px;">
+                                <div class="progress-bar @(isComplete ? "bg-success" : "bg-warning")"
+                                     role="progressbar"
+                                     style="width: @progress%">
+                                    @progress%
+                                </div>
+                            </div>
+                            @if (!isComplete)
+                            {
+                                <small class="text-muted mt-1">
+                                    <i class="bi bi-info-circle"></i>
+                                    Còn @(totalProjects - completedProjects) đề tài chưa chấm xong
+                                </small>
+                            }
+                        </div>
+
                         <hr>
 
                         <div class="mb-2">
                             <strong>Danh sách thành viên:</strong>
                         </div>
                         <ul class="list-unstyled mb-3">
-                            @foreach (var member in council.CouncilMembers)
+                            @foreach (var member in council.CouncilMembers.OrderBy(m => m.Role))
                             {
                                 <li class="mb-1">
                                     <i class="bi bi-person-badge"></i>
                                     @member.Professor.FullName
-                                    <span class="badge bg-info">@member.Role</span>
+                                    <span class="badge @(member.Role == "Chairman" ? "bg-danger" : member.Role == "Secretary" ? "bg-warning text-dark" : "bg-secondary")">
+                                        @switch (member.Role)
+                                        {
+                                            case "Chairman":
+                                                <text>Chủ tịch</text>
+                                                ; break;
+                                            case "Secretary":
+
+                                                <text>Thư ký</text>
+                                                ; break;
+                                            default:
+
+                                                @member.Role
+                                                ; break;
+                                        }
+                                    </span>
                                 </li>
                             }
                         </ul>
 
                         <div class="d-flex gap-2">
                             <a href="@Url.Action("CouncilDetail", new { id = council.CouncilID })"
-                               class="btn btn-primary btn-sm">
+                               class="btn btn-primary btn-sm flex-fill">
                                 <i class="bi bi-eye"></i> Chi tiết
                             </a>
                         </div>
                     </div>
                     <div class="card-footer text-muted small">
-                        Tạo ngày: @council.CreatedDate.ToString("dd/MM/yyyy")
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>Tạo ngày: @council.CreatedDate.ToString("dd/MM/yyyy")</span>
+                            @if (isComplete)
+                            {
+                                <span class="badge bg-success">
+                                    <i class="bi bi-check-all"></i> Hoàn thành
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-warning text-dark">
+                                    <i class="bi bi-hourglass-split"></i> Đang chấm
+                                </span>
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
         }
     </div>
-
-    @if (!Model.Any())
-    {
-        <div class="alert alert-secondary text-center">
-            <i class="bi bi-info-circle"></i> Chưa có hội đồng nào được tạo
-        </div>
-    }
 </div>
 
 <!-- Modal xem chi tiết nhận xét -->
@@ -226,6 +345,27 @@
 
     .badge {
         font-size: 0.85rem;
+    }
+
+    .progress {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .progress-bar {
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-group .btn {
+        padding: 12px 20px;
+        font-weight: 500;
+    }
+
+    .border-success {
+        border-width: 2px !important;
     }
 </style>
 

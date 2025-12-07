@@ -319,6 +319,7 @@ namespace Duan_CNPM.Controllers
         }
 
         // Project Management
+        // CẬP NHẬT method Projects để hỗ trợ filter "Đã chấm điểm"
         public async Task<IActionResult> Projects(string status = "", int year = 0, string search = "")
         {
             if (!CheckAuth()) return RedirectToAction("Login", "Home");
@@ -327,17 +328,37 @@ namespace Duan_CNPM.Controllers
                 .Include(p => p.Student)
                 .Include(p => p.Professor)
                 .Include(p => p.Council)
+                .Include(p => p.Scores) // Thêm để kiểm tra đã chấm
                 .AsQueryable();
 
+            // Filter by status
             if (!string.IsNullOrEmpty(status))
-                query = query.Where(p => p.Status == status);
+            {
+                // ✅ THÊM FILTER "Scored" (Đã chấm điểm)
+                if (status == "Scored")
+                {
+                    query = query.Where(p => p.CouncilID != null && p.Scores.Any());
+                }
+                else
+                {
+                    query = query.Where(p => p.Status == status);
+                }
+            }
 
+            // Filter by year
             if (year > 0)
+            {
                 query = query.Where(p => p.Year == year);
+            }
 
+            // Search
             if (!string.IsNullOrEmpty(search))
-                query = query.Where(p => p.Title.Contains(search) || 
-                                       p.Student.FullName.Contains(search));
+            {
+                query = query.Where(p =>
+                    p.Title.Contains(search) ||
+                    p.Student.FullName.Contains(search) ||
+                    p.Student.StudentCode.Contains(search));
+            }
 
             var projects = await query.OrderByDescending(p => p.CreatedDate).ToListAsync();
 
@@ -384,37 +405,62 @@ namespace Duan_CNPM.Controllers
         }
 
         // Council Management
-        // Thay thế action Councils trong AdminController.cs
-        public async Task<IActionResult> Councils()
+        // CẬP NHẬT method Councils để phân loại đã chấm/chưa chấm
+        public async Task<IActionResult> Councils(string filter = "all")
         {
             if (!CheckAuth()) return RedirectToAction("Login", "Home");
 
-            var councils = await _context.Councils
+            var allCouncils = await _context.Councils
                 .Include(c => c.CouncilMembers)
                     .ThenInclude(cm => cm.Professor)
                 .Include(c => c.Projects)
+                    .ThenInclude(p => p.Student)
+                .Include(c => c.Projects)
+                    .ThenInclude(p => p.Scores)
                 .OrderByDescending(c => c.DefenseDate)
                 .ToListAsync();
 
-            // ✅ Lấy danh sách đề tài được đề xuất bảo vệ
+            // ✅ PHÂN LOẠI HỘI ĐỒNG
+            IEnumerable<Council> councils = allCouncils;
+
+            if (filter == "completed")
+            {
+                // Hội đồng đã chấm xong = tất cả đề tài đều có đủ điểm
+                councils = allCouncils.Where(c =>
+                    c.Projects.All(p =>
+                        p.Scores.Count(s => s.CouncilMember.CouncilID == c.CouncilID) == c.CouncilMembers.Count
+                    )
+                );
+            }
+            else if (filter == "incomplete")
+            {
+                // Hội đồng chưa chấm xong = có ít nhất 1 đề tài chưa đủ điểm
+                councils = allCouncils.Where(c =>
+                    c.Projects.Any(p =>
+                        p.Scores.Count(s => s.CouncilMember.CouncilID == c.CouncilID) < c.CouncilMembers.Count
+                    )
+                );
+            }
+
+            ViewBag.Filter = filter;
+
+            // Đề tài được đề xuất
             var proposedProjects = await _context.Projects
                 .Include(p => p.Student)
                 .Include(p => p.Professor)
-                .Where(p => p.Status == "Completed"
-                         && p.CouncilID == null
-                         && !string.IsNullOrEmpty(p.ProfessorComment)
-                         && p.ProfessorComment.Contains("[ĐỀ XUẤT HỘI ĐỒNG]"))
-                .OrderByDescending(p => p.UpdatedDate)
+                .Where(p =>
+                    p.Status == "Completed" &&
+                    p.CouncilID == null &&
+                    !string.IsNullOrEmpty(p.ProfessorComment) &&
+                    p.ProfessorComment.Contains("[ĐỀ XUẤT HỘI ĐỒNG]"))
                 .ToListAsync();
 
             ViewBag.ProposedProjects = proposedProjects;
 
             return View(councils);
         }
-
         // Thay thế cả 2 action CreateCouncil trong AdminController.cs
 
-        // Thay thế cả 2 action CreateCouncil trong AdminController.cs
 
         [HttpGet]
         public async Task<IActionResult> CreateCouncil(int? projectId)
@@ -768,6 +814,7 @@ namespace Duan_CNPM.Controllers
                 $"DanhSachDoAn_{year}_{DateTime.Now:yyyyMMdd}.xlsx");
         }
 
+        
 
         // System Config
         public async Task<IActionResult> SystemConfig()
