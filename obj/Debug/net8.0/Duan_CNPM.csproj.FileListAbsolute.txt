@@ -1751,3 +1751,4 @@ D:\CNPM-main_1\CNPM-main\obj\Debug\net8.0\Duan_CNPM.genruntimeconfig.cache
 D:\CNPM-main_1\CNPM-main\obj\Debug\net8.0\ref\Duan_CNPM.dll
 D:\CNPM-main_1\CNPM-main\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\CNPM-main_1\CNPM-main\obj\Debug\net8.0\Duan_CNPM.sourcelink.json
+D:\test\CNPM-main\obj\Debug\net8.0\Duan_CNPM.sourcelink.json

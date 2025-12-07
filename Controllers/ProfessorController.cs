@@ -309,16 +309,16 @@ namespace Duan_CNPM.Controllers
             var userID = GetCurrentUserID();
             if (userID == 0) return RedirectToAction("Login", "Home");
 
-            var councils = await _context.CouncilMembers
-                .Include(cm => cm.Council)
-                    .ThenInclude(c => c.Projects)
-                        .ThenInclude(p => p.Student)
-                .Include(cm => cm.Council)
-                    .ThenInclude(c => c.CouncilMembers)
-                        .ThenInclude(cm => cm.Professor)
-                .Where(cm => cm.ProfessorID == userID)
-                .Select(cm => cm.Council)
-                .Distinct()
+            // ✅ SỬA: Thay vì dùng Distinct(), dùng GroupBy hoặc query trực tiếp từ Councils
+            var councils = await _context.Councils
+                .Include(c => c.Projects)
+                    .ThenInclude(p => p.Student)
+                .Include(c => c.Projects)
+                    .ThenInclude(p => p.Scores)
+                        .ThenInclude(s => s.CouncilMember)
+                .Include(c => c.CouncilMembers)
+                    .ThenInclude(cm => cm.Professor)
+                .Where(c => c.CouncilMembers.Any(cm => cm.ProfessorID == userID))
                 .OrderByDescending(c => c.DefenseDate)
                 .ToListAsync();
 

@@ -1,0 +1,183 @@
+﻿@model IEnumerable<Duan_CNPM.Models.Project>
+@{
+    ViewData["Title"] = "Đề tài hướng dẫn";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h2 class="text-center" style="margin-top: 35px;">Đề tài hướng dẫn</h2>
+        </div>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info text-center">
+            <i class="bi bi-info-circle"></i> Bạn chưa được phân công hướng dẫn đề tài nào.
+        </div>
+    }
+    else
+    {
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th style="width: 5%">STT</th>
+                                        <th style="width: 30%">Tên đề tài</th>
+                                        <th style="width: 15%">Sinh viên</th>
+                                        <th style="width: 12%">Trạng thái</th>
+                                        <th style="width: 10%">Năm - HK</th>
+                                        <th style="width: 13%">Ngày tạo</th>
+                                        <th style="width: 15%">Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        int index = 1;
+                                    }
+                                    @foreach (var project in Model)
+                                    {
+                                        <tr>
+                                            <td class="text-center">@index</td>
+                                            <td>
+                                                <strong>@project.Title</strong>
+                                            </td>
+                                            <td>
+                                                @project.Student.FullName
+                                                @if (!string.IsNullOrEmpty(project.Student.StudentCode))
+                                                {
+                                                    <br>
+                                                    <small class="text-muted">@project.Student.StudentCode</small>
+                                                }
+                                            </td>
+                                            <td class="text-center">
+                                                @switch (project.Status)
+                                                {
+                                                    case "Pending":
+                                                        <span class="badge bg-warning text-dark">Chờ duyệt</span>
+                                                        break;
+                                                    case "Approved":
+                                                        <span class="badge bg-info">Đã duyệt</span>
+                                                        break;
+                                                    case "InProgress":
+                                                        <span class="badge bg-primary">Đang thực hiện</span>
+                                                        break;
+                                                    case "Completed":
+                                                        <span class="badge bg-success">Hoàn thành</span>
+                                                        break;
+                                                    case "Rejected":
+                                                        <span class="badge bg-danger">Từ chối</span>
+                                                        break;
+                                                }
+                                            </td>
+                                            <td class="text-center">@project.Year - HK@project.Semester</td>
+                                            <td>@project.CreatedDate.ToString("dd/MM/yyyy HH:mm")</td>
+                                            <td>
+                                                <div class="btn-group btn-group-sm">
+                                                    <a href="@Url.Action("ProjectDetail", new { id = project.ProjectID })"
+                                                       class="btn btn-info"
+                                                       title="Chi tiết">
+                                                        <i class="bi bi-eye"></i> Chi tiết
+                                                    </a>
+
+                                                    @if (project.Status == "Pending")
+                                                    {
+                                                        <button class="btn btn-success"
+                                                                onclick="approveProject(@project.ProjectID)"
+                                                                title="Duyệt">
+                                                            <i class="bi bi-check-circle"></i>
+                                                        </button>
+                                                        <button class="btn btn-danger"
+                                                                onclick="showRejectModal(@project.ProjectID)"
+                                                                title="Từ chối">
+                                                            <i class="bi bi-x-circle"></i>
+                                                        </button>
+                                                    }
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        index++;
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Modal từ chối -->
+<div class="modal fade" id="rejectModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">Lý do từ chối đề tài</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="rejectProjectId" />
+                <textarea id="rejectReason" class="form-control" rows="4" placeholder="Nhập lý do từ chối..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button class="btn btn-danger" onclick="rejectProject()">Từ chối</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function approveProject(id) {
+        if (!confirm("Xác nhận duyệt đề tài này?")) return;
+
+        $.post('/Professor/ApproveProject', { id })
+            .done(res => {
+                alert(res.message);
+                location.reload();
+            })
+            .fail(() => alert("Lỗi khi duyệt."));
+    }
+
+    function showRejectModal(id) {
+        $('#rejectProjectId').val(id);
+        $('#rejectReason').val('');
+        $('#rejectModal').modal('show');
+    }
+
+    function rejectProject() {
+        const id = $('#rejectProjectId').val();
+        const reason = $('#rejectReason').val().trim();
+
+        if (!reason) {
+            alert("Vui lòng nhập lý do từ chối.");
+            return;
+        }
+
+        $.post('/Professor/RejectProject', { id, reason })
+            .done(res => {
+                alert(res.message);
+                location.reload();
+            })
+            .fail(() => alert("Lỗi khi từ chối."));
+    }
+</script>
+
+<style>
+    .table td {
+        vertical-align: middle;
+    }
+
+    .btn-group-sm .btn {
+        padding: 0.25rem 0.5rem;
+    }
+
+    .card {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+</style>

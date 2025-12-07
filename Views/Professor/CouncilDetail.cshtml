@@ -1,0 +1,357 @@
+﻿@model Duan_CNPM.Models.Council
+@{
+    ViewData["Title"] = "Chi tiết hội đồng";
+    var currentUserId = int.Parse(Context.Session.GetString("UserID"));
+    var myMembership = Model.CouncilMembers.FirstOrDefault(cm => cm.ProfessorID == currentUserId);
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <a href="@Url.Action("Councils")" class="btn btn-secondary mb-3">
+                <i class="bi bi-arrow-left"></i> Quay lại
+            </a>
+            <h2 class="text-center">@Model.Name</h2>
+        </div>
+    </div>
+
+    <!-- Thông tin hội đồng -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="bi bi-info-circle"></i> Thông tin hội đồng</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <strong><i class="bi bi-calendar-event"></i> Ngày bảo vệ:</strong>
+                                <span class="text-primary">@Model.DefenseDate.ToString("dd/MM/yyyy HH:mm")</span>
+                            </p>
+                            <p>
+                                <strong><i class="bi bi-geo-alt"></i> Địa điểm:</strong>
+                                @Model.Location
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <strong><i class="bi bi-person-badge"></i> Vai trò của bạn:</strong>
+                                <span class="badge bg-info">
+                                    @switch (myMembership?.Role)
+                                    {
+                                        case "Chairman":
+                                            <text>Chủ tịch</text>
+                                            break;
+                                        case "Secretary":
+                                            <text>Thư ký</text>
+                                            break;
+                                        default:
+                                            @myMembership?.Role
+                                            break;
+                                    }
+                                </span>
+                            </p>
+                            <p>
+                                <strong><i class="bi bi-people"></i> Số thành viên:</strong>
+                                @Model.CouncilMembers.Count
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Danh sách đề tài cần chấm -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">
+                        <i class="bi bi-journal-text"></i> Danh sách đề tài (@Model.Projects.Count)
+                    </h5>
+                </div>
+                <div class="card-body">
+                    @if (Model.Projects.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th style="width: 5%">STT</th>
+                                        <th style="width: 30%">Tên đề tài</th>
+                                        <th style="width: 15%">Sinh viên</th>
+                                        <th style="width: 15%">GVHD</th>
+                                        <th style="width: 10%">Năm - HK</th>
+                                        <th style="width: 10%">Điểm của bạn</th>
+                                        <th style="width: 15%">Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        int index = 1;
+                                    }
+                                    @foreach (var project in Model.Projects.OrderBy(p => p.Student.FullName))
+                                    {
+                                        var myScore = project.Scores.FirstOrDefault(s =>
+                                        s.CouncilMember.ProfessorID == currentUserId);
+
+                                        <tr>
+                                            <td class="text-center">@index</td>
+                                            <td>
+                                                <strong>@project.Title</strong>
+                                            </td>
+                                            <td>
+                                                @project.Student.FullName
+                                                @if (!string.IsNullOrEmpty(project.Student.StudentCode))
+                                                {
+                                                    <br>
+                                                    <small class="text-muted">MSSV: @project.Student.StudentCode</small>
+                                                }
+                                            </td>
+                                            <td>@(project.Professor?.FullName ?? "Chưa có")</td>
+                                            <td class="text-center">@project.Year - HK@project.Semester</td>
+                                            <td class="text-center">
+                                                @if (myScore != null)
+                                                {
+                                                    <span class="badge bg-success fs-6">
+                                                        @myScore.ScoreValue.ToString("F2")
+                                                    </span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-warning text-dark">
+                                                        Chưa chấm
+                                                    </span>
+                                                }
+                                            </td>
+                                            <td>
+                                                <div class="btn-group btn-group-sm">
+                                                    <a href="@Url.Action("ProjectDetail", new { id = project.ProjectID })"
+                                                       class="btn btn-info"
+                                                       title="Xem chi tiết">
+                                                        <i class="bi bi-eye"></i>
+                                                    </a>
+                                                    <button class="btn btn-primary"
+                                                            onclick="showScoreModal(@project.ProjectID, '@project.Title.Replace("'", "\\'")', '@project.Student.FullName.Replace("'", "\\'")', @(myScore?.ScoreValue ?? 0), '@(myScore?.Comment?.Replace("'", "\\'").Replace("\n", "\\n") ?? "")')"
+                                                            title="Chấm điểm">
+                                                        <i class="bi bi-pencil-square"></i> Chấm
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        index++;
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Thống kê tiến độ chấm điểm -->
+                        <div class="alert alert-info mt-3">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <strong>Tổng đề tài:</strong> @Model.Projects.Count
+                                </div>
+                                <div class="col-md-4">
+                                    <strong>Đã chấm:</strong>
+                                    @Model.Projects.Count(p => p.Scores.Any(s => s.CouncilMember.ProfessorID == currentUserId))
+                                </div>
+                                <div class="col-md-4">
+                                    <strong>Chưa chấm:</strong>
+                                    @Model.Projects.Count(p => !p.Scores.Any(s => s.CouncilMember.ProfessorID == currentUserId))
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-muted text-center">Chưa có đề tài nào trong hội đồng này.</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal chấm điểm -->
+<div class="modal fade" id="scoreModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-pencil-square"></i> Chấm điểm đề tài
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="scoreProjectId">
+
+                <div class="alert alert-info">
+                    <h6 class="mb-2"><strong>Đề tài:</strong> <span id="scoreProjectTitle"></span></h6>
+                    <p class="mb-0"><strong>Sinh viên:</strong> <span id="scoreStudentName"></span></p>
+                </div>
+
+                <form id="scoreForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">
+                                Điểm số <span class="text-danger">*</span>
+                            </label>
+                            <div class="input-group">
+                                <input type="number"
+                                       class="form-control form-control-lg text-center fw-bold"
+                                       id="scoreValue"
+                                       min="0"
+                                       max="10"
+                                       step="0.25"
+                                       required
+                                       style="font-size: 1.5rem;">
+                                <span class="input-group-text">/10</span>
+                            </div>
+                            <small class="text-muted">Nhập điểm từ 0 đến 10 (có thể dùng 0.25, 0.5, 0.75)</small>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Đánh giá nhanh</label>
+                            <div class="btn-group-vertical w-100" role="group">
+                                <button type="button" class="btn btn-outline-success btn-sm" onclick="setQuickScore(9.0)">
+                                    Xuất sắc (9.0)
+                                </button>
+                                <button type="button" class="btn btn-outline-primary btn-sm" onclick="setQuickScore(8.0)">
+                                    Giỏi (8.0)
+                                </button>
+                                <button type="button" class="btn btn-outline-info btn-sm" onclick="setQuickScore(7.0)">
+                                    Khá (7.0)
+                                </button>
+                                <button type="button" class="btn btn-outline-warning btn-sm" onclick="setQuickScore(6.0)">
+                                    Trung bình (6.0)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Nhận xét <span class="text-danger">*</span>
+                        </label>
+                        <textarea class="form-control"
+                                  id="scoreComment"
+                                  rows="6"
+                                  required
+                                  placeholder="Nhập nhận xét chi tiết về đề tài...&#13;&#10;&#13;&#10;Gợi ý:&#13;&#10;- Đánh giá về nội dung đề tài&#13;&#10;- Đánh giá về kỹ thuật thực hiện&#13;&#10;- Đánh giá về khả năng trình bày&#13;&#10;- Nhận xét chung và góp ý"></textarea>
+                        <small class="text-muted">
+                            <i class="bi bi-info-circle"></i> Nhận xét chi tiết giúp sinh viên hiểu rõ điểm mạnh và cần cải thiện
+                        </small>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <i class="bi bi-exclamation-triangle"></i>
+                        <strong>Lưu ý:</strong> Sau khi lưu, bạn vẫn có thể chỉnh sửa điểm và nhận xét.
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="bi bi-x-circle"></i> Hủy
+                </button>
+                <button type="button" class="btn btn-primary" onclick="submitScore()">
+                    <i class="bi bi-save"></i> Lưu điểm
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showScoreModal(projectId, projectTitle, studentName, currentScore, currentComment) {
+        document.getElementById('scoreProjectId').value = projectId;
+        document.getElementById('scoreProjectTitle').textContent = projectTitle;
+        document.getElementById('scoreStudentName').textContent = studentName;
+        document.getElementById('scoreValue').value = currentScore > 0 ? currentScore : '';
+        document.getElementById('scoreComment').value = currentComment;
+
+        const modal = new bootstrap.Modal(document.getElementById('scoreModal'));
+        modal.show();
+    }
+
+    function setQuickScore(score) {
+        document.getElementById('scoreValue').value = score;
+    }
+
+    function submitScore() {
+        const projectId = document.getElementById('scoreProjectId').value;
+        const scoreValue = parseFloat(document.getElementById('scoreValue').value);
+        const comment = document.getElementById('scoreComment').value.trim();
+
+        // Validation
+        if (isNaN(scoreValue) || scoreValue < 0 || scoreValue > 10) {
+            alert('Vui lòng nhập điểm hợp lệ (0-10)');
+            return;
+        }
+
+        if (!comment) {
+            alert('Vui lòng nhập nhận xét');
+            return;
+        }
+
+        if (comment.length < 20) {
+            alert('Nhận xét quá ngắn. Vui lòng nhập chi tiết hơn (tối thiểu 20 ký tự)');
+            return;
+        }
+
+        // Disable button và hiển thị loading
+        const btn = event.target;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Đang lưu...';
+
+        // Gửi request
+        fetch('/Professor/SubmitScore', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: `projectId=${projectId}&councilMemberId=@myMembership.CouncilMemberID&score=${scoreValue}&comment=${encodeURIComponent(comment)}`
+        })
+        .then(res => res.json())
+        .then(data => {
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+
+            alert(data.message);
+            if (data.success) {
+                const modal = bootstrap.Modal.getInstance(document.getElementById('scoreModal'));
+                modal.hide();
+                location.reload();
+            }
+        })
+        .catch(err => {
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            console.error(err);
+            alert('Có lỗi xảy ra khi lưu điểm');
+        });
+    }
+</script>
+
+<style>
+    .table td {
+        vertical-align: middle;
+    }
+
+    .btn-group-sm .btn {
+        padding: 0.25rem 0.5rem;
+    }
+
+    #scoreValue {
+        font-weight: bold;
+    }
+
+        #scoreValue:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+
+    .modal-body .alert {
+        border-left: 4px solid #0dcaf0;
+    }
+</style>

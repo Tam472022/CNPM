@@ -1,0 +1,151 @@
+﻿@model IEnumerable<Duan_CNPM.Models.Council>
+@{
+    ViewData["Title"] = "Hội đồng bảo vệ";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h2 class="text-center" style="margin-top: 35px;">Hội đồng bảo vệ của tôi</h2>
+        </div>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info text-center">
+            <i class="bi bi-info-circle"></i> Bạn chưa được phân công vào hội đồng nào.
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var council in Model)
+            {
+                var myRole = council.CouncilMembers.FirstOrDefault(cm => cm.ProfessorID == int.Parse(Context.Session.GetString("UserID")))?.Role;
+
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-primary text-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">@council.Name</h5>
+                                <span class="badge bg-light text-dark">
+                                    @council.Projects.Count đề tài
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <p class="mb-2">
+                                    <strong><i class="bi bi-calendar-event"></i> Ngày bảo vệ:</strong>
+                                    <span class="text-primary">@council.DefenseDate.ToString("dd/MM/yyyy HH:mm")</span>
+                                </p>
+                                <p class="mb-2">
+                                    <strong><i class="bi bi-geo-alt"></i> Địa điểm:</strong>
+                                    @council.Location
+                                </p>
+                                <p class="mb-2">
+                                    <strong><i class="bi bi-person-badge"></i> Vai trò của bạn:</strong>
+                                    <span class="badge bg-info">
+                                        @switch (myRole)
+                                        {
+                                            case "Chairman":
+                                                <text>Chủ tịch</text>
+                                                break;
+                                            case "Secretary":
+                                                <text>Thư ký</text>
+                                                break;
+                                            default:
+                                                @myRole
+                                                break;
+                                        }
+                                    </span>
+                                </p>
+                            </div>
+
+                            <hr>
+
+                            <h6 class="mb-2">Danh sách đề tài:</h6>
+                            <ul class="list-group list-group-flush mb-3">
+                                @foreach (var project in council.Projects.Take(3))
+                                {
+                                    <li class="list-group-item px-0 py-2">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="flex-grow-1">
+                                                <strong>@project.Title</strong>
+                                                <br>
+                                                <small class="text-muted">
+                                                    SV: @project.Student.FullName
+                                                </small>
+                                            </div>
+                                            <div>
+                                                @{
+                                                    var myScore = project.Scores.FirstOrDefault(s =>
+                                                    s.CouncilMember.ProfessorID == int.Parse(Context.Session.GetString("UserID")));
+
+                                                    if (myScore != null)
+                                                    {
+                                                        <span class="badge bg-success">
+                                                            <i class="bi bi-check-circle"></i> Đã chấm: @myScore.ScoreValue.ToString("F2")
+                                                        </span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="badge bg-warning text-dark">
+                                                            <i class="bi bi-clock"></i> Chưa chấm
+                                                        </span>
+                                                    }
+                                                }
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+                            </ul>
+
+                            @if (council.Projects.Count > 3)
+                            {
+                                <small class="text-muted">
+                                    ... và @(council.Projects.Count - 3) đề tài khác
+                                </small>
+                            }
+                        </div>
+                        <div class="card-footer bg-light">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    Tạo ngày: @council.CreatedDate.ToString("dd/MM/yyyy")
+                                </small>
+                                <a href="@Url.Action("CouncilDetail", new { id = council.CouncilID })"
+                                   class="btn btn-primary btn-sm">
+                                    <i class="bi bi-eye"></i> Chi tiết & Chấm điểm
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+<style>
+    .card {
+        transition: transform 0.2s;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+        }
+
+    .list-group-item {
+        border-left: none;
+        border-right: none;
+    }
+
+        .list-group-item:first-child {
+            border-top: none;
+        }
+
+        .list-group-item:last-child {
+            border-bottom: none;
+        }
+</style>
