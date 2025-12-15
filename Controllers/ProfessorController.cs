@@ -571,5 +571,58 @@ namespace Duan_CNPM.Controllers
             _context.Notifications.Add(notification);
             await _context.SaveChangesAsync();
         }
+
+        // Đổi mật khẩu
+        [HttpGet]
+        public IActionResult ChangePassword()
+        {
+            if (!CheckAuth()) return RedirectToAction("Login", "Home");
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(string currentPassword, string newPassword, string confirmPassword)
+        {
+            if (!CheckAuth()) return RedirectToAction("Login", "Home");
+
+            try
+            {
+                var userId = GetCurrentUserID();
+                var user = await _context.Users.FindAsync(userId);
+
+                if (user == null)
+                    return Json(new { success = false, message = "Không tìm thấy người dùng" });
+
+                // Kiểm tra mật khẩu hiện tại
+                if (!BCrypt.Net.BCrypt.Verify(currentPassword, user.PasswordHash))
+                    return Json(new { success = false, message = "Mật khẩu hiện tại không đúng!" });
+
+                // Kiểm tra mật khẩu mới
+                if (string.IsNullOrWhiteSpace(newPassword) || newPassword.Length < 6)
+                    return Json(new { success = false, message = "Mật khẩu mới phải có ít nhất 6 ký tự!" });
+
+                // Kiểm tra xác nhận mật khẩu
+                if (newPassword != confirmPassword)
+                    return Json(new { success = false, message = "Mật khẩu xác nhận không khớp!" });
+
+                // Kiểm tra mật khẩu mới không trùng mật khẩu cũ
+                if (BCrypt.Net.BCrypt.Verify(newPassword, user.PasswordHash))
+                    return Json(new { success = false, message = "Mật khẩu mới không được trùng với mật khẩu hiện tại!" });
+
+                // Cập nhật mật khẩu
+                user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(newPassword);
+                await _context.SaveChangesAsync();
+
+                // Thông báo
+                await CreateNotification(userId, "Đổi mật khẩu thành công",
+                    "Mật khẩu của bạn đã được thay đổi thành công.", "Success");
+
+                return Json(new { success = true, message = "Đổi mật khẩu thành công!" });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = "Lỗi: " + ex.Message });
+            }
+        }
     }
 }
