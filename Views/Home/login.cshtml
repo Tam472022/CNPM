@@ -17,18 +17,37 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #dff6ff, #a8dfff);
+            background-image: url('/images/truong_bach_khoa.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             padding: 20px 0;
+            position: relative;
         }
 
+            /* Lớp phủ mờ để form dễ đọc hơn */
+            body::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(223, 246, 255, 0.7);
+                z-index: 1;
+            }
+
         .login-container {
-            background: white;
+            background: rgba(255, 255, 255, 0.98);
             border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
             overflow: hidden;
             max-width: 680px;
             width: 100%;
+            position: relative;
+            z-index: 2;
         }
 
         .login-header {
@@ -38,15 +57,15 @@
             text-align: center;
         }
 
-        .login-header h2 {
-            margin: 0;
-            font-weight: 600;
-        }
+            .login-header h2 {
+                margin: 0;
+                font-weight: 600;
+            }
 
-        .login-header p {
-            margin: 10px 0 0 0;
-            opacity: 0.9;
-        }
+            .login-header p {
+                margin: 10px 0 0 0;
+                opacity: 0.9;
+            }
 
         .login-body {
             padding: 30px;
@@ -64,12 +83,14 @@
             padding: 12px 15px;
             font-size: 15px;
             transition: all 0.3s;
+            background-color: rgba(255, 255, 255, 0.95);
         }
 
-        .form-control:focus {
-            border-color: #667eea;
-            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
-        }
+            .form-control:focus {
+                border-color: #667eea;
+                box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+                background-color: white;
+            }
 
         .btn-login-primary {
             background: linear-gradient(135deg, #0d1b3d 0%, #1a3a6d 100%);
@@ -82,11 +103,11 @@
             transition: transform 0.2s;
         }
 
-        .btn-login-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-            color: white;
-        }
+            .btn-login-primary:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+                color: white;
+            }
 
         .btn-login-link {
             background: transparent;
@@ -100,10 +121,10 @@
             transition: all 0.3s;
         }
 
-        .btn-login-link:hover {
-            background: #1e3c72;
-            color: white;
-        }
+            .btn-login-link:hover {
+                background: #1e3c72;
+                color: white;
+            }
 
         .alert {
             border-radius: 10px;
@@ -121,10 +142,10 @@
             transition: all 0.3s;
         }
 
-        .btn-secondary:hover {
-            background: #1e3c72;
-            color: white;
-        }
+            .btn-secondary:hover {
+                background: #1e3c72;
+                color: white;
+            }
     </style>
 </head>
 
