@@ -54,19 +54,20 @@
                                     <i class="bi bi-award"></i> Hội đồng bảo vệ
                                 </a>
                             </li>
-                            <li>
-                                <a class="dropdown-item" asp-controller="Professor" asp-action="Profile">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Professor" asp-action="Profile">
                                     <i class="bi bi-person-badge"></i> Hồ sơ cá nhân
                                 </a>
                             </li>
-                            <li>
-                                <a class="dropdown-item" asp-controller="Professor" asp-action="ChangePassword">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Professor" asp-action="ChangePassword">
                                     <i class="bi bi-key-fill"></i> Đổi mật khẩu
                                 </a>
                             </li>
+
                         }
                         else if (Context.Session.GetString("Role") == "Student")
-                        {   
+                        {
 
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Dashboard">
@@ -78,14 +79,13 @@
                                     <i class="bi bi-plus-circle"></i> Tạo đề tài
                                 </a>
                             </li>
-                            
-                            <li>
-                                <a class="dropdown-item" asp-controller="Student" asp-action="Profile">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Profile">
                                     <i class="bi bi-person-badge"></i> Hồ sơ cá nhân
                                 </a>
                             </li>
-                            <li>
-                                <a class="dropdown-item" asp-controller="Student" asp-action="ChangePassword">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="ChangePassword">
                                     <i class="bi bi-key-fill"></i> Đổi mật khẩu
                                 </a>
                             </li>
