@@ -1,9 +1,9 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Duan_CNPM.Data;
 using Duan_CNPM.Models;
-using System.Diagnostics;
 using Duan_CNPM.Services; // ✅ THÊM USING
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 namespace Duan_CNPM.Controllers {
     public class HomeController : Controller {
@@ -58,6 +58,7 @@ namespace Duan_CNPM.Controllers {
         [HttpPost]
         public async Task<IActionResult> Login(string username, string password) {
             HttpContext.Session.SetString("LastTriedUsername", username);
+            // Sau khi xác thực thành công
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password)) {
                 ViewBag.Message = "Tên đăng nhập và mật khẩu không được để trống!";
                 return View();
@@ -114,7 +115,8 @@ namespace Duan_CNPM.Controllers {
                 HttpContext.Session.SetString("UserID", user.UserID.ToString());
                 HttpContext.Session.SetString("Username", user.Username);
                 HttpContext.Session.SetString("FullName", user.FullName);
-                HttpContext.Session.SetString("Role", user.Role); 
+                HttpContext.Session.SetString("Role", user.Role);
+                HttpContext.Session.SetString("Avatar", user.Avatar ?? "/images/default-avatar.png");
                 await CreateAuditLog(user.UserID, "Login Success", "Users", user.UserID);
                 await CreateNotification(user.UserID, "Đăng nhập thành công", $"Chào mừng {user.FullName} quay trở lại!", "Success"); 
                 return RedirectToAction("Index");

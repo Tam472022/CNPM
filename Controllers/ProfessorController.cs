@@ -522,6 +522,8 @@ namespace Duan_CNPM.Controllers
                 // Lưu thay đổi
                 _context.Users.Update(user);
                 await _context.SaveChangesAsync();
+                // ⭐ QUAN TRỌNG: Cập nhật Session với avatar mới
+                HttpContext.Session.SetString("Avatar", user.Avatar ?? "/images/default-avatar.png");
 
                 TempData["Success"] = "Cập nhật ảnh đại diện thành công!";
                 return RedirectToAction("Profile");

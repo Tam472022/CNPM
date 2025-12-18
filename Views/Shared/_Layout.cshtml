@@ -108,8 +108,17 @@
                         else
                         {
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-person-circle"></i> @Context.Session.GetString("FullName")
+                                <a class="nav-link dropdown-toggle text-dark d-flex align-items-center gap-2"
+                                   href="#"
+                                   id="navbarDropdown"
+                                   role="button"
+                                   data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <img src="@Context.Session.GetString("Avatar")"
+                                         alt="Avatar"
+                                         style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 2px solid #dee2e6;"
+                                         onerror="this.src='/images/default-avatar.png'" />
+                                    <span>@Context.Session.GetString("FullName")</span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     @if (Context.Session.GetString("Role") == "Professor")

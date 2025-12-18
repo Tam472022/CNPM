@@ -26,6 +26,8 @@ namespace Duan_CNPM.Controllers
             return HttpContext.Session.GetString("Role") == "Admin";
         }
 
+        // Get avatar:
+
         // Dashboard
         public async Task<IActionResult> Index()
         {
