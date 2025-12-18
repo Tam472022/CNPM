@@ -26,9 +26,13 @@
 
             <!-- Avatar hiển thị -->
             <img id="avatarPreview"
-                 src="@(string.IsNullOrEmpty(Model.Avatar) ? "/images/default-avatar.png" : Model.Avatar)"
-                 class="rounded-circle mb-3" width="120" height="120" alt="Ảnh đại diện"
-                 style="object-fit: cover;" />
+                 src="@Model.AvatarUrl"
+                 class="rounded-circle mb-3"
+                 width="120"
+                 height="120"
+                 alt="Ảnh đại diện"
+                 style="object-fit: cover;"
+                 onerror="this.src='/images/default-avatar.png'" />
 
             <p>Họ và tên: <strong>@Model.FullName</strong></p>
             <p>Email: @(Model.Email ?? "Chưa cập nhật")</p>

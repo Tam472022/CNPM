@@ -77,37 +77,45 @@ namespace Duan_CNPM.Controllers {
 
         // Tạo đề tài mới:
         [HttpPost]
-        public async Task<IActionResult> CreateProject(Project project) {
-            // Không đúng Student thì về trang chủ (dùng cho đăng xuất)
+        public async Task<IActionResult> CreateProject(Project project,
+    string? Member2Name, string? Member2StudentCode,
+    string? Member3Name, string? Member3StudentCode)
+        {
             if (!CheckAuth()) return RedirectToAction("Login", "Home");
-            // Xử lí bất đồng bộ:
-            try {
-                // Lây mã sinh viên:
+
+            try
+            {
                 project.StudentID = GetCurrentUserID();
-                // Vừa tạo là phải chờ duyệt:
                 project.Status = "Pending";
-                // Lấy thời gian thực:
                 project.CreatedDate = DateTime.Now;
+
                 var config = await _context.SystemConfigs.FirstOrDefaultAsync(c => c.ConfigKey == "CurrentYear");
                 project.Year = config != null ? int.Parse(config.ConfigValue) : DateTime.Now.Year;
-                // Học kì:
+
                 var semesterConfig = await _context.SystemConfigs.FirstOrDefaultAsync(c => c.ConfigKey == "CurrentSemester");
                 project.Semester = semesterConfig != null ? int.Parse(semesterConfig.ConfigValue) : 1;
-                // Thêm dự án và chờ duyệt:
+
+                // ✅ THÊM THÔNG TIN THÀNH VIÊN
+                project.Member2Name = string.IsNullOrWhiteSpace(Member2Name) ? null : Member2Name.Trim();
+                project.Member2StudentCode = string.IsNullOrWhiteSpace(Member2StudentCode) ? null : Member2StudentCode.Trim();
+                project.Member3Name = string.IsNullOrWhiteSpace(Member3Name) ? null : Member3Name.Trim();
+                project.Member3StudentCode = string.IsNullOrWhiteSpace(Member3StudentCode) ? null : Member3StudentCode.Trim();
+
                 _context.Projects.Add(project);
                 await _context.SaveChangesAsync();
-                // Thông báo cho giảng viên:
-                if (project.ProfessorID.HasValue) {
+
+                if (project.ProfessorID.HasValue)
+                {
                     await CreateNotification(project.ProfessorID.Value, "Đề tài mới",
                         $"Sinh viên đã đăng ký đề tài: {project.Title}", "Info", $"/Professor/ProjectDetail/{project.ProjectID}");
                 }
-                // Thông báo tạo đề tài thành công:
+
                 TempData["Success"] = "Tạo đề tài thành công!";
                 return RedirectToAction("Dashboard");
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 TempData["Error"] = "Có lỗi xảy ra: " + ex.Message;
-                // Trả về View với số lượng project của sinh viên:
                 return View(project);
             }
         }

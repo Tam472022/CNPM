@@ -72,9 +72,69 @@
                         </div>
                     </div>
 
+                    <!-- Trong phần card thông tin đề tài, sau phần mô tả -->
                     <hr>
                     <h5>Mô tả đề tài</h5>
                     <p class="text-justify">@Model.Description</p>
+
+                    <!-- ✅ THÊM PHẦN NÀY -->
+                    @if (!string.IsNullOrEmpty(Model.Member2Name) || !string.IsNullOrEmpty(Model.Member3Name))
+                    {
+                        <hr>
+                        <h5><i class="bi bi-people"></i> Thành viên nhóm</h5>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="alert alert-info">
+                                    <h6 class="mb-2">
+                                        <i class="bi bi-person-badge"></i> Thành viên 1 (Trưởng nhóm):
+                                        <strong>@Model.Student.FullName</strong>
+                                    </h6>
+                                    @if (!string.IsNullOrEmpty(Model.Student.StudentCode))
+                                    {
+                                        <p class="mb-0">
+                                            <i class="bi bi-card-text"></i> Mã SV: @Model.Student.StudentCode
+                                        </p>
+                                    }
+                                </div>
+                            </div>
+
+                            @if (!string.IsNullOrEmpty(Model.Member2Name))
+                            {
+                                <div class="col-md-6">
+                                    <div class="alert alert-secondary">
+                                        <h6 class="mb-2">
+                                            <i class="bi bi-person"></i> Thành viên 2:
+                                            <strong>@Model.Member2Name</strong>
+                                        </h6>
+                                        @if (!string.IsNullOrEmpty(Model.Member2StudentCode))
+                                        {
+                                            <p class="mb-0">
+                                                <i class="bi bi-card-text"></i> Mã SV: @Model.Member2StudentCode
+                                            </p>
+                                        }
+                                    </div>
+                                </div>
+                            }
+
+                            @if (!string.IsNullOrEmpty(Model.Member3Name))
+                            {
+                                <div class="col-md-6">
+                                    <div class="alert alert-secondary">
+                                        <h6 class="mb-2">
+                                            <i class="bi bi-person"></i> Thành viên 3:
+                                            <strong>@Model.Member3Name</strong>
+                                        </h6>
+                                        @if (!string.IsNullOrEmpty(Model.Member3StudentCode))
+                                        {
+                                            <p class="mb-0">
+                                                <i class="bi bi-card-text"></i> Mã SV: @Model.Member3StudentCode
+                                            </p>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
 
                     @if (!string.IsNullOrEmpty(Model.ProfessorComment))
                     {

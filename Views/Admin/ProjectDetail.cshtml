@@ -64,6 +64,65 @@
                     <h5>Mô tả đề tài</h5>
                     <p class="text-justify">@Model.Description</p>
 
+                    <!-- ✅ THÊM PHẦN NÀY -->
+                    @if (!string.IsNullOrEmpty(Model.Member2Name) || !string.IsNullOrEmpty(Model.Member3Name))
+                    {
+                        <hr>
+                        <h5><i class="bi bi-people"></i> Thành viên nhóm</h5>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="alert alert-info">
+                                    <h6 class="mb-2">
+                                        <i class="bi bi-person-badge"></i> Thành viên 1 (Trưởng nhóm):
+                                        <strong>@Model.Student.FullName</strong>
+                                    </h6>
+                                    @if (!string.IsNullOrEmpty(Model.Student.StudentCode))
+                                    {
+                                        <p class="mb-0">
+                                            <i class="bi bi-card-text"></i> Mã SV: @Model.Student.StudentCode
+                                        </p>
+                                    }
+                                </div>
+                            </div>
+
+                            @if (!string.IsNullOrEmpty(Model.Member2Name))
+                            {
+                                <div class="col-md-6">
+                                    <div class="alert alert-secondary">
+                                        <h6 class="mb-2">
+                                            <i class="bi bi-person"></i> Thành viên 2:
+                                            <strong>@Model.Member2Name</strong>
+                                        </h6>
+                                        @if (!string.IsNullOrEmpty(Model.Member2StudentCode))
+                                        {
+                                            <p class="mb-0">
+                                                <i class="bi bi-card-text"></i> Mã SV: @Model.Member2StudentCode
+                                            </p>
+                                        }
+                                    </div>
+                                </div>
+                            }
+
+                            @if (!string.IsNullOrEmpty(Model.Member3Name))
+                            {
+                                <div class="col-md-6">
+                                    <div class="alert alert-secondary">
+                                        <h6 class="mb-2">
+                                            <i class="bi bi-person"></i> Thành viên 3:
+                                            <strong>@Model.Member3Name</strong>
+                                        </h6>
+                                        @if (!string.IsNullOrEmpty(Model.Member3StudentCode))
+                                        {
+                                            <p class="mb-0">
+                                                <i class="bi bi-card-text"></i> Mã SV: @Model.Member3StudentCode
+                                            </p>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+
                     @if (!string.IsNullOrEmpty(Model.ProfessorComment))
                     {
                         <hr>
@@ -258,12 +317,13 @@
                     <h5 class="mb-0"><i class="bi bi-person-circle"></i> Thông tin sinh viên</h5>
                 </div>
                 <div class="card-body text-center">
-                    <img src="@(string.IsNullOrEmpty(Model.Student.Avatar) ? "/images/default-avatar.png" : Model.Student.Avatar)"
+                    <img src="@Model.Student.AvatarUrl"
                          alt="Avatar"
                          class="rounded-circle mb-3"
                          width="100"
                          height="100"
-                         style="object-fit: cover;">
+                         style="object-fit: cover;"
+                         onerror="this.src='/images/default-avatar.png'">
 
                     <h5>@Model.Student.FullName</h5>
 
@@ -305,12 +365,13 @@
                         <h5 class="mb-0"><i class="bi bi-person-badge"></i> Giảng viên hướng dẫn</h5>
                     </div>
                     <div class="card-body text-center">
-                        <img src="@(string.IsNullOrEmpty(Model.Professor.Avatar) ? "/images/default-avatar.png" : Model.Professor.Avatar)"
+                        <img src="@Model.Professor.AvatarUrl"
                              alt="Avatar"
                              class="rounded-circle mb-3"
                              width="100"
                              height="100"
-                             style="object-fit: cover;">
+                             style="object-fit: cover;"
+                             onerror="this.src='/images/default-avatar.png'">
 
                         <h5>@Model.Professor.FullName</h5>
 

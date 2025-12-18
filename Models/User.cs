@@ -35,6 +35,11 @@ namespace Duan_CNPM.Models
         [StringLength(255)]
         public string? Avatar { get; set; } // ✅ Đã nullable
 
+        [NotMapped]
+        public string AvatarUrl => string.IsNullOrEmpty(Avatar)
+        ? "/images/default-avatar.png"
+        : Avatar;
+
         [StringLength(100)]
         public string? Major { get; set; } // ✅ Nullable - Chuyên ngành
 

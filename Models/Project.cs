@@ -19,6 +19,18 @@ namespace Duan_CNPM.Models {
         [Required]
         public int StudentID { get; set; }
 
+        [StringLength(100)]
+        public string? Member2Name { get; set; }
+
+        [StringLength(50)]
+        public string? Member2StudentCode { get; set; }
+
+        [StringLength(100)]
+        public string? Member3Name { get; set; }
+
+        [StringLength(50)]
+        public string? Member3StudentCode { get; set; }
+
         public int? ProfessorID { get; set; }
 
         [Required]

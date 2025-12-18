@@ -32,6 +32,73 @@
                                    placeholder="Nhập tên đề tài của bạn">
                         </div>
 
+                        <!-- ✅ THÊM PHẦN THÀNH VIÊN NHÓM -->
+                        <div class="card mb-3 border-info">
+                            <div class="card-header bg-info bg-opacity-10">
+                                <h6 class="mb-0">
+                                    <i class="bi bi-people"></i> Thông tin thành viên nhóm (nếu có)
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-info">
+                                    <small>
+                                        <i class="bi bi-info-circle"></i>
+                                        <strong>Lưu ý:</strong> Nếu đề tài làm nhóm, vui lòng nhập thông tin các thành viên. Nếu làm cá nhân, có thể bỏ qua phần này.
+                                    </small>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="Member2Name" class="form-label">
+                                            <i class="bi bi-person"></i> Họ tên thành viên 2
+                                        </label>
+                                        <input type="text"
+                                               class="form-control"
+                                               id="Member2Name"
+                                               name="Member2Name"
+                                               maxlength="100"
+                                               placeholder="Nhập họ tên đầy đủ">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="Member2StudentCode" class="form-label">
+                                            <i class="bi bi-card-text"></i> Mã sinh viên thành viên 2
+                                        </label>
+                                        <input type="text"
+                                               class="form-control"
+                                               id="Member2StudentCode"
+                                               name="Member2StudentCode"
+                                               maxlength="50"
+                                               placeholder="Ví dụ: 106221002">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="Member3Name" class="form-label">
+                                            <i class="bi bi-person"></i> Họ tên thành viên 3
+                                        </label>
+                                        <input type="text"
+                                               class="form-control"
+                                               id="Member3Name"
+                                               name="Member3Name"
+                                               maxlength="100"
+                                               placeholder="Nhập họ tên đầy đủ">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="Member3StudentCode" class="form-label">
+                                            <i class="bi bi-card-text"></i> Mã sinh viên thành viên 3
+                                        </label>
+                                        <input type="text"
+                                               class="form-control"
+                                               id="Member3StudentCode"
+                                               name="Member3StudentCode"
+                                               maxlength="50"
+                                               placeholder="Ví dụ: 106221003">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="mb-3">
                             <label for="Description" class="form-label">Mô tả đề tài <span class="text-danger">*</span></label>
                             <textarea class="form-control" id="Description" name="Description" rows="6" required

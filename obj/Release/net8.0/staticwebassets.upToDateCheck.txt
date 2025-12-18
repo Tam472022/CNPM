@@ -1,5 +1,6 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\default-avatar.png
 wwwroot\images\logoKhoa.PNG
 wwwroot\images\logoTruong.PNG
 wwwroot\images\truong_bach_khoa.png
@@ -65,9 +66,11 @@ wwwroot\uploads\avatars\0211fe04-0035-4a2a-9b2f-94406f4630f6_c-sharp-la-gi-10.pn
 wwwroot\uploads\avatars\0887999e-fe1e-4ee5-b20d-4c78f6e75080_385520277_1006081653795493_4115657073031207517_n.png
 wwwroot\uploads\avatars\101aa8b2-5ce0-47dc-b23a-9d5fb08cbd1e_385520277_1006081653795493_4115657073031207517_n.png
 wwwroot\uploads\avatars\12110cff-4b4b-4274-844d-78eb1f12c488_575855119_771727365902350_2210466112960698579_n.png
+wwwroot\uploads\avatars\2615b8a3-a560-4a94-b02b-61dffdd37420_Ảnh_chụp_màn_hình_2025-11-08_085751-removebg-preview.png
 wwwroot\uploads\avatars\271492dd-6b24-4f24-920b-3fbbf9e1a08d_Ảnh_chụp_màn_hình_2025-11-08_085751-removebg-preview.png
 wwwroot\uploads\avatars\8c085356-8bc7-4379-b21b-57bb8192a066_576202451_800734086278692_6669518650329325539_n.png
 wwwroot\uploads\avatars\aadd4adc-dd20-4767-bbd9-ae9975ed94ee_385520277_1006081653795493_4115657073031207517_n.png
+wwwroot\uploads\avatars\bc22c601-9980-469a-8815-ad6d36f67113_35024_512x512_delicious_icon.png
 wwwroot\uploads\projects\58e9f1a2-b84f-4f78-8dba-835298364ef0_Báo cáo - LTM - 25 - 11.pdf
 wwwroot\uploads\projects\b22c03c8-4417-4663-b81a-31a15409adb9_Báo cáo tiến độ PBL3.pdf
 wwwroot\uploads\projects\dbaaff26-c707-4371-bf64-65016f939321_2.png

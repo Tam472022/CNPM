@@ -262,6 +262,22 @@ namespace Duan_CNPM.Migrations
                     b.Property<decimal?>("FinalScore")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("Member2Name")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Member2StudentCode")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Member3Name")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Member3StudentCode")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<string>("ProfessorComment")
                         .HasColumnType("ntext");
 
@@ -452,7 +468,7 @@ namespace Duan_CNPM.Migrations
                             ConfigKey = "CurrentYear",
                             ConfigValue = "2025",
                             Description = "Năm học hiện tại",
-                            UpdatedDate = new DateTime(2025, 12, 18, 9, 36, 52, 480, DateTimeKind.Local).AddTicks(3913)
+                            UpdatedDate = new DateTime(2025, 12, 18, 13, 57, 13, 209, DateTimeKind.Local).AddTicks(6958)
                         },
                         new
                         {
@@ -460,7 +476,7 @@ namespace Duan_CNPM.Migrations
                             ConfigKey = "CurrentSemester",
                             ConfigValue = "1",
                             Description = "Học kỳ hiện tại",
-                            UpdatedDate = new DateTime(2025, 12, 18, 9, 36, 52, 480, DateTimeKind.Local).AddTicks(3925)
+                            UpdatedDate = new DateTime(2025, 12, 18, 13, 57, 13, 209, DateTimeKind.Local).AddTicks(6973)
                         },
                         new
                         {
@@ -468,7 +484,7 @@ namespace Duan_CNPM.Migrations
                             ConfigKey = "MaxFileSize",
                             ConfigValue = "10485760",
                             Description = "Kích thước file tối đa (bytes) - 10MB",
-                            UpdatedDate = new DateTime(2025, 12, 18, 9, 36, 52, 480, DateTimeKind.Local).AddTicks(3926)
+                            UpdatedDate = new DateTime(2025, 12, 18, 13, 57, 13, 209, DateTimeKind.Local).AddTicks(6974)
                         });
                 });
 
@@ -553,13 +569,13 @@ namespace Duan_CNPM.Migrations
                         new
                         {
                             UserID = 1,
-                            CreatedDate = new DateTime(2025, 12, 18, 9, 36, 52, 480, DateTimeKind.Local).AddTicks(3118),
+                            CreatedDate = new DateTime(2025, 12, 18, 13, 57, 13, 209, DateTimeKind.Local).AddTicks(6210),
                             Email = "admin@cnpm.com",
                             EmailConfirmed = false,
                             FailedLoginAttempts = 0,
                             FullName = "Administrator",
                             IsActive = true,
-                            PasswordHash = "$2a$11$XoIGJzUBIEhiJsu1wNvVv.Nz7WhrA.JUxTR95uNDeaSJsL76.T3um",
+                            PasswordHash = "$2a$11$5.s2HVlCLe2yxFZwLYS78eFYtst8QcBxPoAy7ND4qE5HIr5ScC.7q",
                             Role = "Admin",
                             Username = "admin"
                         });
