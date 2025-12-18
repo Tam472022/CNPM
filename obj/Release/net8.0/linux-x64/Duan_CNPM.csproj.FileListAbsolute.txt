@@ -251,3 +251,7 @@ D:\test\CNPM-main\obj\Release\net8.0\linux-x64\refint\Duan_CNPM.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\Duan_CNPM.pdb
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\Duan_CNPM.genruntimeconfig.cache
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\ref\Duan_CNPM.dll
+D:\test\CNPM-main\bin\Release\net8.0\linux-x64\BouncyCastle.Cryptography.dll
+D:\test\CNPM-main\bin\Release\net8.0\linux-x64\MailKit.dll
+D:\test\CNPM-main\bin\Release\net8.0\linux-x64\MimeKit.dll
+D:\test\CNPM-main\bin\Release\net8.0\linux-x64\System.Security.Cryptography.Pkcs.dll

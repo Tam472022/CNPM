@@ -3,15 +3,18 @@ using Microsoft.EntityFrameworkCore;
 using Duan_CNPM.Data;
 using Duan_CNPM.Models;
 using System.Diagnostics;
+using Duan_CNPM.Services; // ✅ THÊM USING
 
 namespace Duan_CNPM.Controllers {
     public class HomeController : Controller {
         private readonly ApplicationDbContext _context;
         private readonly ILogger<HomeController> _logger;
+        private readonly IEmailService _emailService; // ✅ THÊM
 
-        public HomeController(ApplicationDbContext context, ILogger<HomeController> logger) {
+        public HomeController(ApplicationDbContext context, ILogger<HomeController> logger, IEmailService emailService) {
             _context = context;
             _logger = logger;
+            _emailService = emailService; // ✅ THÊM
         }
 
         public IActionResult Index() {
@@ -64,7 +67,15 @@ namespace Duan_CNPM.Controllers {
                 if (user == null) {
                     ViewBag.Message = "Tên đăng nhập không tồn tại!";
                     return View();
-                } 
+                }
+
+                // ✅ KIỂM TRA XÁC THỰC EMAIL
+                if (!user.EmailConfirmed)
+                {
+                    ViewBag.Message = "Tài khoản chưa được xác thực email! Vui lòng kiểm tra email để xác thực.";
+                    return View();
+                }
+
                 if (!user.IsActive) {
                     ViewBag.Message = "Tài khoản đã bị vô hiệu hóa!";
                     return View();
@@ -125,7 +136,7 @@ namespace Duan_CNPM.Controllers {
         }
 
         [HttpPost]
-        public IActionResult Register (
+        public async Task<IActionResult> Register(
             string Username, string FullName, string Password, string ConfirmPassword, string Role,
             string StudentCode, string StudentMajor, string StudentPhone, string StudentEmail,
             string ProfessorMajor, string ProfessorPhone, string ProfessorEmail
@@ -144,11 +155,32 @@ namespace Duan_CNPM.Controllers {
                     ViewBag.Message = "Vui lòng chọn vai trò!";
                     return View();
                 }
+
+                // ✅ KIỂM TRA EMAIL BẮT BUỘC
+                string userEmail = Role == "Student" ? StudentEmail : ProfessorEmail;
+                if (string.IsNullOrWhiteSpace(userEmail))
+                {
+                    ViewBag.Message = "Email là bắt buộc để xác thực tài khoản!";
+                    return View();
+                }
+
                 // Không được đăng ký trùng tên với bất cứ ai (username phải khác biệt)
                 if (_context.Users.Any(u => u.Username == Username)) {
                     ViewBag.Message = "Tên đăng nhập đã tồn tại!";
                     return View();
                 }
+
+                // ✅ KIỂM TRA EMAIL TRÙNG
+                if (_context.Users.Any(u => u.Email == userEmail))
+                {
+                    ViewBag.Message = "Email đã được sử dụng!";
+                    return View();
+                }
+
+                // ✅ TẠO TOKEN XÁC THỰC
+                var verificationToken = Guid.NewGuid().ToString();
+
+
                 // Khởi tạo người dùng:
                 var user = new User {
                     // Non-nullable:
@@ -156,9 +188,13 @@ namespace Duan_CNPM.Controllers {
                     FullName = FullName.Trim(),
                     Role = Role,
                     PasswordHash = BCrypt.Net.BCrypt.HashPassword(Password),
-                    IsActive = true,
+                    IsActive = false, // ✅ CHƯA ACTIVE CHO ĐẾN KHI XÁC THỰC EMAIL
+                    EmailConfirmed = false, // ✅ THÊM
+                    EmailVerificationToken = verificationToken, // ✅ THÊM
+                    EmailVerificationExpiry = DateTime.Now.AddHours(24), // ✅ THÊM
                     FailedLoginAttempts = 0
                 };
+
                 // Vai trò là student hay Professor:
                 if (Role == "Student") {
                     user.StudentCode = StudentCode?.Trim();
@@ -171,12 +207,97 @@ namespace Duan_CNPM.Controllers {
                     user.Email = ProfessorEmail?.Trim();
                 }
                 _context.Users.Add(user);
-                _context.SaveChanges();
-                ViewBag.Message = "Đăng ký thành công! Vui lòng đăng nhập.";
+                await _context.SaveChangesAsync();
+
+                // ✅ GỬI EMAIL XÁC THỰC
+                try
+                {
+                    var verificationLink = Url.Action(
+                        "VerifyEmail",
+                        "Home",
+                        new { token = verificationToken },
+                        Request.Scheme
+                    );
+
+                    await _emailService.SendVerificationEmailAsync(
+                        user.Email,
+                        user.FullName,
+                        verificationLink
+                    );
+
+                    ViewBag.Message = "Đăng ký thành công! Vui lòng kiểm tra email để xác thực tài khoản.";
+                    ViewBag.MessageType = "success";
+                }
+                catch (Exception emailEx)
+                {
+                    _logger.LogError(emailEx, "Failed to send verification email");
+                    ViewBag.Message = "Đăng ký thành công nhưng không thể gửi email xác thực. Vui lòng liên hệ admin.";
+                    ViewBag.MessageType = "warning";
+                }
+
                 return View();
             } catch (Exception ex) {
                 _logger.LogError(ex, "Register error");
                 ViewBag.Message = "Có lỗi xảy ra, vui lòng thử lại!";
+                return View();
+            }
+        }
+
+        // ✅ THÊM METHOD MỚI: XÁC THỰC EMAIL
+        [HttpGet]
+        public async Task<IActionResult> VerifyEmail(string token)
+        {
+            if (string.IsNullOrWhiteSpace(token))
+            {
+                ViewBag.Message = "Link xác thực không hợp lệ!";
+                ViewBag.MessageType = "error";
+                return View();
+            }
+
+            try
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.EmailVerificationToken == token);
+
+                if (user == null)
+                {
+                    ViewBag.Message = "Link xác thực không tồn tại hoặc đã được sử dụng!";
+                    ViewBag.MessageType = "error";
+                    return View();
+                }
+
+                if (user.EmailConfirmed)
+                {
+                    ViewBag.Message = "Email đã được xác thực trước đó!";
+                    ViewBag.MessageType = "info";
+                    return View();
+                }
+
+                if (user.EmailVerificationExpiry.HasValue && user.EmailVerificationExpiry.Value < DateTime.Now)
+                {
+                    ViewBag.Message = "Link xác thực đã hết hạn! Vui lòng đăng ký lại.";
+                    ViewBag.MessageType = "error";
+                    return View();
+                }
+
+                // ✅ XÁC THỰC THÀNH CÔNG
+                user.EmailConfirmed = true;
+                user.IsActive = true;
+                user.EmailVerificationToken = null;
+                user.EmailVerificationExpiry = null;
+
+                await _context.SaveChangesAsync();
+
+                await CreateAuditLog(user.UserID, "Email Verified", "Users", user.UserID);
+
+                ViewBag.Message = "Xác thực email thành công! Bạn có thể đăng nhập ngay bây giờ.";
+                ViewBag.MessageType = "success";
+                return View();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Email verification error");
+                ViewBag.Message = "Có lỗi xảy ra khi xác thực email!";
+                ViewBag.MessageType = "error";
                 return View();
             }
         }

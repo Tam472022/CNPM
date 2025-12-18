@@ -43,6 +43,16 @@ namespace Duan_CNPM.Models
 
         public bool IsActive { get; set; } = true;
 
+        // ✅ THÊM CÁC TRƯỜNG MỚI
+        public bool EmailConfirmed { get; set; } = false;
+
+        [StringLength(255)]
+        public string? EmailVerificationToken { get; set; }
+
+        public DateTime? EmailVerificationExpiry { get; set; }
+        
+        // phía trên là các trường liên quan xác thực email
+
         public DateTime CreatedDate { get; set; } = DateTime.Now;
 
         public DateTime? LastLogin { get; set; }

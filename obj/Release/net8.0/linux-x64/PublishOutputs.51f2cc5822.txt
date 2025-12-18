@@ -7,11 +7,13 @@ D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\Duan_CNPM.pdb
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\Azure.Core.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\Azure.Identity.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\BCrypt.Net-Next.dll
+D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\BouncyCastle.Cryptography.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\ClosedXML.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\DocumentFormat.OpenXml.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\ExcelNumberFormat.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\Humanizer.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\Irony.dll
+D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\MailKit.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\Microsoft.Build.dll
@@ -52,6 +54,7 @@ D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\Microsoft.VisualStudio
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
+D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\MimeKit.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\Mono.TextTemplating.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\Newtonsoft.Json.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\NuGet.Common.dll
@@ -77,6 +80,7 @@ D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\System.IO.Packaging.dl
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\System.Memory.Data.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\System.Reflection.MetadataLoadContext.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\System.Runtime.Caching.dll
+D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\System.Security.Cryptography.Pkcs.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\System.Security.Permissions.dll
 D:\test\CNPM-main\obj\Release\net8.0\linux-x64\PubTmp\Out\System.Windows.Extensions.dll

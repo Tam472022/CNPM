@@ -452,7 +452,7 @@ namespace Duan_CNPM.Migrations
                             ConfigKey = "CurrentYear",
                             ConfigValue = "2025",
                             Description = "Năm học hiện tại",
-                            UpdatedDate = new DateTime(2025, 11, 13, 16, 25, 19, 676, DateTimeKind.Local).AddTicks(825)
+                            UpdatedDate = new DateTime(2025, 12, 18, 9, 36, 52, 480, DateTimeKind.Local).AddTicks(3913)
                         },
                         new
                         {
@@ -460,7 +460,7 @@ namespace Duan_CNPM.Migrations
                             ConfigKey = "CurrentSemester",
                             ConfigValue = "1",
                             Description = "Học kỳ hiện tại",
-                            UpdatedDate = new DateTime(2025, 11, 13, 16, 25, 19, 676, DateTimeKind.Local).AddTicks(1043)
+                            UpdatedDate = new DateTime(2025, 12, 18, 9, 36, 52, 480, DateTimeKind.Local).AddTicks(3925)
                         },
                         new
                         {
@@ -468,7 +468,7 @@ namespace Duan_CNPM.Migrations
                             ConfigKey = "MaxFileSize",
                             ConfigValue = "10485760",
                             Description = "Kích thước file tối đa (bytes) - 10MB",
-                            UpdatedDate = new DateTime(2025, 11, 13, 16, 25, 19, 676, DateTimeKind.Local).AddTicks(1045)
+                            UpdatedDate = new DateTime(2025, 12, 18, 9, 36, 52, 480, DateTimeKind.Local).AddTicks(3926)
                         });
                 });
 
@@ -490,6 +490,16 @@ namespace Duan_CNPM.Migrations
                     b.Property<string>("Email")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("EmailVerificationExpiry")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EmailVerificationToken")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<int>("FailedLoginAttempts")
                         .HasColumnType("int");
@@ -543,12 +553,13 @@ namespace Duan_CNPM.Migrations
                         new
                         {
                             UserID = 1,
-                            CreatedDate = new DateTime(2025, 11, 13, 16, 25, 19, 675, DateTimeKind.Local).AddTicks(8591),
+                            CreatedDate = new DateTime(2025, 12, 18, 9, 36, 52, 480, DateTimeKind.Local).AddTicks(3118),
                             Email = "admin@cnpm.com",
+                            EmailConfirmed = false,
                             FailedLoginAttempts = 0,
                             FullName = "Administrator",
                             IsActive = true,
-                            PasswordHash = "$2a$11$jK/xUi9LFbnsjzZ0Jsfftu6xZhQGE9iO6YGS578T5Nhf9kgOsP1y2",
+                            PasswordHash = "$2a$11$XoIGJzUBIEhiJsu1wNvVv.Nz7WhrA.JUxTR95uNDeaSJsL76.T3um",
                             Role = "Admin",
                             Username = "admin"
                         });

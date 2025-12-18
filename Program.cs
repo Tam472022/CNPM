@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Duan_CNPM.Data;
+using Duan_CNPM.Services; // ✅ THÊM DÒNG NÀY
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,9 @@ builder.Services.AddControllersWithViews();
 // Configure Entity Framework with SQL Server
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// ✅ THÊM EMAIL SERVICE
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 // Configure Session
 builder.Services.AddDistributedMemoryCache();

@@ -40,7 +40,7 @@ namespace Duan_CNPM.Controllers {
                 .OrderByDescending(p => p.CreatedDate)
                 .ToListAsync(); 
             // Đếm số lượng dự án
-            ViewBag.TotalProjects = projects.Count - projects.Count(p => p.Status == "Rejected");
+            ViewBag.TotalProjects = projects.Count;
             ViewBag.PendingProjects = projects.Count(p => p.Status == "Pending");
             ViewBag.CompletedProjects = projects.Count(p => p.Status == "Completed");
             ViewBag.InProgressProjects = projects.Count(p => p.Status == "Approved" || p.Status == "InProgress")

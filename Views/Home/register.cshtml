@@ -183,9 +183,13 @@
         <div class="register-body">
             @if (ViewBag.Message != null)
             {
-                var isSuccess = ViewBag.Message.ToString().Contains("thành công");
-                <div class="alert @(isSuccess ? "alert-success" : "alert-danger") alert-dismissible fade show" role="alert">
-                    <i class="bi @(isSuccess ? "bi-check-circle-fill" : "bi-exclamation-triangle-fill")"></i>
+                var isSuccess = (ViewBag.MessageType as string) == "success";
+                var isWarning = (ViewBag.MessageType as string) == "warning";
+                var alertClass = isSuccess ? "alert-success" : isWarning ? "alert-warning" : "alert-danger";
+                var iconClass = isSuccess ? "bi-check-circle-fill" : isWarning ? "bi-exclamation-triangle-fill" : "bi-exclamation-triangle-fill";
+
+                <div class="alert @alertClass alert-dismissible fade show" role="alert">
+                    <i class="bi @iconClass"></i>
                     @ViewBag.Message
                     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 </div>

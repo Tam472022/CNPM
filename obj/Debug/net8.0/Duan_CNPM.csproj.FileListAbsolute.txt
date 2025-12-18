@@ -1752,3 +1752,8 @@ D:\CNPM-main_1\CNPM-main\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\CNPM-main_1\CNPM-main\obj\Debug\net8.0\Duan_CNPM.sourcelink.json
 D:\test\CNPM-main\obj\Debug\net8.0\Duan_CNPM.sourcelink.json
 D:\test\CNPM-main\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\test\CNPM-main\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\test\CNPM-main\bin\Debug\net8.0\MailKit.dll
+D:\test\CNPM-main\bin\Debug\net8.0\MimeKit.dll
+D:\test\CNPM-main\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\test\CNPM-main\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
