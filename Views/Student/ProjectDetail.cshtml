@@ -65,6 +65,14 @@
                             {
                                 <p><strong>Ngày bảo vệ:</strong> @Model.DefenseDate.Value.ToString("dd/MM/yyyy HH:mm")</p>
                             }
+                            @if (Model.Council != null && !string.IsNullOrEmpty(Model.Council.Location))
+                            {
+                                <p>
+                                    <strong>Địa điểm bảo vệ:</strong>
+                                    <span>@Model.Council.Location</span>
+                                </p>
+                            }
+
                             @if (Model.FinalScore.HasValue)
                             {
                                 <p><strong>Điểm:</strong> <span class="badge bg-success fs-5">@Model.FinalScore.Value.ToString("F2")</span></p>

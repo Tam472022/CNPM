@@ -1,5 +1,6 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\default-avatar.png
 wwwroot\images\logoKhoa.PNG
 wwwroot\images\logoTruong.PNG
 wwwroot\images\truong_bach_khoa.png
@@ -74,4 +75,3 @@ wwwroot\uploads\projects\58e9f1a2-b84f-4f78-8dba-835298364ef0_Báo cáo - LTM - 
 wwwroot\uploads\projects\b22c03c8-4417-4663-b81a-31a15409adb9_Báo cáo tiến độ PBL3.pdf
 wwwroot\uploads\projects\dbaaff26-c707-4371-bf64-65016f939321_2.png
 wwwroot\uploads\projects\e4c0ebd8-4bf5-4016-a277-844d6935d882_3.png
-wwwroot\images\default-avatar.png

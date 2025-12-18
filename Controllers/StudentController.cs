@@ -45,8 +45,7 @@ namespace Duan_CNPM.Controllers {
             ViewBag.TotalProjects = projects.Count;
             ViewBag.PendingProjects = projects.Count(p => p.Status == "Pending");
             ViewBag.CompletedProjects = projects.Count(p => p.Status == "Completed");
-            ViewBag.InProgressProjects = projects.Count(p => p.Status == "Approved" || p.Status == "InProgress")
-                - projects.Count(p => p.Status == "Completed"); 
+            ViewBag.InProgressProjects = projects.Count(p => p.Status == "Approved" || p.Status == "InProgress"); 
             // Lấy 5 thông báo chưa đọc gần nhất
             var notifications = await _context.Notifications
                 .Where(n => n.UserID == userID && !n.IsRead)

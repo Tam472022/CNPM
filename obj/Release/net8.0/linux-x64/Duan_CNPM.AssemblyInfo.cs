@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Duan_CNPM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+023ae3c80ae4d9b735abc2dedc787ab3b1e4ad59")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a369241a0cdbf7eca444884c0a28ff7791d4b417")]
 [assembly: System.Reflection.AssemblyProductAttribute("Duan_CNPM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Duan_CNPM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
