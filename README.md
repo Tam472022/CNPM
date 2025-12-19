@@ -13,15 +13,15 @@ Sinh viên thực hiện: Trần Quang Khánh, Lê Xuân Nam, Hồ Anh Nguyên, 
 
 👨‍🎓 Dành cho Sinh viên
 
-✅ Đăng ký đề tài (cá nhân hoặc nhóm tối đa 3 thành viên)
-
-📊 Cập nhật tiến độ thực hiện
-
-📁 Upload tài liệu (báo cáo, source code, poster)
-
-🔔 Nhận thông báo từ giảng viên và hệ thống
-
-📅 Xem lịch bảo vệ và thông tin hội đồng
+    ✅ Đăng ký đề tài (cá nhân hoặc nhóm tối đa 3 thành viên)
+    
+    📊 Cập nhật tiến độ thực hiện
+    
+    📁 Upload tài liệu (báo cáo, source code, poster)
+    
+    🔔 Nhận thông báo từ giảng viên và hệ thống
+    
+    📅 Xem lịch bảo vệ và thông tin hội đồng
 
 
 👨‍🏫 Dành cho Giảng viên
