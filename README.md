@@ -5,9 +5,9 @@
 🎓 Hệ Thống Quản Lý Đồ Án Tốt Nghiệp
 📋 Giới Thiệu
 
-Hệ thống quản lý đồ án tốt nghiệp là một ứng dụng web được phát triển bằng ASP.NET Core MVC, hỗ trợ quản lý toàn bộ quy trình thực hiện đồ án từ đăng ký, theo dõi tiến độ đến chấm điểm và bảo vệ.
-
-Sinh viên thực hiện: Trần Quang Khánh, Lê Xuân Nam, Hồ Anh Nguyên, Hồ Nguyên Tâm - 22KTMT1
+    Hệ thống quản lý đồ án tốt nghiệp là một ứng dụng web được phát triển bằng ASP.NET Core MVC, hỗ trợ quản lý toàn bộ quy trình thực hiện đồ án từ đăng ký, theo dõi tiến độ đến chấm điểm và bảo vệ.
+    
+    Sinh viên thực hiện: Trần Quang Khánh, Lê Xuân Nam, Hồ Anh Nguyên, Hồ Nguyên Tâm - 22KTMT1
 
 ✨ Tính Năng Chính
 
@@ -26,31 +26,31 @@ Sinh viên thực hiện: Trần Quang Khánh, Lê Xuân Nam, Hồ Anh Nguyên, 
 
 👨‍🏫 Dành cho Giảng viên
 
-📝 Phê duyệt/từ chối đề tài
-
-💬 Nhận xét và hướng dẫn sinh viên
-
-✅ Xác nhận hoàn thành đề tài
-
-🎯 Đề xuất đưa vào hội đồng bảo vệ
-
-📊 Chấm điểm trong hội đồng
-
-📈 Theo dõi tiến độ nhiều đề tài
+    📝 Phê duyệt/từ chối đề tài
+    
+    💬 Nhận xét và hướng dẫn sinh viên
+    
+    ✅ Xác nhận hoàn thành đề tài
+    
+    🎯 Đề xuất đưa vào hội đồng bảo vệ
+    
+    📊 Chấm điểm trong hội đồng
+    
+    📈 Theo dõi tiến độ nhiều đề tài
 
 
 👨‍💼 Dành cho Admin
 
 
-👥 Quản lý người dùng (sinh viên, giảng viên)
-
-📋 Quản lý đề tài
-
-🏆 Tạo và quản lý hội đồng bảo vệ
-
-📊 Thống kê và báo cáo
-
-⚙️ Cấu hình hệ thống (năm học, học kỳ)
-
-📜 Xuất danh sách đề tài ra Excel
+    👥 Quản lý người dùng (sinh viên, giảng viên)
+    
+    📋 Quản lý đề tài
+    
+    🏆 Tạo và quản lý hội đồng bảo vệ
+    
+    📊 Thống kê và báo cáo
+    
+    ⚙️ Cấu hình hệ thống (năm học, học kỳ)
+    
+    📜 Xuất danh sách đề tài ra Excel
 
