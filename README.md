@@ -53,4 +53,14 @@
     ⚙️ Cấu hình hệ thống (năm học, học kỳ)
     
     📜 Xuất danh sách đề tài ra Excel
-
+    
+🎯 Quy Trình Sử Dụng
+    Sinh viên đăng ký đề tài → Email xác thực
+    Admin phân công giảng viên (hoặc sinh viên chọn sẵn)
+    Giảng viên duyệt đề tài
+    Sinh viên thực hiện và cập nhật tiến độ
+    Giảng viên xác nhận hoàn thành 100%
+    Giảng viên đề xuất đưa vào hội đồng
+    Admin tạo hội đồng và xếp lịch bảo vệ
+    Hội đồng chấm điểm
+    Hệ thống tính điểm trung bình
